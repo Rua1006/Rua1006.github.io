@@ -22,14 +22,30 @@
     <link rel="stylesheet" href="./css/reset.css">
     <style>
         /*header.css*/
-        .hd {width: 100%; background-color: palevioletred; height: 200px; position: fixed; top: 0; left: 0; z-index: 999;}
+        .hd {width: 100%; background-color:transparent; height: 220px; position: fixed; top: 0; left: 0; z-index: 999;}
         .hd_wrap {width: 1200px; margin: 0 auto;}
+        .hd:hover {background-color:#ebaccb;}
         .logo {display: block; width: 120px; height: auto; margin-top: 30px; margin-bottom: 30px; float: left;}
-        .logo img {display: block; width: 100%;}
+        .logo img {display: block; width: 100%; height: auto;}
         .tnb {float: right; margin-top: 30px; margin-bottom: 30px;}
         .tnb a {font-size: 14px; color: black; padding: 14px; font-weight: 300;}
+        .gnb {float:left; width: 704px; margin-left: 50px; margin-top: 16px;}
+        /*clear-fix 처리*/
+        .gnb:after {content: "";display: block;clear: both;}
+        .gnb > ul:after {content: "";display: block;clear: both;}
+        .gnb > ul > li {float: left; width: 20%; height: 40px; line-height: 40px; position: relative;}
+        .gnb .dp1 {display: block; color: #333; text-align: center; background-color: trasparent; font-size : 14px; margin-left: 10px}
+        .gnb li:hover .dp1 {color:#333; background-color: #fff;}
+        .gnb .sub {display: none; width: 100%; height: auto; position:absolute; top: 40px; background-color: #fff; left: 0; z-index: 99; height: 124px;}        
+        .gnb:hover li .sub {display: block;}
+        .gnb li .sub li {clear: both; height: 30px; line-height: 30px; border-bottom: 1px solid #333}
+        .gnb li .dp1 {display: block; height: 40px; line-height: 40px; background-color: transparent; color: black}
+        .content {clear:both; width: 100%;}
+        .vs {clear: both; width: 100%; height: 100vh; overflow: hidden;}
+        .vdo {display: block; width: 100%; height: auto;}
+        .page {clear: both; width: 100%;}
+        .page_wrap {width: 1200px; margin: 0 auto;}
         
-        .gnb {clear: both;}
     </style>
 </head>
 <body>
@@ -89,7 +105,7 @@
     </header>
     <div class="content">
         <figure class="vs">
-            <video src="./video/universe.mp4" autoplay muted class="vdo"></video>
+            <video src="./video/baskin.mp4" autoplay muted class="vdo"></video>
         </figure>
         <section class="page" id="page1">
             <div class="page_wrap">
@@ -102,19 +118,19 @@
                     <li class="right">
                         <ul class="ico_lst">
                             <li>
-                                <a href="" class="icon1">
+                                <a href="ice.html" class="icon1">
                                     <h3 class="cate_tit">ICECREAM</h3>
                                     <p class="cate_com">아이스크림의 기준<br>배스킨라빈스 </p>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="icon2">
+                                <a href="cake.html" class="icon2">
                                     <h3 class="cate_tit">ICECREAMCAKE</h3>
                                     <p class="cate_com">아이와 어른이 좋아하는<br>아이스크림을 하나의 케이크에서<br>모두 즐기세요!</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="icon3">
+                                <a href="drink.html" class="icon3">
                                     <h3 class="cate_tit">BEVERAGE</h3>
                                     <p class="cate_com">아이스크림으로 즐기는<br>배스킨라빈스만의 음료!</p>
                                 </a>
