@@ -22,37 +22,50 @@
     <link rel="stylesheet" href="./css/reset.css">
     <style>
         /*header.css*/
-        .hd {width: 100%; background-color:transparent; height: 220px; position: fixed; top: 0; left: 0; z-index: 999;}
-        .hd_wrap {width: 1200px; margin: 0 auto;}
+        .hd { width: 100%; height:180px; position:absolute; top: 0; 
+        left: 0; z-index:91; }
+        .hd_wrap { width: 1200px; margin: 0 auto; }
         .hd:hover {background-color:#ebaccb;}
-        .logo {display: block; width: 120px; height: auto; margin-top: 30px; margin-bottom: 30px; float: left;}
-        .logo img {display: block; width: 100%; height: auto;}
-        .tnb {float: right; margin-top: 30px; margin-bottom: 30px;}
-        .tnb a {font-size: 14px; color: black; padding: 14px; font-weight: 300;}
-        .gnb {float:left; width: 704px; margin-left: 50px; margin-top: 16px;}
-        /*clear-fix 처리*/
-        .gnb:after {content: "";display: block;clear: both;}
-        .gnb > ul:after {content: "";display: block;clear: both;}
-        .gnb > ul > li {float: left; width: 20%; height: 40px; line-height: 40px; position: relative;}
-        .gnb .dp1 {display: block; color: #333; text-align: center; background-color: trasparent; font-size : 14px; margin-left: 10px}
-        .gnb li:hover .dp1 {color:#333; background-color: #fff;}
-        .gnb .sub {display: none; width: 100%; height: auto; position:absolute; top: 40px; background-color: #fff; left: 0; z-index: 99; height: 124px;}        
-        .gnb:hover li .sub {display: block;}
-        .gnb li .sub li {clear: both; height: 30px; line-height: 30px; border-bottom: 1px solid #333}
-        .gnb li .dp1 {display: block; height: 40px; line-height: 40px; background-color: transparent; color: black}
-        .content {clear:both; width: 100%;}
-        .vs {clear: both; width: 100%; height: 100vh; overflow: hidden;}
-        .vdo {display: block; width: 100%; height: auto;}
-        .page {clear: both; width: 100%;}
-        .page_wrap {width: 1200px; margin: 0 auto;}
-        
+        .logo { display:block; width: 120px; height: auto; float:left; margin:10px 0px; }
+        .logo img { display:block; width: 100%; height: auto;}
+        .tnb { float:right; margin: 20px 0px; }
+        .tnb a { padding: 1em; font-size:12px; color:#333; }
+        .tnb a:hover { color:deepskyblue; font-weight:700; text-decoration: underline; text-decoration-style:dotted; }
+        /* 방법1 : logo/tnb/gnb 한 줄로 배치 */
+        .gnb { float:left;  width: 800px; margin-left: 50px; margin-top: 10px; } */     
+        /* clear-fix 처리 */
+        .gnb:after { content:""; display:block; clear:both; } 
+        .gnb > ul:after { content:""; display:block; clear:both; }
+        .gnb > ul > li { float:left; width: 20%; height:40px; line-height: 40px; position:relative; }
+        .gnb .dp1 { display:block; color:#333; text-align: center; 
+        background-color:#ebaccb; font-size:16px; }
+        .gnb li:hover .dp1 { color:#333; background-color:#fff; }
+        .gnb .sub { display:none; width: 100%; height:auto; position:absolute; top:40px; background-color:#ccc;
+        left: 0; z-index:90; height: 80px; }
+        .gnb:hover li .sub { display:block;  }
+        .gnb li .sub li { clear:both; height: 30px; line-height: 30px; border-bottom:1px solid #fff; }
+        .gnb li .sub li a { background-color:#3c3c8c; color:#fff; font-size:14px; display:block; text-indent:2em; 
+        overflow: hidden; white-space:nowrap; text-overflow: ellipsis; }
+        .gnb li .sub li:hover a { color:#ebaccb; }
+        .content { clear: both; width: 100%; }
+        .vs { clear:both; width: 100%; height:100vh; overflow:hidden; }
+        .vdo { display:block; width:100%; height:auto; }
+        .page { clear:both; width: 100%; }
+        .page_wrap { width: 1200px; margin: 0 auto; }
+        #page1, #page3 { background-color:#FFE5C365; }
+        .page_tit { text-align: center; font-size:32px; padding-top:1.2em; padding-bottom: 0.8em; }
+        .lst { clear:both; width: 1200px; }
+        .lst:after { content:""; display:block; clear: both;}
+        .lst li.left { float:left; }
+        .lst li.right { float:right; }
+            
     </style>
 </head>
 <body>
 <div class="wrap">
     <header class="hd">
         <div class="hd_wrap">
-            <a href="" class="logo"><img src="./img/pngwing.com (1).png" alt="상단로고"></a>    
+            <a href="" class="logo"><img src="./img/baskin.png" alt="상단로고"></a>    
             <nav class="tnb">
                 <a href="login.html">로그인</a>
                 <a href="join.html">회원가입</a>
@@ -277,7 +290,7 @@
     </div>
     <footer class="ft">
         <div class="ft_wrap">
-            <div class="ft_logo"><img src="./img/베스킨라빈스 로고.png" alt="하단로고"></div>
+            <div class="ft_logo"><img src="./img/baskin.png" alt="하단로고"></div>
             <div class="mid_box">
                 <nav class="fnb">
                     <a href="">개인정보 처리 방침</a>
