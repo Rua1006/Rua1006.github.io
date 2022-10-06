@@ -20,10 +20,12 @@
     <link rel="shortcut icon" href="./img/favicon-16x16.png" type="image/x-icon">
     <!-- 각 종 플러그인과 설정 파일 -->
     <link rel="stylesheet" href="./css/reset.css">
+    
+    <!-- jquery 연결-->
+    <script src="./js/jquery-1.11.1.js"></script>
     <style>
         /*header.css*/
-        .hd { width: 100%; height:180px; position:absolute; top: 0; 
-        left: 0; z-index:91; }
+        .hd { width: 100%; height:180px; position:absolute; top: 0; left: 0; z-index:91; }
         .hd_wrap { width: 1200px; margin: 0 auto; }
         .hd:hover {background-color:#ebaccb;}
         .logo { display:block; width: 120px; height: auto; float:left; margin:10px 0px; }
@@ -50,6 +52,8 @@
         .content { clear: both; width: 100%; }
         .vs { clear:both; width: 100%; height:100vh; overflow:hidden; }
         .vdo { display:block; width:100%; height:auto; }
+
+        /*content*/
         .page { clear:both; width: 100%; }
         .page_wrap { width: 1200px; margin: 0 auto; }
         #page2, #page4 { background-color:#FFE5C365; }
@@ -58,39 +62,74 @@
         .lst:after { content:""; display:block; clear: both;}
         .lst li {margin-bottom: 40px;}
         .lst li.left { float:left; width: 800px; height: 460px;}
-        .lst li.right { float:right; width: 300px; height: 460px;}
-
+        .lst li.right { float:right; width: 350px; height: 460px;}
+        
+       
         .ico_lst {clear: both; width: 100%; overflow: hidden;}
-        .ico_lst li a {display: block; background-position: 0px; background-repeat: no-repeat; background-size: auto 80%; padding-left: 85px;}
-        .ico_lst li a.icon1 {background-image: url("./img/ice-cream_2_.svg");}
-        .ico_lst li a.icon2 {background-image: url("./img/cake-g137a29246_1920.svg"); width: 300px; height: 85px;}
-        .ico_lst li a.icon3 {background-image: url("./img/coffee-g3831f52d6_1280.svg");}
+        .ico_lst li a {display: block; background-position: 0px center; background-repeat: no-repeat; background-size: auto 80%; padding-left: 85px;}
+        .ico_lst li a.icon1 {background-image: url("./img/icecrem-icon.svg");}
+        .ico_lst li a.icon2 {background-image: url("./img/free-icon-cake-3761510.svg"); height: 85px;}
+        .ico_lst li a.icon3 {background-image: url("./img/free-icon-ice-coffee-1102985.svg");}
         .cate_tit {color: #333; font-size: 30px; padding-bottom: 0.5em;}
-        .cate_com {color:#333; font-size: 20px; }
+        .cate_com {color:#333; font-size: 20px;overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
 
         /*page2*/
-        .pic_lst {clear:both; width: 100%;}
+        .pic_lst {clear:both; width: 100%; padding-bottom: 80px;}
         .pic_lst:after {content: ""; display: block; clear: both;}
         .pic_lst li {float: left; position: relative; margin-bottom: 30px;}
-        .pic_lst li a {display: block; width: 360px; height: 300px; margin-right: 40px;}
+        .pic_lst li a {display: block; width: 150px; height: 300px; margin-right: 150px;}
         .pic_lst li a img {display: block; width: 300px; height:auto;  background-color: #ffe5c365;}
-        .pic_lst li a{}
-
+        .pic_lst li a .hv_box { width: 360px; height: 300px; color:#fff; opacity:0; position:absolute; top:0; left: 0; z-index:10; transition-duration:0.8s; background-color:transparent; }
+        .pic_lst li a:hover .hv_box { opacity:1; }
+        .pic_tit { position:absolute; top:20px; left: 20px; text-shadow:0px 1px 4px red; }
+        .pic_com { position:absolute; right:80px; bottom:20px; text-shadow:0px 0px 3px blue; }
+       
         /*page3*/
-        #page3{background-color: #fff;}
-        #page3.page_wrap {width: 100%;}
-        .circle_lst {clear: both;}
-        .circle_lst li {width: 240px; height: 240px; border-radius: 120px; overflow: hidden; background-color:#fff; position: relative;}
+        #page3{background-repeat: no-repeat; background-size: cover; background-color: #fff; background-position: center center; height: 85vh; overflow: hidden;}
+        #page3 .page_wrap {width: 100%;}
+        .circle_lst {clear: both; width: 3200px; height:} 
+        .circle_lst li {width: 240px; height: 240px; border-radius: 120px; overflow: hidden; background-color:#fff; position: relative; float:left; margin:40px;}
+        .circle_lst.lst2 li {float:right;}
         .circle_lst li a {display: block; width: 100%; height: 100%;}
         .circle_lst li a img {display: block; width: 300px; height: auto; position: absolute; top: 50%; left: -30px; z-index: 11; margin-top: -150px; }
+        
+       
 
         /*footer*/
-        .ft{clear: both; width: 100%; height: 200px; background-color: #3c3c8c;}
+        .ft{clear: both; width: 100%; height: 200px; background-color: #3c3c8c; padding-bottom: 50px;}
         .ft_wrap {clear: both; width: 1200px; margin: 0 auto; padding-top: 50px;}
         .ft_wrap:after {content: ""; display: block; clear: both;}
         .ft_logo {float: left; width: 150px;}
-        .mid_box {}
+        .mid_box { float:left; width: 760px; padding-left: 100px; }
+        .fnb { clear:both; }
+        .fnb a { color:#fff; font-size:14px; padding: 20px; padding-left: 100px; }
+        .fnb a.dpc { color: #ebaccb; }
+        .addr { padding-left: 50px; color:#ececec; padding-top: 50px; font-size:12px; line-height: 2; }
+        .copyright { padding-left: 150px; color:#fff; padding-top: 80px; }
+        .sel_box { float:right; border-bottom:1px solid #fff;
+        height: 44px; line-height: 44px; text-align:center; width: 140px; }
+        #sel { border:none; outline: none; background-color: transparent; color:#fff; }
+        #sel option { color:#333; }
+
+        p{font-family:Verdana, Geneva, Tahoma, sans-serif}
     </style>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var ht = $(window).height();
+                var tp = $(this).scrollTop();
+                if(tp>=600){
+                    $(".hd").css("position","fixed");
+                } else {
+                    $(".hd").css("position","absolute");
+                }
+            });
+            $
+            $("<ul class='circle_lst lst2'></ul>").insertAfter($(".circle_lst"));
+            $lst1_obj = $(".circle_lst li").clone();
+            $(".circle_lst.lst2").append($lst1_obj);
+        });    
+        </script>
 </head>
 <body>
 <div class="wrap">
@@ -170,7 +209,7 @@
                             <li>
                                 <a href="cake.html" class="icon2">
                                     <h3 class="cate_tit">ICECREAMCAKE</h3>
-                                    <p class="cate_com">아이와 어른이 좋아하는<br>아이스크림을 하나의 케이크에서<br>모두 즐기세요!</p>
+                                    <p class="cate_com">아이와 어른이 좋아하는<br>아이스크림을 하나의 케이크에서 모두 즐기세요!</p>
                                 </a>
                             </li>
                             <li>
@@ -310,11 +349,9 @@
                     <li><a href=""><img src="./img/london-gb335cf5d5_1920.png" alt="이벤트배너5"></a></li>
                     <li><a href=""><img src="./img/new-york-gdaab04361_1920.png" alt="이벤트배너6"></a></li>
                     <li><a href=""><img src="./img/paris-gb31570a2a_1280.png" alt="이벤트배너7"></a></li>
-                    <li><a href=""><img src="./img/credit-g6f1385e54_1280.png" alt="이벤트배너8"></a></li>
-                    <li><a href=""><img src="./img/coffee-g4aefba634_1280.png" alt="이벤트배너9"></a></li>
-                    <li><a href=""><img src="./img/market-g0c14f33db_1280.png" alt="이벤트배너10"></a></li>
-                    <li><a href=""><img src="./img/attach-gf8c890f23_1920.jpg" alt="이벤트배너11"></a></li>
-                    <li><a href=""><img src="./img/message-g93daab7d0_1920.jpg" alt="이벤트배너12"></a></li>
+                    <li><a href=""><img src="./img/coffee-g4aefba634_1280.png" alt="이벤트배너8"></a></li>
+                    <li><a href=""><img src="./img/attach-gf8c890f23_1920.jpg" alt="이벤트배너9"></a></li>
+                    <li><a href=""><img src="./img/message-g93daab7d0_1920.jpg" alt="이벤트배너10"></a></li>
                 </ul>
             </div>
         </section>
