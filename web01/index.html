@@ -52,13 +52,44 @@
         .vdo { display:block; width:100%; height:auto; }
         .page { clear:both; width: 100%; }
         .page_wrap { width: 1200px; margin: 0 auto; }
-        #page1, #page3 { background-color:#FFE5C365; }
+        #page2, #page4 { background-color:#FFE5C365; }
         .page_tit { text-align: center; font-size:32px; padding-top:1.2em; padding-bottom: 0.8em; }
         .lst { clear:both; width: 1200px; }
         .lst:after { content:""; display:block; clear: both;}
-        .lst li.left { float:left; }
-        .lst li.right { float:right; }
-            
+        .lst li {margin-bottom: 40px;}
+        .lst li.left { float:left; width: 800px; height: 460px;}
+        .lst li.right { float:right; width: 300px; height: 460px;}
+
+        .ico_lst {clear: both; width: 100%; overflow: hidden;}
+        .ico_lst li a {display: block; background-position: 0px; background-repeat: no-repeat; background-size: auto 80%; padding-left: 85px;}
+        .ico_lst li a.icon1 {background-image: url("./img/ice-cream_2_.svg");}
+        .ico_lst li a.icon2 {background-image: url("./img/cake-g137a29246_1920.svg"); width: 300px; height: 85px;}
+        .ico_lst li a.icon3 {background-image: url("./img/coffee-g3831f52d6_1280.svg");}
+        .cate_tit {color: #333; font-size: 30px; padding-bottom: 0.5em;}
+        .cate_com {color:#333; font-size: 20px; }
+
+        /*page2*/
+        .pic_lst {clear:both; width: 100%;}
+        .pic_lst:after {content: ""; display: block; clear: both;}
+        .pic_lst li {float: left; position: relative; margin-bottom: 30px;}
+        .pic_lst li a {display: block; width: 360px; height: 300px; margin-right: 40px;}
+        .pic_lst li a img {display: block; width: 300px; height:auto;  background-color: #ffe5c365;}
+        .pic_lst li a{}
+
+        /*page3*/
+        #page3{background-color: #fff;}
+        #page3.page_wrap {width: 100%;}
+        .circle_lst {clear: both;}
+        .circle_lst li {width: 240px; height: 240px; border-radius: 120px; overflow: hidden; background-color:#fff; position: relative;}
+        .circle_lst li a {display: block; width: 100%; height: 100%;}
+        .circle_lst li a img {display: block; width: 300px; height: auto; position: absolute; top: 50%; left: -30px; z-index: 11; margin-top: -150px; }
+
+        /*footer*/
+        .ft{clear: both; width: 100%; height: 200px; background-color: #3c3c8c;}
+        .ft_wrap {clear: both; width: 1200px; margin: 0 auto; padding-top: 50px;}
+        .ft_wrap:after {content: ""; display: block; clear: both;}
+        .ft_logo {float: left; width: 150px;}
+        .mid_box {}
     </style>
 </head>
 <body>
@@ -122,10 +153,10 @@
         </figure>
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit"></h2>
+                <h2 class="page_tit">FLAVOR OF THE MONTH</h2>
                 <ul class="lst">
                     <li class="left">
-                        <video width="500" height="400" controls autoplay muted>
+                        <video width="800" height="460" controls autoplay muted>
                             <source src="./video/monthly hot menu.mp4" type="video/mp4">
                     </li>
                     <li class="right">
@@ -249,7 +280,7 @@
                     </li>
                     <li>
                         <a href="">
-                            <img src="./img/1696731510.png" alt="비타500블라스트" class="사진11">
+                            <img src="./img/1652173872.png" alt="비타500블라스트" class="사진11">
                             <div class="hv_box">
                                 <h3 class="pic_tit">비타500블라스트</h3>
                                 <p class="pic_com">#비타500 #블라스트</p>
@@ -290,7 +321,7 @@
     </div>
     <footer class="ft">
         <div class="ft_wrap">
-            <div class="ft_logo"><img src="./img/baskin.png" alt="하단로고"></div>
+            <div class="ft_logo"><img src="./img/baskin.png" alt="하단로고" width=150px; height=auto;></div>
             <div class="mid_box">
                 <nav class="fnb">
                     <a href="">개인정보 처리 방침</a>
