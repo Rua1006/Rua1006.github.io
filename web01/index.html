@@ -20,34 +20,34 @@
     <link rel="shortcut icon" href="./img/favicon-16x16.png" type="image/x-icon">
     <!-- 각 종 플러그인과 설정 파일 -->
     <link rel="stylesheet" href="./css/reset.css">
-    
+    <link rel="stylesheet" href="./css/font.css">
+
     <!-- jquery 연결-->
     <script src="./js/jquery-1.11.1.js"></script>
     <style>
+        @import url("./css/font.css");
+        
         /*header.css*/
-        .hd { width: 100%; height:180px; position:absolute; top: 0; left: 0; z-index:91; }
+        .hd { width: 100%; height:160px; position:absolute; top: 0; left: 0; z-index:91; }
         .hd_wrap { width: 1200px; margin: 0 auto; }
         .hd:hover {background-color:#ebaccb;}
         .logo { display:block; width: 120px; height: auto; float:left; margin:10px 0px; }
         .logo img { display:block; width: 100%; height: auto;}
         .tnb { float:right; margin: 20px 0px; }
-        .tnb a { padding: 1em; font-size:12px; color:#333; }
+        .tnb a { padding: 1em; font-size:12px; color:#333; background-color: #fff; font-family: 'baskinfont2';}
         .tnb a:hover { color:deepskyblue; font-weight:700; text-decoration: underline; text-decoration-style:dotted; }
         /* 방법1 : logo/tnb/gnb 한 줄로 배치 */
-        .gnb { float:left;  width: 800px; margin-left: 50px; margin-top: 10px; } */     
+        .gnb { float:left;  width: 800px; margin-left: 50px; margin-top: 10px; } */   
         /* clear-fix 처리 */
         .gnb:after { content:""; display:block; clear:both; } 
         .gnb > ul:after { content:""; display:block; clear:both; }
         .gnb > ul > li { float:left; width: 20%; height:40px; line-height: 40px; position:relative; }
-        .gnb .dp1 { display:block; color:#333; text-align: center; 
-        background-color:#ebaccb; font-size:16px; }
+        .gnb .dp1 { display:block; color:#3c3c8c; text-align: center; background-color:#ebaccb; font-size:16px; text-decoration-line: none; font-family: 'baskinfont';}
         .gnb li:hover .dp1 { color:#333; background-color:#fff; }
-        .gnb .sub { display:none; width: 100%; height:auto; position:absolute; top:40px; background-color:#ccc;
-        left: 0; z-index:90; height: 80px; }
+        .gnb .sub { display:none; width: 100%; height:auto; position:absolute; top:40px; background-color:#ccc; left: 0; z-index:90; height: 80px; }
         .gnb:hover li .sub { display:block;  }
         .gnb li .sub li { clear:both; height: 30px; line-height: 30px; border-bottom:1px solid #fff; }
-        .gnb li .sub li a { background-color:#3c3c8c; color:#fff; font-size:14px; display:block; text-indent:2em; 
-        overflow: hidden; white-space:nowrap; text-overflow: ellipsis; }
+        .gnb li .sub li a { background-color:#3c3c8c; color:#fff; font-size:14px; display:block; text-indent:2em; overflow: hidden; white-space:nowrap; text-overflow: ellipsis; }
         .gnb li .sub li:hover a { color:#ebaccb; }
         .content { clear: both; width: 100%; }
         .vs { clear:both; width: 100%; height:100vh; overflow:hidden; }
@@ -57,21 +57,22 @@
         .page { clear:both; width: 100%; }
         .page_wrap { width: 1200px; margin: 0 auto; }
         #page2, #page4 { background-color:#FFE5C365; }
-        .page_tit { text-align: center; font-size:32px; padding-top:1.2em; padding-bottom: 0.8em; }
+        .page_tit { text-align: center; font-size:32px; padding-top:1.2em; padding-bottom: 0.8em; font-family: 'baskinfont';}
         .lst { clear:both; width: 1200px; }
+        .lst a{text-decoration-line: none;}
         .lst:after { content:""; display:block; clear: both;}
         .lst li {margin-bottom: 40px;}
-        .lst li.left { float:left; width: 800px; height: 460px;}
-        .lst li.right { float:right; width: 350px; height: 460px;}
+        .lst li.left { float:left; width: 800px; height: 460px; }
+        .lst li.right { float:right; width: 350px; height: 460px; }
         
        
-        .ico_lst {clear: both; width: 100%; overflow: hidden;}
+        .ico_lst {clear: both; width: 100%; overflow: hidden; margin-top: 50px;}
         .ico_lst li a {display: block; background-position: 0px center; background-repeat: no-repeat; background-size: auto 80%; padding-left: 85px;}
         .ico_lst li a.icon1 {background-image: url("./img/icecrem-icon.svg");}
         .ico_lst li a.icon2 {background-image: url("./img/free-icon-cake-3761510.svg"); height: 85px;}
         .ico_lst li a.icon3 {background-image: url("./img/free-icon-ice-coffee-1102985.svg");}
-        .cate_tit {color: #333; font-size: 30px; padding-bottom: 0.5em;}
-        .cate_com {color:#333; font-size: 20px;overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+        .cate_tit {color: #333; font-size: 30px; padding-bottom: 0.5em; font-family:'baskinfont'; color: #d382a1;}
+        .cate_com {color:#333; font-size: 20px;overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family: 'baskinfont';}
 
         /*page2*/
         .pic_lst {clear:both; width: 100%; padding-bottom: 80px;}
@@ -81,8 +82,8 @@
         .pic_lst li a img {display: block; width: 300px; height:auto;  background-color: #ffe5c365;}
         .pic_lst li a .hv_box { width: 360px; height: 300px; color:#fff; opacity:0; position:absolute; top:0; left: 0; z-index:10; transition-duration:0.8s; background-color:transparent; }
         .pic_lst li a:hover .hv_box { opacity:1; }
-        .pic_tit { position:absolute; top:20px; left: 20px; text-shadow:0px 1px 4px red; }
-        .pic_com { position:absolute; right:80px; bottom:20px; text-shadow:0px 0px 3px blue; }
+        .pic_tit { position:absolute; top:20px; left: 20px; color: #3c3c8c; font-family:'baskinfont'; font-size: 20px;}
+        .pic_com { position:absolute; right:80px; bottom:15px; color: rgb(212, 95, 16); font-family: 'baskinfont';}
        
         /*page3*/
         #page3{background-repeat: no-repeat; background-size: cover; background-color: #fff; background-position: center center; height: 85vh; overflow: hidden;}
@@ -111,7 +112,7 @@
         #sel { border:none; outline: none; background-color: transparent; color:#fff; }
         #sel option { color:#333; }
 
-        p{font-family:Verdana, Geneva, Tahoma, sans-serif}
+        
     </style>
     <script>
         $(document).ready(function(){
