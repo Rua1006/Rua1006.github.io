@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baskinrobbins</title>
+    <!-- 메타포 -->
+    <meta name="description" content="행복을 전하는 프리미엄 아이스크림, 배스킨라빈스 공식 홈페이지 입니다.">
+    <meta name="keywords" content="Baskinrobbins, br31, 배스킨라빈스, 배라, 베라, 배스킨, 베스킨, 31">
+    <!-- 오픈그래프 -->
+    <meta property="og:title" content="[배스킨라빈스]">
+    <meta property="og:description" content="행복을 전하는 프리미엄 아이스크림, 배스킨라빈스 공식 홈페이지 입니다.">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./img/img_br_sns">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/favicon-16x16.png" type="image/x-icon">
+    <!-- 각 종 플러그인과 설정 파일 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <!-- jquery 연결-->
+    <script src="./js/jquery-1.11.1.js"></script>
+    <style>
+        @import url("./css/font.css");
+        /*header.css*/
+        .hd {position: fixed;}
+
+        /*content*/
+        .vs {clear: both; width: 100%; height: 300px;}
+        .vs img {display: block; width: 100%; height: auto;}
+        .bread {clear: both; width: 100%; line-height: 60px;}
+        .bread_fr {width: 1200px; margin: 0 auto;}
+        .page {clear: both; width: 100%; min-height: 100vh;}
+        .page:after {content:""; display: block; clear: both;}
+        .page_wrap {width: 1200px; margin: 0 auto;}
+        .content {display: none;}
+        .content:target {display: block;}
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var ht = $(window).height();
+                var tp = $(this).scrollTop();
+                if(tp>=600){
+                    $(".hd").css("position","fixed");
+                } else {
+                    $(".hd").css("position","absolute");
+                }
+            });
+            $
+            $("<ul class='circle_lst lst2'></ul>").insertAfter($(".circle_lst"));
+            $lst1_obj = $(".circle_lst li").clone();
+            $(".circle_lst.lst2").append($lst1_obj);
+        });    
+        </script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="" class="logo"><img src="./img/baskin.png" alt="상단로고"></a>    
+            <nav class="tnb">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li class="item1">
+                        <a href="" class="dp1">Menu</a>
+                        <ul class="sub">
+                            <li><a href="baskin.html#ice">아이스크림</a></li>
+                            <li><a href="baskin.html#cake">아이스크림케이크</a></li>
+                            <li><a href="baskin.html#drink">음료</a></li>
+                        </ul>
+                    </li>
+                    <li class="item2">
+                        <a href="" class="dp1">영양성분 및 알레르기</a>
+                        <ul class="sub">
+                            <li><a href="icenutri.html">아이스크림</a></li>
+                            <li><a href="cakenutri.html">아이스크림케이크</a></li>
+                            <li><a href="drinknutri.html">음료</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dp1">이벤트</a>
+                        <ul class="sub">
+                            <li><a href="ingevent.html">진행중인 이벤트</a></li>
+                            <li><a href="winevent.html">당첨자 발표</a></li>
+                            <li><a href="closeevent.html">지난 이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="" class="dp1">가게정보</a>
+                        <ul class="sub">
+                            <li><a href="new.html">보도자료</a></li>
+                            <li><a href="imporm.html">매장소개</a></li>
+                            <li><a href="con.html">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="" class="dp1">게시판</a>
+                        <ul class="sub">
+                            <li><a href="notics.html">공지사항</a></li>
+                            <li><a href="qna.html">고객센터</a></li>
+                            <li><a href="gna.html">개설문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <figure class="vs">
+            <img src="./img/pexels-jéshoots-3631.jpg" alt="비주얼">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+            <a href="" class="home">HOME</a> &gt;
+            <select name="sel1" id="sel1"></select> &gt;
+                <option>MENU</option>
+                <option value="icenutri.html">영양성분 및 알레르기</option>
+                <option value="ingevent.html">이벤트</option>
+                <option value="new.html">가게정보</option>
+                <option value="notics.html">게시판</option>
+            <select name="sel2" id="sel2"></select> &gt;
+        </div>
+    </div>
+    <section class="page">
+        <div class="page_wrap">
+            <h2 class="page_title">아이스크림</h2>
+
+        </div>
+    </section>
+    <script>
+        var sel1 = document.getElementById("sel1");
+        var sel2 = document.getElementById("sel2");
+        sel1.addEventListener("change",function(){
+            location.href = sel1.value;
+        });
+        sel2.addEventListener("change",function(){
+            location.href = sel2.value;
+        });
+        var sel3 = document.getElementById("sel3");
+        var sel4 = document.getElementById("sel4");
+        sel3.addEventListener("change",function(){
+            location.href = sel3.value;
+        });
+        sel4.addEventListener("change",function(){
+            location.href = sel4.value;
+        });
+        var sel5 = document.getElementById("sel5");
+        var sel6 = document.getElementById("sel6");
+        sel5.addEventListener("change",function(){
+            location.href = sel5.value;
+        });
+        sel6.addEventListener("change",function(){
+            location.href = sel6.value;
+        });
+    </script>
+</div>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_logo"><img src="./img/baskin.png" alt="하단로고" width=150px; height=auto;></div>
+            <div class="mid_box">
+                <nav class="fnb">
+                    <a href="">개인정보 처리 방침</a>
+                    <a href="">이용약관</a>
+                    <a href="">이메일무단수집거부</a>
+                </nav>
+                <p class="addr">
+                    사업자 등록번호 : 303-81-09535 비알코리아(주) 대표이사 도세호 서울특별시 서초구 남부순환로 2620(양재동 11-149번지)  
+                </p>
+                <p class="copyright">Copyright ⓒ 2016 BRKOREA Company. All Rights Reserved.</p>
+            </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">패밀리 사이트</option>
+                    <option value="">SPC그룹사이트</option>
+                    <option value="">BR코리아</option>
+                    <option value="">해피포인트카드</option>
+                </select>
+            </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
