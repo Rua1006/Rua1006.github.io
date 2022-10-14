@@ -36,8 +36,8 @@
         .hd {position: fixed;}
 
         /*content*/
-        .vs {clear: both; width: 100%; height: 300px; overflow: hidden; }
-        .vs img {display: block; width: 100%; height: auto;}
+        .vs {clear: both; width: 100%;  height:300px; overflow: hidden;}
+        .vs img {display: block; width:100%; height:auto;}
         .bread {clear: both; width: 100%; line-height: 60px; border-bottom:3px solid #eee;}
         .bread_fr {width: 1200px; margin: 0 auto;}
         .page { clear:both; width: 100%; min-height:100vh;}
@@ -46,8 +46,8 @@
         .content {display:none;}
         .content:target {display: block;}
 
-        .page_title { padding-top: 1em; }
-        .home { color:#333; }
+        .page_title { padding-top: 1em; font-weight:bolder; font-size: 20px; }
+        .home { color:#333; text-decoration: none;}
         .to_top { position:fixed; bottom:80px; right:80px; z-index:999; background-color:rgba(11,11,11,0.75); color:#fff; display:block; width: 60px;
         height: 60px; line-height: 60px; text-align: center; font-size:20px; border-radius:32px; visibility:hidden; transition-duration:0.8s; }
         .to_top:hover { background-color: deepskyblue; }
@@ -55,6 +55,7 @@
 
     </style>
     <link rel="stylesheet" href="footer.css">
+    <!--스크롤 스크립트-->
     <script>
     $(document).ready(function(){
         $(".to_top").attr("href", location.href);
@@ -86,41 +87,41 @@
                     <li class="item1">
                         <a href="" class="dp1">Menu</a>
                         <ul class="sub">
-                            <li><a href="baskin.html#ice">아이스크림</a></li>
-                            <li><a href="baskin.html#cake">아이스크림케이크</a></li>
-                            <li><a href="baskin.html#drink">음료</a></li>
+                            <li><a href="baskin.html#page1">아이스크림</a></li>
+                            <li><a href="baskin.html#page2">아이스크림케이크</a></li>
+                            <li><a href="baskin.html#page3">음료</a></li>
                         </ul>
                     </li>
                     <li class="item2">
                         <a href="" class="dp1">영양성분 및 알레르기</a>
                         <ul class="sub">
-                            <li><a href="tri.html#icenutri">아이스크림</a></li>
-                            <li><a href="tri.html#cakenutri">아이스크림케이크</a></li>
-                            <li><a href="tri.html#drinknutri">음료</a></li>
+                            <li><a href="tri.html#page1">아이스크림</a></li>
+                            <li><a href="tri.html#page2">아이스크림케이크</a></li>
+                            <li><a href="tri.html#page3">음료</a></li>
                         </ul>
                     </li>
                     <li class="item3">
                         <a href="" class="dp1">이벤트</a>
                         <ul class="sub">
-                            <li><a href="event.html#ing">진행중인 이벤트</a></li>
-                            <li><a href="event.html#win">당첨자 발표</a></li>
-                            <li><a href="event.html#close">지난 이벤트</a></li>
+                            <li><a href="event.html#page1">진행중인 이벤트</a></li>
+                            <li><a href="event.html#page2">당첨자 발표</a></li>
+                            <li><a href="event.html#page3">지난 이벤트</a></li>
                         </ul>
                     </li>
                     <li class="item4">
                         <a href="" class="dp1">가게정보</a>
                         <ul class="sub">
-                            <li><a href="imp.html#new">보도자료</a></li>
-                            <li><a href="imp.html#imporm">매장소개</a></li>
-                            <li><a href="imp.html#contact">CONTACT US</a></li>
+                            <li><a href="imp.html#page1">보도자료</a></li>
+                            <li><a href="imp.html#page2">매장소개</a></li>
+                            <li><a href="imp.html#page3">CONTACT US</a></li>
                         </ul>
                     </li>
                     <li class="item5">
                         <a href="" class="dp1">게시판</a>
                         <ul class="sub">
-                            <li><a href="brd.html#notics">공지사항</a></li>
-                            <li><a href="brd.html#qna">고객센터</a></li>
-                            <li><a href="brd.html#gna">개설문의</a></li>
+                            <li><a href="brd.html#page1">공지사항</a></li>
+                            <li><a href="brd.html#page2">고객센터</a></li>
+                            <li><a href="brd.html#page3">개설문의</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -129,22 +130,22 @@
     </header>
     <div class="content" id="page1">
         <figure class="vs">
-            <img src="./img/pexels-jéshoots-3631.jpg" alt="비주얼">
+            <img src="./img/the-background-g43fa521a7_1920.png" alt="비주얼">
         </figure>
         <div class="bread">
             <div class="bread_fr">
                 <a href="index.html" class="home">HOME</a> &gt;
                 <select name="sel1" id="sel1" class="sel">
-                    <option>MENU</option>
-                    <option value="tri.html#icenutri">영양성분 및 알레르기</option>
-                    <option value="event.html#ing">이벤트</option>
-                    <option value="imp.html#new">가게정보</option>
-                    <option value="brd.html#notics">게시판</option>
+                    <option >MENU</option>
+                    <option value="tri.html#page1">영양성분 및 알레르기</option>
+                    <option value="event.html#page1">이벤트</option>
+                    <option value="imp.html#page1">가게정보</option>
+                    <option value="brd.html#page1">게시판</option>
                 </select> &gt;
                 <select name="sel2" id="sel2" class="sel">
                     <option selected>아이스크림</option>
-                    <option value="baskin.html#cake">아이스크림케이크</option>
-                    <option value="baskin.html#drink">음료</option>
+                    <option value="baskin.html#page2">아이스크림케이크</option>
+                    <option value="baskin.html#page3">음료</option>
                 </select>
             </div>
         </div>
@@ -156,22 +157,22 @@
     </div>
     <div class="content" id="page2">
         <figure class="vs">
-            <img src="./img/pexels-jéshoots-3631.jpg" alt="비주얼">
+            <img src="./img/the-background-g43fa521a7_1920.png" alt="비주얼">
         </figure>
         <div class="bread">
             <div class="bread_fr">
                 <a href="./index.html" class="home">HOME</a> &gt;
                 <select name="sel3" id="sel3" class="sel">
                     <option>MENU</option>
-                    <option value="baskin.html#icenutri">영양성분 및 알레르기</option>
-                    <option value="baskin.html#ingevent">이벤트</option>
-                    <option value="baskin.html#new">가게정보</option>
-                    <option value="baskin.html#notics">게시판</option>
+                    <option value="tri.html#page1">영양성분 및 알레르기</option>
+                    <option value="event.html#page1">이벤트</option>
+                    <option value="imp.html#page1">가게정보</option>
+                    <option value="brd.html#page1">게시판</option>
                 </select> &gt;
                 <select name="sel4" id="sel4" class="sel">
                     <option selected>아이스크림케이크</option>
-                    <option value="baskin.html#ice">아이스크림</option>
-                    <option value="baskin.html#drink">음료</option>
+                    <option value="baskin.html#page1">아이스크림</option>
+                    <option value="baskin.html#page3">음료</option>
                 </select>
             </div>
         </div>
@@ -183,28 +184,28 @@
     </div>
     <div class="content" id="page3">
         <figure class="vs">
-            <img src="./img/pexels-jéshoots-3631.jpg" alt="비주얼">
+            <img src="./img/the-background-g43fa521a7_1920.png" alt="비주얼">
         </figure>
         <div class="bread">
             <div class="bread_fr">
                 <a href="./index.html" class="home">HOME</a> &gt;
-                <select name="sel5" id="sel5" class="se">
+                <select name="sel5" id="sel5" class="sel">
                     <option>MENU</option>
-                    <option value="baskin.html#icenutri">영양성분 및 알레르기</option>
-                    <option value="baskin.html#ingevent">이벤트</option>
-                    <option value="baskin.html#new">가게정보</option>
-                    <option value="baskin.html#notics">게시판</option>
+                    <option value="tri.html#page1">영양성분 및 알레르기</option>
+                    <option value="event.html#page1">이벤트</option>
+                    <option value="imp.html#page1">가게정보</option>
+                    <option value="brd.html#page1">게시판</option>
                 </select> &gt;
                 <select name="sel6" id="sel6" class="sel">
                     <option selected>음료</option>
-                    <option value="baskin.html#ice">아이스크림</option>
-                    <option value="baskin.html#cake">아이스크림케이크</option>
+                    <option value="baskin.html#page1">아이스크림</option>
+                    <option value="baskin.html#page2">아이스크림케이크</option>
                 </select>
             </div>
         </div>
         <section class="page">
             <div class="page_wrap">
-                <h2 class="page_title">아이스크림케이크</h2>
+                <h2 class="page_title">음료</h2>
             </div>
         </section>
     </div>
