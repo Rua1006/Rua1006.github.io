@@ -4,35 +4,211 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인</title>
+    <title>Baskinrobbins</title>
+    <!-- 메타포 -->
+    <meta name="description" content="행복을 전하는 프리미엄 아이스크림, 배스킨라빈스 공식 홈페이지 입니다.">
+    <meta name="keywords" content="Baskinrobbins, br31, 배스킨라빈스, 배라, 베라, 배스킨, 베스킨, 31">
+    <!-- 오픈그래프 -->
+    <meta property="og:title" content="[배스킨라빈스]">
+    <meta property="og:description" content="행복을 전하는 프리미엄 아이스크림, 배스킨라빈스 공식 홈페이지 입니다.">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./img/img_br_sns">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/favicon-16x16.png" type="image/x-icon">
+    <!-- 각 종 플러그인과 설정 파일 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="header.css">
+    <!-- 구형 브라우저 html5태그 인식 -->
+    <script src="./js/html5shiv.js"></script>
+    <!-- 구형 브라우저에서 css animation 인식 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- jquery 연결-->
+    <script src="./js/jquery-1.11.1.js"></script>
+
+    <style>
+        /*header.css*/
+        .hd {position: fixed;}
+
+        /*content*/
+        .vs {clear: both; width: 100%;  height:300px; overflow: hidden;}
+        .vs img {display: block; width:100%; height:auto;}
+        .bread {clear: both; width: 100%; line-height: 60px; border-bottom:3px solid #eee;}
+        .bread_fr {width: 1200px; margin: 0 auto;}
+        .page { clear:both; width: 100%; min-height:100vh;}
+        .page:after { content:""; display:block; clear:both; }
+        .page_wrap { width: 1200px; margin: 0 auto; }
+        
+        
+
+        .page_title { padding-top: 1em; font-weight:bolder; font-size: 50px;  text-align: center; margin-top: 30px; color:#3c3c8c;}
+        .home { color:#333; text-decoration: none;}
+
+        .frm { border:1px solid #ebaccb;; padding: 24px; width: 580px; margin:50px auto; height: 200px;}
+        .frm_tb { display:table; margin:40px auto;  }
+        .frm_tb tr { display:table-row; }
+        .frm_tb td, .frm_tb th { display:table-cell; }
+        .frm_tb th { width:200px; height: 48px; font-size: 20px;}
+        .frm_tb td { width:300px; height: 48px; }
+        .frm_tb label:before { content:"*"; margin-right: 10px; color:#3c3c8c;}
+
+        .in_dt { background-color:#fff; height:32px; line-height: 32px; width: 280px; color:#333; font-size:16px; text-indent:0.5em; }
+        .in_btn { display:block; background-color:#ebaccb; min-width:120px; height: 32px;  line-height: 32px; border-radius:20px; float:left; margin-left:80px; margin-right:20px; cursor:pointer; 
+        color: #fff; font-size: 15px; border: 0; outline: 0;}
+        .in_btn:hover { background-color: #3c3c8c; }
+
+    </style>
+    <link rel="stylesheet" href="footer.css">
+    <!--스크롤 스크립트-->
+    <script>
+    $(document).ready(function(){
+        $(".to_top").attr("href", location.href);
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=300){
+                $(".to_top").addClass("on");
+                $(".to_top").attr("href", location.href);
+            } else {
+                $(".to_top").removeClass("on");
+                $(".to_top").attr("href", location.href);
+            }
+        });
+    });    
+    </script>
 </head>
 <body>
-    <div class="wrap">
-        <form action="" method="post">
-            <fieldset>
-                <legend>로그인</legend>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <input type="text" name="id" id="id" placeholder="아이디 입력">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="password" name="pw" id="pw" placeholder="비밀번호 입력">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="submit" value="로그인">
-                                <input type="reset" value="취소">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </fieldset>
-        </form>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="index.html" class="logo"><img src="./img/baskin.png" alt="상단로고"></a>    
+            <nav class="tnb">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li class="item1">
+                        <a href="" class="dp1">Menu</a>
+                        <ul class="sub">
+                            <li><a href="baskin.html#page1">아이스크림</a></li>
+                            <li><a href="baskin.html#page2">아이스크림케이크</a></li>
+                            <li><a href="baskin.html#page3">음료</a></li>
+                        </ul>
+                    </li>
+                    <li class="item2">
+                        <a href="" class="dp1">영양성분 및 알레르기</a>
+                        <ul class="sub">
+                            <li><a href="tri.html#page1">아이스크림</a></li>
+                            <li><a href="tri.html#page2">아이스크림케이크</a></li>
+                            <li><a href="tri.html#page3">음료</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dp1">이벤트</a>
+                        <ul class="sub">
+                            <li><a href="event.html#page1">진행중인 이벤트</a></li>
+                            <li><a href="event.html#page2">당첨자 발표</a></li>
+                            <li><a href="event.html#page3">지난 이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="" class="dp1">가게정보</a>
+                        <ul class="sub">
+                            <li><a href="imp.html#page1">보도자료</a></li>
+                            <li><a href="imp.html#page2">매장소개</a></li>
+                            <li><a href="imp.html#page3">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="" class="dp1">게시판</a>
+                        <ul class="sub">
+                            <li><a href="brd.html#page1">공지사항</a></li>
+                            <li><a href="brd.html#page2">고객센터</a></li>
+                            <li><a href="brd.html#page3">개설문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <figure class="vs">
+            <img src="./img/banner.jpg" alt="비주얼">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <span class="sel">로그인</span>
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">로그인</h2>
+                <div class="form_fr">
+                    <form name="frm1" action="" method="post" id="loginForm" class="frm">
+                        <table class="frm_tb">
+                            <tbody>
+                                <tr>
+                                    <th><label for="id">아이디</label></th>
+                                    <td>
+                                        <input type="text" name="id" id="id" class="in_dt" required autofocus>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="id">비밀번호</label></th>
+                                    <td>
+                                        <input type="password" name="pw" id="pw" class="in_dt" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button type="submit" class="in_btn">로그인</button>
+                                        <button type="reset" class="in_btn">취소</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </section>       
     </div>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_logo"><img src="./img/baskin.png" alt="하단로고" width=150px; height=auto;></div>
+            <div class="mid_box">
+                <nav class="fnb">
+                    <a href="">개인정보 처리 방침</a>
+                    <a href="">이용약관</a>
+                    <a href="">이메일무단수집거부</a>
+                </nav>
+                <p class="addr">
+                    사업자 등록번호 : 303-81-09535 비알코리아(주) 대표이사 도세호 서울특별시 서초구 남부순환로 2620(양재동 11-149번지)  
+                </p>
+                <p class="copyright">Copyright ⓒ 2016 BRKOREA Company. All Rights Reserved.</p>
+            </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">패밀리 사이트</option>
+                    <option value="">SPC그룹사이트</option>
+                    <option value="">BR코리아</option>
+                    <option value="">해피포인트카드</option>
+                </select>
+            </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+</div>
+<a href="" class="to_top">▲</a><!-- .to_top.on -->
 </body>
 </html>
