@@ -32,6 +32,7 @@
     <script src="./js/jquery-1.11.1.js"></script>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
         /*header.css*/
         .hd {position: fixed;}
 
@@ -45,6 +46,13 @@
         .page_wrap { width: 1200px; margin: 0 auto; }
         .content {display:none;}
         .content:target {display: block;}
+
+        .borad_table {width: 100%; margin-top: 20px; border-top: 2px solid #ff7c98; }
+        .borad_table td {border-bottom: 1px solid #dadada; text-align: center; font-size: 15px;}
+        .borad_table a.tit {color: rgb(129, 33, 185); font-size: 15px; text-decoration-line:none; font-family: 'Noto Sans KR', sans-serif;}
+        .borad_table .num {color : #333; font-weight: 400; vertical-align: middle; font-family: 'Noto Sans KR', sans-serif;}
+        .borad_table .title {height:55px; padding-left: 20px; text-align: left; vertical-align: middle; }
+        .borad_table .period {font-size: 15px; vertical-align: middle; font-family: 'Noto Sans KR', sans-serif;}
 
         .page_title { padding-top: 1em; font-weight:bolder; font-size: 20px; }
         .home { color:#333; }
@@ -153,18 +161,120 @@
         <section class="page">
             <div class="page_wrap">
                 <h2 class="page_title">공지사항</h2>
-                <ul class="noti_lst">
-                    <li><span class="">1</span><span class="">제목</span><span class="">작성날짜</span></li>
-                    <li><span class="">2</span><span class="">제목</span><span class="">작성날짜</span></li>
-                    <li><span class="">3</span><span class="">제목</span><span class="">작성날짜</span></li>
-                    <li><span class="">4</span><span class="">제목</span><span class="">작성날짜</span></li>
-                    <li><span class="">5</span><span class="">제목</span><span class="">작성날짜</span></li>
-                    <li><span class="">6</span><span class="">제목</span><span class="">작성날짜</span></li>
-                    <li><span class="">7</span><span class="">제목</span><span class="">작성날짜</span></li>
-                    <li><span class="">8</span><span class="">제목</span><span class="">작성날짜</span></li>
-                    <li><span class="">9</span><span class="">제목</span><span class="">작성날짜</span></li>
-                    <li><span class="">10</span><span class="">제목</span><span class="">작성날짜</span></li>
-                </ul>
+                <table class="borad_table">
+					<colgroup>
+						<col width="8%">
+						<col width="*">
+						<col width="10%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td class="num">15</td>
+							<td class="title">
+							    <a href="" class="tit">직접 구워 맛있는 Belgian waffle Cone 판매</a>	
+						    </td>
+							<td class="period">2022-10-12</td>
+						</tr>
+						<tr>
+							<td class="num">14</td>
+							<td class="title">
+								<a href="" class="tit">단체주문도 언제, 어디서나 배스킨라빈스!</a>
+							</td>
+							<td class="period">2022-07-01</td>
+						</tr>
+						<tr>
+							<td class="num">13</td>
+							<td class="title">
+								<a href="" class="tit">배스킨라빈스의 1월 신규 MD를 만나보세요!</a>
+							</td>
+							<td class="period">2022-02-11</td>
+						</tr>
+                        <tr>
+							<td class="num">12</td>
+							<td class="title">
+								<a href="" class="tit">배스킨라빈스의 스페셜 MD를 만나보세요!</a>
+							</td>
+							<td class="period">2021-06-15</td>
+						</tr>
+						<tr>
+							<td class="num">11</td>
+							<td class="title">
+								<a href="" class="tit">Taste the Original 새로워진 그린티, 31요거트!</a>
+							</td>
+							<td class="period">2021-06-15</td>
+						</tr>
+						<tr>
+							<td class="num">10</td>
+							<td class="title">
+								<a href="" class="tit">[신제품 출시] 밀탑의 시그니처 국내산 팥으로 더욱 맛있어진 팥빙수 블라스트 출시!</a>
+                            </td>
+							<td class="period">2021-05-20</td>
+						</tr>
+						<tr>
+							<td class="num">9</td>
+							<td class="title">
+								<a href="" class="tit">[신제품 출시] 밀탑의 시그니처 국내산 팥으로 더욱 맛있는 배라 빙수를 즐겨보세요!</a>
+						    </td>
+							<td class="period">2021-05-13</td>
+						</tr>
+						<tr>
+							<td class="num">8</td>
+							<td class="title">
+								<a href="" class="tit">[신제품 출시] 워터프로세스 방식으로 풍미는 보존, 카페인은 제거한 디카페인 커피 출시!</a>
+							</td>
+							<td class="period">2021-04-30</td>
+						</tr>
+						<tr>
+							<td class="num">7</td>
+							<td class="title">
+								<a href="" class="tit">[신제품 출시] 달콤한 연유와 딸기 과육이 들어있는 딸기 연유 라떼 출시!</a>
+						    </td>
+							<td class="period">2021-03-17</td>
+						</tr>
+						<tr>
+							<td class="num">6</td>
+							<td class="title">
+								<a href="" class="tit">월리를 찾아라 닮은꼴 콘테스트 당첨자 발표</a>
+							</td>
+							<td class="period">2020-12-22</td>
+						</tr>
+						<tr>
+							<td class="num">5</td>
+							<td class="title">
+								<a href="" class="tit">개인정보처리방침 변경 안내</a>
+							</td>
+							<td class="period">2020-07-14</td>
+						</tr>
+						<tr>
+							<td class="num">4</td>
+							<td class="title">
+								<a href="" class="tit">[신제품 출시] 아이스크림과 함께 즐기는 배스킨라빙수 출시</a>
+							</td>
+							<td class="period">2020-06-10</td>
+						</tr>
+						<tr>
+							<td class="num">3</td>
+							<td class="title">
+								<a href="" class="tit">배라를 배달로 먹방 콘테스트 수상자 발표</a>
+							</td>
+							<td class="period">2020-05-15</td>
+						</tr>
+						<tr>
+							<td class="num">2</td>
+							<td class="title">
+								<a href="" class="tit">6월 이달의 맛 선거 투표 결과 발표</a>
+						    </td>
+							<td class="period">2020-04-29</td>
+						</tr>
+						<tr>
+							<td class="num">1</td>
+							<td class="title">
+								<a href="=" class="tit">[신제품 출시] 깔끔한 산미와 따사로운 햇살같은 커피원두 카페브리즈 써니 출시!</a>
+							</td>
+							<td class="period">2020-01-10</td>
+						</tr>
+					</tbody>
+				</table> 
             </div>
         </section>
     </div>
