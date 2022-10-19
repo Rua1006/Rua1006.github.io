@@ -32,6 +32,7 @@
     <script src="./js/jquery-1.11.1.js"></script>
 
     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
         /*header.css*/
         .hd {position: fixed;}
 
@@ -46,14 +47,31 @@
         .content {display:none;}
         .content:target {display: block;}
 
-        .borad_table {width: 100%; margin-top: 20px; border-top: 2px solid #ff7c98; }
+        .borad_table {width: 100%; border-top: 2px solid #ff7c98; border-bottom: 2px solid #ff7c98; }
         .borad_table td {border-bottom: 1px solid #dadada; text-align: center; font-size: 15px;}
         .borad_table a.tit {color: rgb(129, 33, 185); font-size: 15px;}
         .borad_table .num {color : #333; font-weight: 400; vertical-align: middle;}
         .borad_table .title {height:55px; padding-left: 20px; text-align: left; vertical-align: middle;}
         .borad_table .period {font-size: 15px; vertical-align: middle;}
 
-        .page_title { padding-top: 1em; font-weight:bolder; font-size: 20px; }
+        .img_box1 {width: 400px; border: 4px solid #ffe5c365; float: left; margin-top: 10%; margin-left: 10%;}
+        .img_box2 {width: 400px; border: 4px solid #ffe5c365; float: right; margin-top: 10%; margin-right: 10%;}
+        .img_box_fr {display: block; clear: both; width: 400px; height:500px;}
+        .img_box_fr h2 {text-align: center; font-family: 'Noto Sans KR', sans-serif; font-size: 45px; margin-top: 30px;}
+        .img_box_fr .hu {width: 250px; height: 226.56px; margin-left:75px; }
+        .img_box_fr span {clear: both; display: block; text-align: center; font-family: 'Noto Sans KR', sans-serif; margin-bottom: 30px;}
+        .in_btn {display:block; background-color:#ebaccb; min-width:120px; height: 32px;  line-height: 32px; border-radius:20px; float:left; cursor:pointer; 
+        color: #fff; font-size: 15px; border: 0; outline: 0; margin-left: 140px; font-size: 17px;}
+        .in_btn a {color:#fff}
+        .in_btn:hover { background-color: #3c3c8c; }
+
+        .map_fr {clear:both; display: block; margin: 15px 0px 20px 200px ; font-family: 'Noto Sans KR', sans-serif;}
+        .map_fr .sub_title1 {font-size: 20px; margin-bottom: 5px;}
+        .map_fr .sub_title2 {font-size: 20px; margin-top: 16px; margin-bottom: 5px;}
+        .map_fr .subway {float: left;}
+        .map_fr .car {float: right; margin-right: 40%;}
+
+        .page_title { padding-top: 1em; font-weight:bolder; font-size: 30px; padding-bottom: 1em; text-align: center;}
         .home { color:#333; }
         .to_top { position:fixed; bottom:80px; right:80px; z-index:999; background-color:rgba(11,11,11,0.75); color:#fff; display:block; width: 60px;
         height: 60px; line-height: 60px; text-align: center; font-size:30px; border-radius:32px; visibility:hidden; transition-duration:0.8s;
@@ -140,7 +158,7 @@
                         <a href="" class="dp1">가게정보</a>
                         <ul class="sub">
                             <li><a href="imp.html#page1">보도자료</a></li>
-                            <li><a href="imp.html#page2">매장소개</a></li>
+                            <li><a href="imp.html#page2">채용정보</a></li>
                             <li><a href="imp.html#page3">CONTACT US</a></li>
                         </ul>
                     </li>
@@ -172,7 +190,7 @@
                 </select> &gt;
                 <select name="sel2" id="sel2" class="sel">
                     <option selected>보도자료</option>
-                    <option value="imp.html#page2">매장소개</option>
+                    <option value="imp.html#page2">채용정보</option>
                     <option value="imp.html#page3">CONTACT US</option>
                 </select>
             </div>
@@ -187,13 +205,6 @@
 						<col width="10%">
 					</colgroup>
 					<tbody>
-						<tr>
-							<td class="num">15</td>
-							<td class="title">
-							    <a href="" class="tit">SPC 배스킨라빈스, 한정판 ‘짱구 캐릭터 키링’ 20종 출시</a>	
-						    </td>
-							<td class="period">2022-10-12</td>
-						</tr>
 						<tr>
 							<td class="num">14</td>
 							<td class="title">
@@ -312,7 +323,7 @@
                     <option value="brd.html#page1">게시판</option>
                 </select> &gt;
                 <select name="sel4" id="sel4" class="sel">
-                    <option selected>매장소개</option>
+                    <option selected>채용정보</option>
                     <option value="imp.html#page1">보도자료</option>
                     <option value="imp.html#page3">CONTACT US</option>
                 </select>
@@ -320,7 +331,33 @@
         </div>
         <section class="page">
             <div class="page_wrap">
-                <h2 class="page_title">매장소개</h2>
+                <h2 class="page_title">채용정보</h2>
+                <div class="img_box1">
+                    <div class="img_box_fr">
+                        <h2>아르바이트</h2>
+                        <img src="./img/imp_img/hu2.png" alt="아르바이트" class="hu">
+                        <span>
+                        즐거운 일터에서 함께 일하며 경험을 쌓고,<br>
+                        다양한 혜택이 함께하는 최고의 기회를 누려보세요!<br>
+                        가맹점 아르바이트는<br>
+                        아르바이트 포털 사이트에서 모집하고 있습니다.
+                        </span>
+                        <button type="button" class="in_btn"><a href="http://www.albamon.com/" target="_blank">자세히보기</a><button>
+                    </div>
+                </div>
+                <div class="img_box2">
+                    <div class="img_box_fr">
+                        <h2>사무직</h2>
+                        <img src="./img/imp_img/hu1.png" alt="사무직" class="hu">
+                        <span>
+                        끊임없는 혁신으로 성공을 창조해온 배스킨라빈스!<br>
+                        이곳에서 당신의 소중한 꿈을 펼쳐보세요!<br>
+                        배스킨라빈스 사무직은<br>
+                        비알코리아 사이트를 통해 모집하고 있습니다.
+                        </span>
+                        <button type="button" class="in_btn"><a href="https://spc.recruiter.co.kr/appsite/company/index" target="_blank">자세히보기</a></button>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
@@ -341,7 +378,7 @@
                 <select name="sel6" id="sel6" class="sel">
                     <option selected>CONTACT US</option>
                     <option value="imp.html#page1">보도자료</option>
-                    <option value="imp.html#page2">매장소개</option>
+                    <option value="imp.html#page2">채용정보</option>
                 </select>
             </div>
         </div>
@@ -349,7 +386,7 @@
             <div class="page_wrap">
                 <h2 class="page_title">CONTACT US</h2>
                 
-                <div id="map" style="margin-left:120px;	margin-top:50px; width:800px;height:600px; background:white; ">
+                <div id="map" style="margin-left:200px;	margin-top:10px; width:800px;height:600px; background:white; ">
 
                 </div>
                 
@@ -433,10 +470,18 @@
                 
                 </script>
 
-                <h3>찾아오시는길</h3>
-                <span>지하철 이용3호선 양재역 5번출구, 도보로 3분 소요 (약 200M)</span><br>    
-                <span>차량 이용 남부순환로 대로변 위치 (양재역 -> 도곡역 방향)</span>
-            </div>
+                <div class="map_fr">
+                    <h2 class="sub_title1">비알코리아㈜</h2>
+                    <p>서울시 서초구 남부순환로 2620 (양재동 11-149번지)<br> TEL : 080-555-3131</p>
+
+                    <h2 class="sub_title2">비알코리아 ㈜ 오시는 방법</h2>
+                    <span class="subway">
+                    지하철 이용 <br> 3호선 양재역 5번출구, 도보로 3분 소요 (약 200M)
+                    </span>   
+                    <span class="car">
+                    차량 이용<br> 남부순환로 대로변 위치 (양재역 -> 도곡역 방향)
+                    </span>
+                </div>
         </section>
     </div>
     <script>
