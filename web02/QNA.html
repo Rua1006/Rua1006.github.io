@@ -50,11 +50,17 @@
     .item-title {display: block; margin-bottom: 0.5em; font-size: 20px;}
     .item-subtitle {display: block; margin-bottom: 0.5em; font-size: 18px;}
     .item-btitle {font-size: 50px; margin-bottom: 1em;}
-    .insert {width: 1000px; margin-left: 30%;}
+    .insert {width: 1000px; margin-left: 20%;}
     .input-group {align-items: flex-end;}
     .email {width: 480px; float: left;}
     .phone {width: 480px; float: right;}
-    .text-h {}
+    #sidebarMenu {height: 98vh; margin: 0; float: left; padding-top: 100px;  text-align: center;} 
+    .maincontent {float:left; width: auto; min-width: 1300px; height: auto; min-height: 100%; padding-top: 100px; padding-bottom: 600px; margin-left: 20px;}
+    body {margin: 0; padding: 0; height: 100%;}  
+    #body-wrapper {min-height: 100%; position: relative;}
+    .maincontent {margin-top: 100px; padding-bottom: 600px;}
+    .subtitle1 { border-top: solid 1px #333; border-bottom: solid 1px #333; line-height: 30px; width: auto; min-width: 1320px; margin-bottom: 20px; background-color: #adb5bd;}  
+    .nav-title {display: inline; text-decoration: none; margin-left: 50px; color: #333; font-weight: 500;}
     /* button */
     .btn-outline-secondary {display: block; text-align: center;}
     .btn-dark{display: block; text-align: center;}
@@ -64,6 +70,11 @@
     .text-muted {margin-top: 1em;}
     .container1 {text-align: center; font-size: 12px; padding-top: 2em; padding-bottom: 1em;}
     .container1 a {color: #333;}
+    .in_container{display: block;}
+    html, body {height: 100%;}
+    body {display: flex; flex-direction: column; margin: 0; }
+    .accordion {border-bottom: 1px solid #adb5bd; border-top: 1px solid #adb5bd;}
+    .accordion-item {font-size: 13px; font-weight: 600;}
     </style>    
 </head>
 <body>
@@ -120,72 +131,101 @@
       </div>
     </div>
   </nav>
-<div class="content-side container-fluid">
-<section class="side-nav">
-    <ul class="nav flex-column">
-        <h3 class="item-btitle">마이페이지</h3>
-            <li class="nav-item">
-                <span class="item-title">쇼핑정보</span>
-            <li class="nav-item">
-            <a class="nav-link item-subtitle" href="#">주문/배송</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link item-subtitle" href="#">취소/반품 현황</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link item-subtitle" href="#">상품 리뷰</a>
-            </li>
-            <li class="nav-item">
-                <span class="item-title item-subtitle">계정정보</span>
-            <li class="nav-item">
-                <a class="nav-link item-subtitle" href="#">회원정보 수정</a>
-            </li>
-            <li class="nav-item">
-                <span class="item-title">고객센터</span>
-            <li class="nav-item">
-            <a class="nav-link item-subtitle" href="#">자주묻는질문</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link item-subtitle" href="#">1:1질문하기</a>
-            </li>
+  <div id="body-wrapper">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item mt-5">
+            <a class="nav-link sidebarsm" href="#">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>  -->
+                마이페이지
+            </a>
+          </li>
+          </li>
+          <li class="nav-item mt-3">
+            <a class="nav-link sidebarsm" href="#">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> -->
+              주문/배송
+            </a>
+          </li>
+          <li class="nav-item mt-3">
+            <a class="nav-link sidebarsm" href="#">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg> -->
+                취소/반품 현황
+            </a>
+          <li class="nav-item mt-3">
+            <a class="nav-link sidebarsm" href="#">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>  -->
+                상품 리뷰
+            </a>
+          </li>		     
+          <li class="nav-item mt-3">
+            <a class="nav-link sidebarsm" href="#">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> -->
+                계정정보
+            </a>
+          </li>
+          <li class="nav-item mt-3">
+            <a class="nav-link sidebarsm" href="#">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> -->
+                회원정보 수정
+            </a>
+          </li>
+          <li class="nav-item mt-3">
+            <a class="nav-link sidebarsm" href="#">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg> -->
+                고객센터
+            </a>
+          </li>
+          <li class="nav-item mt-3">
+            <a class="nav-link sidebarsm" href="#">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg> -->
+                자주묻는질문
+            </a>
+          </li>
+          <li class="nav-item mt-3">
+            <a class="nav-link sidebarsm" href="#">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg> -->
+                1:1질문하기
+            </a>
+          </li>
         </ul>
-      </ul>
-</section>
-<section class="maincontent container-fluid">
-        <form action="" class="insert">
-            <div class="container subtitle">
-                <div class="list-title font--kr litletitle">문의하기</strong></div>
+      </div>
+    </nav>
+    <section class="maincontent container-fluid">
+      <form action="" class="insert">
+          <div class="container subtitle">
+              <div class="list-title font--kr litletitle">문의하기</strong></div>
+          </div>
+          <div class="container subtitle2">
+              <div class="list-title font--kr litletitle">1:1문의</strong></div>
+          </div>
+          <div class="button">
+              <button type="button" class="btn btn-outline-secondary col-6 mx-auto">자주 묻는 질문 바로가기 ▶</button>    
+          </div>
+          <div class="input-group mb-5 mt-4 email">
+              <span class="input-group-text" id="inputGroup-sizing-default">이메일</span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>    
+          <div class="input-group mb-5 mt-4 phone">
+              <span class="input-group-text" id="inputGroup-sizing-default">휴대폰</span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="input-group mb-5">
+              <span class="input-group-text" id="inputGroup-sizing-default">분류</span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="input-group"> 
+              <textarea class="form-control" aria-label="With textarea" placeholder="내용입력" rows="10" cols="8"></textarea>
             </div>
-            <div class="container subtitle2">
-                <div class="list-title font--kr litletitle">1:1문의</strong></div>
-            </div>
-            <div class="button">
-                <button type="button" class="btn btn-outline-secondary col-6 mx-auto">자주 묻는 질문 바로가기 ▶</button>    
-            </div>
-            <div class="input-group mb-5 mt-4 email">
-                <span class="input-group-text" id="inputGroup-sizing-default">이메일</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div>    
-            <div class="input-group mb-5 mt-4 phone">
-                <span class="input-group-text" id="inputGroup-sizing-default">휴대폰</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div>
-            <div class="input-group mb-5">
-                <span class="input-group-text" id="inputGroup-sizing-default">분류</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div>
-            <div class="input-group"> 
-                <textarea class="form-control" aria-label="With textarea" placeholder="내용입력" rows="10" cols="8"></textarea>
-              </div>
-            <div class="button">
-                <button type="button" class="btn btn-dark col-6 mx-auto">제출하기</button>    
-            </div>
-        </form>
-</section>
+          <div class="button">
+              <button type="button" class="btn btn-dark col-6 mx-auto">제출하기</button>    
+          </div>
+      </form>
+    </section>
 </div>
 </body>
-<footer class="n-footer">
-<div class="container">
+<div class="container-sticky">
   <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
     <div class="col mb-3">
     </div>
@@ -215,7 +255,7 @@
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
       </ul>
     </div>
-  </footer>
+    </footer>
 </div>
 <div class="container1 border-top">
   <p>주)아이아이컴바인드 | 사업자등록번호: 119-86-38589 | 대표자: 김한국 | 서울특별시 마포구 어울마당로5길 41 | 대표번호: 1644-1246 | 이메일: <a href="">cs@tamburins.com</a></p>
@@ -226,5 +266,4 @@
   <p>고객님의 안전한 현금자산 거래를 위하여 하나은행과 채무지급보증계약을 체결하여 보장해드리고 있습니다. 서비스 가입사실확인</p>
   <p class="text-center text-muted">©  탬버린즈 대한민국</p>
 </div>
-</footer>
 </html>

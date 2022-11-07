@@ -31,29 +31,44 @@
     .navbar {--bs-navbar-padding-y: 0; height: 100px;}
     .bag {margin-left: 20px;}
     /* main */
-    .content {padding-top: 100px; margin-bottom: 20px; width: 700px;}
+    .content {padding-top: 100px; margin-bottom: 20px;}
+    .content-side {margin-top: 15%; padding-bottom: 15%; margin-left: 8%;}
     .col-lg-6 {font-size: 15px; line-height: 30px; word-break: keep-all;}
     .my-5 {margin-top: 0rem!important; margin-bottom: 0rem!important; }
     .product1 {margin-top: 30px;}
-    .subtitle {border-bottom: 1px solid #adb5bd; padding-bottom: 1em; font-size: 17px; font-weight: 700;}
+    .subtitle {border-bottom: 1px solid #adb5bd; padding-bottom: 1em; font-size: 17px; font-weight: 700; width: 400px; text-align: center; margin-left: 0;}
     .card {margin-bottom: 30px;}
     .card-text1{word-break: keep-all; font-size: 12px; margin-bottom: 1em;}
     .card-title {font-size: 17px; font-weight: 600; margin-bottom: 1em;}
     .item-spec {display: block; float: right;}
-    .btn {margin-top: 1em; float: right;}
+    .btn {margin-top: 1em;}
     .col-lg-6 {flex: 0 0 auto; width: 71%; margin-top: 2em;}
     .subtitle_mini {font-size: 17px; font-weight: 600; margin-bottom: 1em;}
     .product1 {margin-bottom:30px;}
-    .maincontent {float: right;}
-    .detail-imgs {height: 100vh; width: 700px; display: block;}
-    .product-detail {width: 700px;}
+    .side-nav {text-align: center; float: left; border-right: 1px solid #adb5bd; padding-right: 40px;}
+    .item-title {display: block; margin-bottom: 0.5em; font-size: 20px;}
+    .item-subtitle {display: block; margin-bottom: 0.5em; font-size: 18px;}
+    .item-btitle {font-size: 50px; margin-bottom: 1em;}
+    .input-group {align-items: flex-end;}
+    .maincontent {width: 50%; height: auto; min-height: 100%; padding-top: 100px; padding-bottom: 600px; float:right; padding-left: 5%; padding-right: 5%;}
+    body {margin: 0; padding: 0; height: 100%;}  
+    #body-wrapper {min-height: 100%; position: relative;}
+    .maincontent {margin-top: 100px; padding-bottom: 600px;}
+    .subtitle1 { border-top: solid 1px #333; border-bottom: solid 1px #333; line-height: 30px; width: auto; min-width: 1320px; margin-bottom: 20px; background-color: #adb5bd;}  
+    .nav-title {display: inline; text-decoration: none; margin-left: 50px; color: #333; font-weight: 500;}
+    .sidebar-sticky {height: 98vh; margin: 0; float: left;  text-align: center; width: 50%; display: block;} 
+    .productimg {width: 800px; height: auto; margin-left: 100px;}
+    /* product-detail */
+
     /* foot */
     .col {text-align: center;}
     .col h5 {margin: 1em;}
     .text-muted {margin-top: 1em;}
-    .container {display: block;}
     .container1 {text-align: center; font-size: 12px; padding-top: 2em; padding-bottom: 1em;}
     .container1 a {color: #333;}
+    .in_container{display: block;}
+    html, body {height: 100%;}
+    body {display: flex; flex-direction: column; margin: 0; }
     </style>    
 </head>
 <body>
@@ -110,48 +125,51 @@
       </div>
     </div>
   </nav>
-<div class="product-detail">
-    <div class="detail-imgs relative">
-        <div class="detail-imgs__container scrollable-content swiper-container jsImgSlide" data-break="768">
-            <img class="detail-imgs__img" src="./img/test/sample_images_01.png" >
-        </div>
+<div id="body-wrapper">  
+    <div class="sidebar-sticky">
+      <img src="./img/gift/PLP_perumeHandCare_veinFey9.jpg" alt="제품이미지" class="productimg">
     </div>
-</div>
-<section class="maincontent">
-    <form action="" class="insert">
-        <div class="container subtitle">
-            <div class="list-title font--kr litletitle">회원정보변경</strong></div>
+  <section class="maincontent">
+      <div class="product-info__inner product-box">
+        <!-- 카테고리 네임 -->
+        <div class="product__name mt-3 mb-3">선물 추천</div>
+        <!-- 카테고리 네임 -->
+        <div class="product-info">
+            <div class="product-subname mt-3 mb-3">퍼퓸핸드 미니 듀오 세트 베스트 (FEY9+VEIN)</div>
+            <div class="product-price mt-3 mb-3"><strong class="price_status">33,500원</strong></div>
         </div>
-        <div class="input-group mb-5 mt-4 w-50">
-            <span class="input-group-text" id="inputGroup-sizing-default">아이디</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>    
-        <div class="input-group mb-5 w-50">
-            <span class="input-group-text" id="inputGroup-sizing-default">비밀번호</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            <button class="btn btn-dark" type="button" id="button-addon2">비밀번호 중복 확인</button>
+        <div class="product-info-size mt-3 mb-3">
+          <span>15mL*2</span>
         </div>
-        <div class="input-group mb-5 w-50">
-            <span class="input-group-text" id="inputGroup-sizing-default">이름</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <div class="datail_info2">
+          <div class="product-desc-title mt-3 mb-3"> 퍼퓸핸드 베스트 향</div>
+          <div class="product-desc-1 mt-3 mb-3">
+            [FEY9]<br>
+            무화과나무 | 엠브레트 씨앗 | 달콤 씁쓸한<br>
+            열매 안에서 꽃을 피우는 무화과는 절제된 향취를 가집니다. 잎과 과육의 달콤 씁쓸함이 더해져 향은 더욱 풍부해지고, 엠브레트 씨앗과 엠버의 부드러운 조화는 깊이감 있는 여운을 남기며 향의 매력에 빠져들게 만듭니다.<br><br>
+            [VEIN]<br>
+            월계수 잎 | 은방울꽃 | 정돈된 가죽<br>
+            가볍게 감싸는 월계수 잎과 은방울꽃의 깨끗함 뒤로, 정돈된 가죽 향이 약간의 긴장감을 선명하게 유지해 줍니다. 가죽의 무게감은 잔향의 머스크와 만나 눈부신 대조를 이루며 한층 부드러워진 맥박의 잔잔한 템포를 느끼게 합니다.<br><br>
+            향수처럼 사용할 수 있는 크림 타입 퍼퓸.<br>
+          </div>
+          <div class="product-desc-2 mt-3 mb-3">
+            [FEY9]<br>
+            무화과나무 | 엠브레트 씨앗 | 달콤 씁쓸한<br>
+            열매 안에서 꽃을 피우는 무화과는 절제된 향취를 가집니다. 잎과 과육의 달콤 씁쓸함이 더해져 향은 더욱 풍부해지고, 엠브레트 씨앗과 엠버의 부드러운 조화는 깊이감 있는 여운을 남기며 향의 매력에 빠져들게 만듭니다.<br><br>
+            [VEIN]<br>
+            월계수 잎 | 은방울꽃 | 정돈된 가죽<br>
+            가볍게 감싸는 월계수 잎과 은방울꽃의 깨끗함 뒤로, 정돈된 가죽 향이 약간의 긴장감을 선명하게 유지해 줍니다. 가죽의 무게감은 잔향의 머스크와 만나 눈부신 대조를 이루며 한층 부드러워진 맥박의 잔잔한 템포를 느끼게 합니다.<br><br>
+            향수처럼 사용할 수 있는 크림 타입 퍼퓸.<br><br>
+          </div>
         </div>
-        <div class="input-group mb-5 w-50">
-            <span class="input-group-text" id="inputGroup-sizing-default">연락처</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>
-        <div class="input-group mb-5 w-50">
-            <span class="input-group-text" id="inputGroup-sizing-default">생년월일</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>
-        <div class="button">
-            <button type="button" class="btn btn-dark">회원 정보 변경</button>    
-        </div>
-    </form>
-</section>
+      </div>
+      <div class="button">
+        <button type="button" class="btn btn-dark">장바구니로 이동</button>    
+      </div>
+  </section>
 </div>
 </body>
-<footer class="n-footer">
-<div class="container">
+<div class="container-sticky">
   <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
     <div class="col mb-3">
     </div>
@@ -181,7 +199,7 @@
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
       </ul>
     </div>
-  </footer>
+    </footer>
 </div>
 <div class="container1 border-top">
   <p>주)아이아이컴바인드 | 사업자등록번호: 119-86-38589 | 대표자: 김한국 | 서울특별시 마포구 어울마당로5길 41 | 대표번호: 1644-1246 | 이메일: <a href="">cs@tamburins.com</a></p>
@@ -192,5 +210,4 @@
   <p>고객님의 안전한 현금자산 거래를 위하여 하나은행과 채무지급보증계약을 체결하여 보장해드리고 있습니다. 서비스 가입사실확인</p>
   <p class="text-center text-muted">©  탬버린즈 대한민국</p>
 </div>
-</footer>
 </html>
