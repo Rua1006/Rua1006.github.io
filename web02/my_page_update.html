@@ -71,12 +71,13 @@
     </style>    
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-white fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="./img/logo/logo5.png" alt="로고" width="100" height="auto"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="navbar navbar-expand-lg bg-white fixed-top">
+  <div class="container-fluid">
+    <!-- 로고 클릭시 메인페이지 이동 -->
+    <a class="navbar-brand" href="index.html"><img src="./img/logo/logo5.png" alt="로고" width="100" height="auto"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
@@ -108,13 +109,23 @@
             </ul>
           </li>
         </ul>
+        <!-- navi 끝부분 -->
         <ul class="nav justify-content-end">
           <li class="nav-item">
             <a class="nav-link text-secondary" href="login.html">로그인</a>
           </li> 
+          <!-- 마이페이지 -->
+          <!-- <li class="nav-item">
+            <a class="nav-link text-secondary" href="#">마이페이지</a>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link text-secondary" href="join_term.html">회원가입</a>
           </li>
+          <!-- 로그아웃 -->
+          <!-- <li class="nav-item">
+            <a class="nav-link text-secondary" href="#">로그아웃</a>
+          </li> -->
+          <!-- 비회원 및 회원 확인 -->
           <li>
             <a class="navbar-brand bag" href="cart.html">
             <img src="./img/icon/noun-shopping-bag-2930765.png" alt="장바구니" width="30" height="30">
@@ -122,69 +133,69 @@
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
+  </div>
+</nav>
 <div id="body-wrapper">
   <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
     <div class="sidebar-sticky">
       <ul class="nav flex-column">
         <li class="nav-item mt-5">
           <a class="nav-link sidebarsm" href="#">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>  -->
-              마이페이지
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>  -->
+          마이페이지
           </a>
         </li>
         </li>
         <li class="nav-item mt-3">
           <a class="nav-link sidebarsm" href="#">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> -->
-            주문/배송
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> -->
+          주문/배송
           </a>
         </li>
         <li class="nav-item mt-3">
           <a class="nav-link sidebarsm" href="#">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg> -->
-              취소/반품 현황
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg> -->
+          취소/반품 현황
           </a>
         <li class="nav-item mt-3">
           <a class="nav-link sidebarsm" href="#">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>  -->
-              상품 리뷰
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>  -->
+          상품 리뷰
           </a>
         </li>		     
         <li class="nav-item mt-3">
           <a class="nav-link sidebarsm" href="#">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> -->
-              계정정보
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> -->
+          계정정보
           </a>
         </li>
         <li class="nav-item mt-3">
           <a class="nav-link sidebarsm" href="#">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> -->
-              회원정보 수정
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> -->
+          회원정보 수정
           </a>
         </li>
         <li class="nav-item mt-3">
           <a class="nav-link sidebarsm" href="#">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg> -->
-              고객센터
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg> -->
+          고객센터
           </a>
         </li>
         <li class="nav-item mt-3">
           <a class="nav-link sidebarsm" href="#">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg> -->
-              자주묻는질문
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg> -->
+          자주묻는질문
           </a>
         </li>
         <li class="nav-item mt-3">
           <a class="nav-link sidebarsm" href="#">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg> -->
-              1:1질문하기
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg> -->
+          1:1질문하기
           </a>
         </li>
       </ul>
     </div>
-  </nav>
+   </nav>
   <section class="maincontent">
     <form action="" class="insert">
         <div class="container subtitle">
@@ -218,45 +229,47 @@
   </section>
 </div>
 </body>
-<div class="container-sticky">
+<footer class="ft">
+  <div class="container-sticky">
   <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-    <div class="col mb-3">
-    </div>
-    <div class="col mb-3">
-      <h5>선물추천</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">온라인서비스</a></li>
-      </ul>
-    </div>
-    <div class="col mb-3">
+      <!-- 왼쪽 비울려고 생성 -->
+      <div class="col mb-3"></div>
+      <div class="col mb-3">
+          <h5>선물추천</h5>
+          <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">온라인서비스</a></li>
+          </ul>
+      </div>
+      <div class="col mb-3">
       <h5>고객센터</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">주문 배송 조회</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">적립금 현황</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">고객서비스</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">자주 묻는 질문</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">1:1문의하기</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">상품 문의 내역</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">주문 배송 조회</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">적립금 현황</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">고객서비스</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">자주 묻는 질문</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">1:1문의하기</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">상품 문의 내역</a></li>
       </ul>
-    </div>
-    <div class="col mb-3">
-      <h5>소셜</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kakaotalk</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Weibo</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
-      </ul>
-    </div>
-    </footer>
-</div>
-<div class="container1 border-top">
-  <p>주)아이아이컴바인드 | 사업자등록번호: 119-86-38589 | 대표자: 김한국 | 서울특별시 마포구 어울마당로5길 41 | 대표번호: 1644-1246 | 이메일: <a href="">cs@tamburins.com</a></p>
-  <br>    
-  <p>개인정보 보호 책임자: 정태호 | 호스팅 서비스 사업자: Aws | 통신판매업신고: 제 2014-서울마포-1050 호 (<a href="">사업자정보확인</a>) | <a href="">개인정보처리방침</a> | <a href="">이용약관</a></p>
-</div>
-<div class="container1">
-  <p>고객님의 안전한 현금자산 거래를 위하여 하나은행과 채무지급보증계약을 체결하여 보장해드리고 있습니다. 서비스 가입사실확인</p>
-  <p class="text-center text-muted">©  탬버린즈 대한민국</p>
-</div>
+      </div>
+      <div class="col mb-3">
+          <h5>소셜</h5>
+          <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kakaotalk</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Weibo</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
+          </ul>
+      </div>
+  </footer>
+  </div>
+  <div class="container1 border-top">
+      <p>주)아이아이컴바인드 | 사업자등록번호: 119-86-38589 | 대표자: 김한국 | 서울특별시 마포구 어울마당로5길 41 | 대표번호: 1644-1246 | 이메일: <a href="">cs@tamburins.com</a></p>
+      <br>    
+      <p>개인정보 보호 책임자: 정태호 | 호스팅 서비스 사업자: Aws | 통신판매업신고: 제 2014-서울마포-1050 호 (<a href="">사업자정보확인</a>) | <a href="">개인정보처리방침</a> | <a href="">이용약관</a></p>
+  </div>
+  <div class="container1">
+      <p>고객님의 안전한 현금자산 거래를 위하여 하나은행과 채무지급보증계약을 체결하여 보장해드리고 있습니다. 서비스 가입사실확인</p>
+      <p class="text-center text-muted">©  탬버린즈 대한민국</p>
+  </div>
+</footer>
 </html>

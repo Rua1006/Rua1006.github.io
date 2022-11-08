@@ -53,12 +53,13 @@
     </style>    
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-white fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="./img/logo/logo5.png" alt="로고" width="100" height="auto"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="navbar navbar-expand-lg bg-white fixed-top">
+  <div class="container-fluid">
+    <!-- 로고 클릭시 메인페이지 이동 -->
+    <a class="navbar-brand" href="index.html"><img src="./img/logo/logo5.png" alt="로고" width="100" height="auto"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
@@ -90,13 +91,23 @@
             </ul>
           </li>
         </ul>
+        <!-- navi 끝부분 -->
         <ul class="nav justify-content-end">
           <li class="nav-item">
             <a class="nav-link text-secondary" href="login.html">로그인</a>
           </li> 
+          <!-- 마이페이지 -->
+          <!-- <li class="nav-item">
+            <a class="nav-link text-secondary" href="#">마이페이지</a>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link text-secondary" href="join_term.html">회원가입</a>
           </li>
+          <!-- 로그아웃 -->
+          <!-- <li class="nav-item">
+            <a class="nav-link text-secondary" href="#">로그아웃</a>
+          </li> -->
+          <!-- 비회원 및 회원 확인 -->
           <li>
             <a class="navbar-brand bag" href="cart.html">
             <img src="./img/icon/noun-shopping-bag-2930765.png" alt="장바구니" width="30" height="30">
@@ -104,16 +115,15 @@
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
+  </div>
+</nav>
 <div class="content">
-    
-    <div class="login-page bg-light">
-        <div class="container-fluid">
-            <div class="container subtitle">
-                <div class="list-title font--kr">회원 이용 약관</strong></div>
-            </div>
-            <div class="agree_fr ">
+  <div class="login-page bg-light">
+    <div class="container-fluid">
+      <div class="container subtitle">
+          <div class="list-title font--kr">회원 이용 약관</strong></div>
+      </div>
+      <div class="agree_fr ">
 제1장 총칙
 
 제1조(목적) 이 약관은 회사가 온라인으로 제공하는 디지털콘텐츠(이하 "콘텐츠"라고 한다) 및 제반서비스의 이용과 관련하여 회사와 이용자와의 권리, 의무 및 책임사항 등을 규정함을 목적으로 합니다. 
@@ -409,58 +419,58 @@
 ④ "회사"는 "이용자" 상호간 또는 "이용자"와 제3자 간에 "콘텐츠"를 매개로 하여 발생한 분쟁 등에 대하여 책임을 지지 않습니다. 
 
 제33조(분쟁의 해결) "회사"는 분쟁이 발생하였을 경우에 "이용자"가 제기하는 정당한 의견이나 불만을 반영하여 적절하고 신속한 조치를 취합니다. 다만, 신속한 처리가 곤란한 경우에 "회사"는 "이용자"에게 그 사유와 처리일정을 통보합니다.                     
-            </div>
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-                <label class="form-check-label" for="inlineFormCheck">이용약관 동의</label>
-            </div>
-        <div class="button">
-            <button type="button" class="btn btn-dark">회원가입으로 이동</button>    
-        </div>
-        </div>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+        <label class="form-check-label" for="inlineFormCheck">이용약관 동의</label>
+      </div>
+      <div class="button pb-5">
+          <button type="button" class="btn btn-dark">회원가입으로 이동</button>    
+      </div>
     </div>
+  </div>
 </body>
-<footer class="n-footer">
-<div class="container">
+<footer class="ft">
+  <div class="container-sticky">
   <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-    <div class="col mb-3">
-    </div>
-    <div class="col mb-3">
-      <h5>선물추천</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">온라인서비스</a></li>
-      </ul>
-    </div>
-    <div class="col mb-3">
+      <!-- 왼쪽 비울려고 생성 -->
+      <div class="col mb-3"></div>
+      <div class="col mb-3">
+          <h5>선물추천</h5>
+          <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">온라인서비스</a></li>
+          </ul>
+      </div>
+      <div class="col mb-3">
       <h5>고객센터</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">주문 배송 조회</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">적립금 현황</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">고객서비스</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">자주 묻는 질문</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">1:1문의하기</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">상품 문의 내역</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">주문 배송 조회</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">적립금 현황</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">고객서비스</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">자주 묻는 질문</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">1:1문의하기</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">상품 문의 내역</a></li>
       </ul>
-    </div>
-    <div class="col mb-3">
-      <h5>소셜</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kakaotalk</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Weibo</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
-      </ul>
-    </div>
+      </div>
+      <div class="col mb-3">
+          <h5>소셜</h5>
+          <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kakaotalk</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Weibo</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
+          </ul>
+      </div>
   </footer>
-</div>
-<div class="container1 border-top">
-  <p>주)아이아이컴바인드 | 사업자등록번호: 119-86-38589 | 대표자: 김한국 | 서울특별시 마포구 어울마당로5길 41 | 대표번호: 1644-1246 | 이메일: <a href="">cs@tamburins.com</a></p>
-  <br>    
-  <p>개인정보 보호 책임자: 정태호 | 호스팅 서비스 사업자: Aws | 통신판매업신고: 제 2014-서울마포-1050 호 (<a href="">사업자정보확인</a>) | <a href="">개인정보처리방침</a> | <a href="">이용약관</a></p>
-</div>
-<div class="container1">
-  <p>고객님의 안전한 현금자산 거래를 위하여 하나은행과 채무지급보증계약을 체결하여 보장해드리고 있습니다. 서비스 가입사실확인</p>
-  <p class="text-center text-muted">©  탬버린즈 대한민국</p>
-</div>
+  </div>
+  <div class="container1 border-top">
+      <p>주)아이아이컴바인드 | 사업자등록번호: 119-86-38589 | 대표자: 김한국 | 서울특별시 마포구 어울마당로5길 41 | 대표번호: 1644-1246 | 이메일: <a href="">cs@tamburins.com</a></p>
+      <br>    
+      <p>개인정보 보호 책임자: 정태호 | 호스팅 서비스 사업자: Aws | 통신판매업신고: 제 2014-서울마포-1050 호 (<a href="">사업자정보확인</a>) | <a href="">개인정보처리방침</a> | <a href="">이용약관</a></p>
+  </div>
+  <div class="container1">
+      <p>고객님의 안전한 현금자산 거래를 위하여 하나은행과 채무지급보증계약을 체결하여 보장해드리고 있습니다. 서비스 가입사실확인</p>
+      <p class="text-center text-muted">©  탬버린즈 대한민국</p>
+  </div>
 </footer>
 </html>
