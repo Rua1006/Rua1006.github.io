@@ -9,17 +9,20 @@
 <style>
 body, html { font-family: 'Noto Sans KR', sans-serif; }
 .table { min-width:960px; }
-#logo { display:block; width:217px; height:63px; background-image:url("../data/logo.png");
+#logo { display:block; width:217px; height:63px; background-image:url("data/logo.png");
 background-size:100% auto; background-repeat:no-repeat; background-position:center center; padding: 0;}
 .content .item_com {width:200px;}
 .con {width: 100%;}
 </style>
 <script src="https://code.jquery.com/jquery-latest.js"></script>
-	<style>
-	.table {line-height: 50px; word-break: keep-all; border-top : 1px solid #333; border-bottom: 1px solid #333; border-collapse: collapse;}
-	#con {margin-bottom: 10px;}
-	.table img{height: 330px;}
-	</style>
+    <style>
+    .tile:not(.is-child) {display: flex; flex-wrap: wrap;}
+	.item_com {font-size: 12px;}
+	.container .title {font-size: 20px;}
+	.container .subtitle {font-size: 17px;}
+	.button {position:absolute; right: 0px; bottom: 0px;}
+	.buttons {position: absolute; right: 0px; bottom: 0px;}
+    </style>
   </head>
   <body>
     <nav class="navbar is-white" role="navigation" aria-label="main navigation">
@@ -34,7 +37,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start" id="gnb">
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../tour.html">
+                        <a class="navbar-link"  href="tour.html">
                         명품관광코스
                         </a>
                         <div class="navbar-dropdown cate" id="cate01">
@@ -44,7 +47,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../travel.html">
+                        <a class="navbar-link"  href="travel.html">
                         관광명소
                         </a>
                         <div class="navbar-dropdown cate" id="cate02">
@@ -54,7 +57,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../fst.html">
+                        <a class="navbar-link"  href="fst.html">
                         축제
                         </a>
                         <div class="navbar-dropdown cate" id="cate03">
@@ -64,7 +67,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../sleep.html">
+                        <a class="navbar-link"  href="sleep.html">
                         숙박
                         </a>
                         <div class="navbar-dropdown cate" id="cate04">
@@ -74,7 +77,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../foodpl.html">
+                        <a class="navbar-link"  href="foodpl.html">
                         식당
                         </a>
                         <div class="navbar-dropdown cate" id="cate05">
@@ -84,7 +87,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../food.html">
+                        <a class="navbar-link"  href="food.html">
                         음식
                         </a>
                         <div class="navbar-dropdown cate" id="cate06">
@@ -94,7 +97,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../shop.html">
+                        <a class="navbar-link"  href="shop.html">
                         쇼핑
                         </a>
                         <div class="navbar-dropdown cate" id="cate07">
@@ -104,7 +107,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div> 
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link" href="../more.html">
+                        <a class="navbar-link" href="more.html">
                         더 알아보기
                         </a>
                         <div class="navbar-dropdown">
@@ -177,106 +180,73 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
 </script>
 	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
 	  <ul style="float:right;">
-	    <li><a href="../index.html">Home</a></li>
-	    <li><a href="GetTourListCtrl.html">전체 장소</a></li>
-	    <li><a href="../sleep.html">
-			<span>숙박</span>
+	    <li><a href="./index.html">Home</a></li>
+	    <li><a href="foodpl.html">전체 장소</a></li>
+	    <li class="is-active"><a href="foodpl.html" aria-current="page">
+			<span>식당</span>
 	    </a></li>
-	    <li class="is-active"><a href="#" aria-current="page">호텔 인터불고 엑스코</a></li>
 	  </ul>
 	</nav>
   <section class="section">
     <div class="container">
-      <h1 class="title">장소 상세보기</h1>
+      <h1 class="title">	
+			<span>식당</span>
+			목록</h1>
       	<div id="con">
-      		<table class="table">
-      			<tr>
-				<td>
-					<img src="../img/uploadgetImage36.jpg" class="lazy" onerror="this.style.display='none'" alt="배너" />
-					<!-- onerror="this.style.display='none'"  -->
-	      		</td>
-				<td>
-					<img src="../img/uploadgetImage37.jpg" class="lazy" onerror="this.style.display='none'" alt="배너" />
-					<!-- onerror="this.style.display='none'"  -->
-	      		</td>
-		    	</tr>
-		  </tbody>
-		</table>
+      		<div class="tile is-ancestor columns" style="padding-bottom:40px;">
+			      <div class="tile is-3" style="box-sizing:border-box;">
+			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
+			          <p class="title">대구전통따로식당</p>
+			          <p class="subtitle">
+						<span>식당</span>
+			          </p>
+			          <figure class="image is-4by3">
+			            <img src="./img/uploaddgjt_me5.jpg" alt="대구전통따로식당">
+			          </figure>
+			          <div class="content" style="margin:10px;">
+			          	<p class="item_com">대구광역시 중구 국채보상로 563-1</p>
+			          </div>
+			          <a href="foodpl/dda.html" class="button is-primary">자세히 보기</a>
+			        </article>
+			      </div>
+				
+			      <div class="tile is-3" style="box-sizing:border-box;">
+			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
+			          <p class="title">왕거미</p>
+			          <p class="subtitle">
+						<span>식당</span>
+			          </p>
+			          <figure class="image is-4by3">
+			            <img src="./img/uploadfood.jpg" alt="왕거미">
+			          </figure>
+			          <div class="content" style="margin:10px;">
+			          	<p class="item_com">대구광역시 중구 국채보상로 696-8</p>
+			          </div>
+			          <a href="foodpl/spi.html" class="button is-primary">자세히 보기</a>
+			        </article>
+			      </div>
+			      <div class="tile is-3" style="box-sizing:border-box;">
+			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
+			          <p class="title">동인동찜갈비 돌담집</p>
+			          <p class="subtitle">
+						<span>식당</span>
+			          </p>
+			          <figure class="image is-4by3">
+			            <img src="./img/uploaddgjt_me6.jpg" alt="동인동찜갈비 돌담집">
+			          </figure>
+			          <div class="content" style="margin:10px;">
+			          	<p class="item_com">대구광역시 중구 동덕로36길 9-4</p>
+			          </div>
+			          <a href="foodpl/rock.html" class="button is-primary">자세히 보기</a>
+			        </article>
+			      </div>
+			</div>
       	</div>
-		<table class="table is-striped">
-		   <tbody>
-		    <tr>
-		      <th style="min-width:180px;">번호</th>
-		      <td>24</td>
-		    </tr>
-		    <tr>
-		      <th>분류</th>
-			      <td>
-					<span>숙박</span>
-			      </td>
-		    </tr>
-		    <tr>
-		      <th>장소 번호</th>
-		      <td><p>D0024</p>
-		      	<input type="hidden" name="tourno" id="tourno" value="D0024" />
-		      </td>
-		    </tr>
-		    <tr> 
-		      <th>장소명</th>
-		      <td>
-				호텔 인터불고 엑스코
-		      </td>	
-		    </tr>
-		    <tr>
-		      <th>장소 주요 설명</th>
-		      <td><p>대구 전시컨벤션센터 맞은편에 자리한 호텔 인터불고 엑스코는 비즈니스에 최적인 호텔이다. 대구공항, 북대구 IC와 인접하여 전국어디에서나 빠르고 편리하게 이용하실 수 있고 대구 전시컨벤션센터와 연결되어 10여개 중소연회장과 함께 모든 비즈니스 모임, 결혼예식, 연회가 동시에 활용가능하며, 303실의 수준 높은 객실은 편안한 휴식을 누릴 수 있다.</p></td>
-		    </tr>
-		    <tr>
-		      <th>장소 상세 설명</th>
-		      <td><p>주소 대구광역시 북구 유통단지로 80
-                전화번호 053-380-0114
-                홈페이지 http://www.ibhotel.com/</p></td>
-		    </tr>
-		  </tbody>
-		</table>
 		<div class="buttons">
 		  <a href="GetTourListCtrl.html" class="button is-info">전체 목록</a>
-		  <a href="../sleep.html" class="button is-info">카테고리 목록</a> 
 		</div>
     </div>
   </section>
-  <script>
-  //image Lazy Loading : 실제로 사용자 화면에 보여질 필요가 있을 때까지 이미지 로딩을 지연하는 것으로 네트워크 대역폭을 줄이는 방법
-  /* document.addEventListener("DOMContentLoaded", function() {
-	  var lazyloadImages = document.querySelectorAll("img.lazy");    
-	  var lazyloadThrottleTimeout;
-	  
-	  function lazyload () {
-	    if(lazyloadThrottleTimeout) {
-	      clearTimeout(lazyloadThrottleTimeout);
-	    }    
-	    
-	    lazyloadThrottleTimeout = setTimeout(function() {
-	        var scrollTop = window.pageYOffset;
-	        lazyloadImages.forEach(function(img) {
-	            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-	              img.src = img.dataset.src;
-	              img.classList.remove('lazy');
-	            }
-	        });
-	        if(lazyloadImages.length == 0) { 
-	          document.removeEventListener("scroll", lazyload);
-	          window.removeEventListener("resize", lazyload);
-	          window.removeEventListener("orientationChange", lazyload);
-	        }
-	    }, 20);
-	  }
-	  
-	  document.addEventListener("scroll", lazyload);
-	  window.addEventListener("resize", lazyload);
-	  window.addEventListener("orientationChange", lazyload);
-	}); */
-  </script>
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
