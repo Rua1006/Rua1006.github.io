@@ -9,20 +9,23 @@
 <style>
 body, html { font-family: 'Noto Sans KR', sans-serif; }
 .table { min-width:960px; }
-#logo { display:block; width:217px; height:63px; background-image:url("../data/logo.png");
+#logo { display:block; width:217px; height:63px; background-image:url("/pro03/data/logo.png");
 background-size:100% auto; background-repeat:no-repeat; background-position:center center; padding: 0;}
 .content .item_com {width:200px;}
 .con {width: 100%;}
 </style>
 <script src="https://code.jquery.com/jquery-latest.js"></script>
-	<style>
-	.table {line-height: 50px; word-break: keep-all; border-top : 1px solid #333; border-bottom: 1px solid #333; border-collapse: collapse;}
-	#con {margin-bottom: 10px;}
-	.table img{height: 330px;}
-	</style>
+    <style>
+    .tile:not(.is-child) {display: flex; flex-wrap: wrap;}
+	.item_com {font-size: 12px;}
+	.container .title {font-size: 20px;}
+	.container .subtitle {font-size: 17px;}
+	.button {position:absolute; right: 0px; bottom: 0px;}
+	.buttons {position: absolute; right: 0px; bottom: 0px;}
+    </style>
   </head>
   <body>
-	<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-white" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" id="logo" href="index.html"></a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -34,7 +37,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start" id="gnb">
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../tour.html">
+                        <a class="navbar-link"  href="tour.html">
                         명품관광코스
                         </a>
                         <div class="navbar-dropdown cate" id="cate01">
@@ -44,7 +47,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../travel.html">
+                        <a class="navbar-link"  href="travel.html">
                         관광명소
                         </a>
                         <div class="navbar-dropdown cate" id="cate02">
@@ -54,7 +57,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../fst.html">
+                        <a class="navbar-link"  href="fst.html">
                         축제
                         </a>
                         <div class="navbar-dropdown cate" id="cate03">
@@ -64,7 +67,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../sleep.html">
+                        <a class="navbar-link"  href="sleep.html">
                         숙박
                         </a>
                         <div class="navbar-dropdown cate" id="cate04">
@@ -74,7 +77,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../foodpl.html">
+                        <a class="navbar-link"  href="foodpl.html">
                         식당
                         </a>
                         <div class="navbar-dropdown cate" id="cate05">
@@ -84,7 +87,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../food.html">
+                        <a class="navbar-link"  href="food.html">
                         음식
                         </a>
                         <div class="navbar-dropdown cate" id="cate06">
@@ -94,7 +97,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"  href="../shop.html">
+                        <a class="navbar-link"  href="shop.html">
                         쇼핑
                         </a>
                         <div class="navbar-dropdown cate" id="cate07">
@@ -104,7 +107,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                         </div>
                     </div> 
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link" href="../more.html">
+                        <a class="navbar-link" href="more.html">
                         더 알아보기
                         </a>
                         <div class="navbar-dropdown">
@@ -136,6 +139,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
                 </div>
             </div>
     </nav>
+<script>
 <script>
 	$(document).ready(function(){
 		$.ajax({
@@ -177,101 +181,74 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
 </script>
 	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
 	  <ul style="float:right;">
-	    <li><a href="../index.html">Home</a></li>
-	    <li><a href="GetTourListCtrl.html">전체 장소</a></li>
-	    <li><a href="../food.html">
-			<span>음식</span>
+	    <li><a href="./index.html">Home</a></li>
+	    <li><a href="shop.html">전체 장소</a></li>
+	    <li class="is-active"><a href="shop.html" aria-current="page">
+			<span>쇼핑</span>
 	    </a></li>
-	    <li class="is-active"><a href="#" aria-current="page">대구따로국밥(대구육개장)</a></li>
 	  </ul>
 	</nav>
   <section class="section">
     <div class="container">
-      <h1 class="title">장소 상세보기</h1>
+      <h1 class="title">	
+			<span>쇼핑</span>
+			목록</h1>
       	<div id="con">
-      		<table class="table">
-      			<tr>
-				<td>
-					<img src="../img/uploadtasteFood1.jpg" class="lazy" onerror="this.style.display='none'" alt="배너" />
-					<!-- onerror="this.style.display='none'"  -->
-	      		</td>
-		    	</tr>
-		  </tbody>
-		</table>
+      		<div class="tile is-ancestor columns" style="padding-bottom:40px;">
+			      <div class="tile is-3" style="box-sizing:border-box;">
+			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
+			          <p class="title">동성로</p>
+			          <p class="subtitle">
+						<span>쇼핑</span>
+			          </p>
+			          <figure class="image is-4by3">
+			            <img src="./img/uploadgetImage39.jpg" alt="동성로">
+			          </figure>
+			          <div class="content" style="margin:10px;">
+			          	<p class="item_com">주소 대구광역시 중구 동성로3가 56-3</p>
+			          </div>
+			          <a href="shop/load.html" class="button is-primary">자세히 보기</a>
+			        </article>
+			      </div>
+			      <div class="tile is-3" style="box-sizing:border-box;">
+			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
+			          <p class="title">방촌시장</p>
+			          <p class="subtitle">
+						<span>쇼핑</span>
+			          </p>
+			          <figure class="image is-4by3">
+			            <img src="./img/uploadgetImage38.jpg" alt="방촌시장">
+			          </figure>
+			          <div class="content" style="margin:10px;">
+			          	<p class="item_com">주소 대구광역시 동구 동촌로46길 2</p>
+			          </div>
+			          <a href="shop/mart.html" class="button is-primary">자세히 보기</a>
+			        </article>
+			      </div>
+			      <div class="tile is-3" style="box-sizing:border-box;">
+			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
+			          <p class="title">대구신세계 백화점</p>
+			          <p class="subtitle">
+						<span>쇼핑</span>
+			          </p>
+			          <figure class="image is-4by3">
+			            <img src="./img/uploadgetImage43.jpg" alt="대구신세계 백화점">
+			          </figure>
+			          <div class="content" style="margin:10px;">
+			          	<p class="item_com">주소 대구광역시 동구 동부로 149(신천동)
+                        전화번호 1588-1234
+                        홈페이지 https://www.shinsegae.com</p>
+			          </div>
+			          <a href="shop/dep.html" class="button is-primary">자세히 보기</a>
+			        </article>
+			      </div>
+			</div>
       	</div>
-		<table class="table is-striped">
-		   <tbody>
-		    <tr>
-		      <th style="min-width:180px;">번호</th>
-		      <td>28</td>
-		    </tr>
-		    <tr>
-		      <th>분류</th>
-			      <td>
-					<span>음식</span>
-			      </td>
-		    </tr>
-		    <tr>
-		      <th>장소 번호</th>
-		      <td><p>F0028</p>
-		      	<input type="hidden" name="tourno" id="tourno" value="F0028" />
-		      </td>
-		    </tr>
-		    <tr> 
-		      <th>장소명</th>
-		      <td>
-				대구따로국밥(대구육개장)
-		      </td>	
-		    </tr>
-		    <tr>
-		      <th>장소 주요 설명</th>
-		      <td><p>전국에서 얼큰하면서도 다양한 버전의 쇠고기국을 가진 도시는 대구가 유일하다. 대구따로국밥(대구육개장) 의 특징 중 하나는 붉고 걸쭉한 고추기름. 국이 끓을때 고춧가루를 넣지 않고 녹인 쇠기름으로 고추기름을 만들어 양념으로 넣는다. 대구는 삼복에는 엄청나게 땀을 흘리고 겨울에는 사람을 동태로 만들 정도의 혹한이다. 고춧가루에 들어있는 캡사이신 성분이 여름에는 땀을 배출해 주고, 겨울에는 찬 몸을 덥혀주는 구실을 한다. 1929년 12월 종합 잡지 '별건곡'에도 '대구가 육개장의 고장'이었음을 알려 주고 있으며 최남선의 “조선상식 문답”에도 육개장을 대구의 명물로 소개하고 있다 1946년부터 한일극장 공터 나무시장에서 국에 밥을 말아 팔던 국일식당은 사골과 사태를 밤새도록 고아 우려낸 육수에 대파와 무를 넣고 고추가루와 다진 마늘을 듬뿍 넣어 얼큰하고 매운 듯하면서 개운한 뒷맛이 일품이었다. 6.25전쟁이 나자 전국 각처에서 피란민이 대구로 모이면서 국밥 형태의 상차림을 싫어하는 사람들</p></td>
-		    </tr>
-		    <tr>
-		      <th>장소 상세 설명</th>
-		      <td><p>얼큰화끈 국물지존!
-				맵고 얼큰한 맛에 진한 육수의 고소함까지</p></td>
-		    </tr>
-		  </tbody>
-		</table>
 		<div class="buttons">
 		  <a href="GetTourListCtrl.html" class="button is-info">전체 목록</a>
-		  <a href="../food.html" class="button is-info">카테고리 목록</a>
 		</div>
     </div>
   </section>
-  <script>
-  //image Lazy Loading : 실제로 사용자 화면에 보여질 필요가 있을 때까지 이미지 로딩을 지연하는 것으로 네트워크 대역폭을 줄이는 방법
-  /* document.addEventListener("DOMContentLoaded", function() {
-	  var lazyloadImages = document.querySelectorAll("img.lazy");    
-	  var lazyloadThrottleTimeout;
-	  
-	  function lazyload () {
-	    if(lazyloadThrottleTimeout) {
-	      clearTimeout(lazyloadThrottleTimeout);
-	    }    
-	    
-	    lazyloadThrottleTimeout = setTimeout(function() {
-	        var scrollTop = window.pageYOffset;
-	        lazyloadImages.forEach(function(img) {
-	            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-	              img.src = img.dataset.src;
-	              img.classList.remove('lazy');
-	            }
-	        });
-	        if(lazyloadImages.length == 0) { 
-	          document.removeEventListener("scroll", lazyload);
-	          window.removeEventListener("resize", lazyload);
-	          window.removeEventListener("orientationChange", lazyload);
-	        }
-	    }, 20);
-	  }
-	  
-	  document.addEventListener("scroll", lazyload);
-	  window.addEventListener("resize", lazyload);
-	  window.addEventListener("orientationChange", lazyload);
-	}); */
-  </script>
 <footer class="footer">
   <div class="content has-text-centered">
     <p>

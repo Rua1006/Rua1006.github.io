@@ -1,0 +1,339 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>장소 상세보기</title>
+    
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<style>
+body, html { font-family: 'Noto Sans KR', sans-serif; }
+.table { min-width:960px; }
+#logo { display:block; width:217px; height:63px; background-image:url("/pro03/data/logo.png");
+background-size:100% auto; background-repeat:no-repeat; background-position:center center; padding: 0;}
+.content .item_com {width:200px;}
+.con {width: 100%;}
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+    
+	<style>
+	.table {line-height: 50px; word-break: keep-all; border-top : 1px solid #333; border-bottom: 1px solid #333; border-collapse: collapse;}
+	#con {margin-bottom: 10px;}
+	.table img{height: 330px;}
+	</style>
+  </head>
+  <body>
+  
+
+
+
+
+
+
+<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" id="logo" href="/pro03/">
+
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+	<div id="navbarBasicExample" class="navbar-menu">
+	  <div class="navbar-start" id="gnb">
+	    <div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=A">
+		 	명품관광코스
+			</a>
+			<div class="navbar-dropdown cate" id="cate01">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=B">
+		 	관광명소
+			</a>
+			<div class="navbar-dropdown cate" id="cate02">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=C">
+		 	축제
+			</a>
+			<div class="navbar-dropdown cate" id="cate03">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=D">
+		 	숙박
+			</a>
+			<div class="navbar-dropdown cate" id="cate04">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=E">
+		 	식당
+			</a>
+			<div class="navbar-dropdown cate" id="cate05">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=F">
+		 	음식
+			</a>
+			<div class="navbar-dropdown cate" id="cate06">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=G">
+		 	쇼핑
+			</a>
+			<div class="navbar-dropdown cate" id="cate07">
+				    
+			</div>
+		</div> 
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link">
+		 	더 알아보기
+			</a>
+			<div class="navbar-dropdown">
+			<a class="navbar-item" href="/pro03/GetNoticeListCtrl.do">
+				NOTICE
+			</a>
+			<hr class="navbar-divider">
+	          <a class="navbar-item" href="/pro03/GetQnaListCtrl.do">
+	            QNA
+	          </a>
+	          <hr class="navbar-divider">
+	          <a class="navbar-item" href="/pro03/GetImpressListCtrl.do">
+	 			이용후기
+	          </a> 
+	       	</div>
+		</div>
+	</div>
+	</div>
+    <div class="navbar-end">
+	  <div class="navbar-item">
+	  	
+	 <div class="buttons">
+	   <a href="/pro03/user/membership.jsp" class="button is-dark">
+	     <strong>회원가입</strong>
+	   </a>
+	   <a href="/pro03/user/login.jsp" class="button is-light">
+	   	 로그인
+	   </a>
+	 </div>
+	
+	
+  </div>
+  </div>
+</nav>
+<script>
+	$(document).ready(function(){
+		$.ajax({
+			url:"/pro03/MenuLoadCtrl.do",
+			type:"POST",
+			enctype:"UTF-8",
+			datatype:"json",
+			processData:false,
+			contentType:false, 
+			cache:false,
+			success:function(data){
+				$(".navbar-dropdown.cate").empty();
+				var trans = $.parseJSON(data);
+				$.each(trans, function(key, value){
+					if(key=="data"){
+						for(var i=0;i<value.length;i++){
+							if(value[i].cate=="A"){
+								$("#cate01").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="B"){
+								$("#cate02").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="C"){
+								$("#cate03").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="D"){
+								$("#cate04").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="E"){
+								$("#cate05").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="F"){
+								$("#cate06").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="G"){
+								$("#cate07").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							}
+						}
+					}
+				});
+				
+			}
+		});
+	});
+</script>
+	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
+	  <ul style="float:right;">
+	    <li><a href="/pro03/">Home</a></li>
+	    <li><a href="/pro03/GetTourListCtrl.do">전체 장소</a></li>
+	    <li><a href="/pro03/GetTourCateListCtrl.do?cate=G">
+ 			 
+			
+			
+			
+			
+			
+			
+			
+			<span>쇼핑</span>
+			
+			
+	    </a></li>
+	    <li class="is-active"><a href="#" aria-current="page">대구신세계 백화점</a></li>
+	  </ul>
+	</nav>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">장소 상세보기</h1>
+      	<div id="con">
+      		<table class="table">
+      			
+      			<tr>
+				
+				<td>
+					<img src="upload/getImage43.jpg" class="lazy" onerror="this.style.display='none'" alt="배너" />
+					<!-- onerror="this.style.display='none'"  -->
+	      		</td>
+				
+				<td>
+					<img src="upload/getImage42.jpg" class="lazy" onerror="this.style.display='none'" alt="배너" />
+					<!-- onerror="this.style.display='none'"  -->
+	      		</td>
+				
+				<td>
+					<img src="upload/getImage41.jpg" class="lazy" onerror="this.style.display='none'" alt="배너" />
+					<!-- onerror="this.style.display='none'"  -->
+	      		</td>
+					
+		    	</tr>
+		    	
+				
+		  </tbody>
+		</table>
+      	</div>
+		<table class="table is-striped">
+		   <tbody>
+		    <tr>
+		      <th style="min-width:180px;">번호</th>
+		      <td>33</td>
+		    </tr>
+		    <tr>
+		      <th>분류</th>
+			      <td>
+	   				 
+					
+					
+					
+					
+					
+					
+					
+					<span>쇼핑</span>
+					
+					
+			      </td>
+		    </tr>
+		    <tr>
+		      <th>장소 번호</th>
+		      <td><p>G0033</p>
+		      	<input type="hidden" name="tourno" id="tourno" value="G0033" />
+		      </td>
+		    </tr>
+		    <tr> 
+		      <th>장소명</th>
+		      <td>
+				대구신세계 백화점
+		      </td>	
+		    </tr>
+		    <tr>
+		      <th>장소 주요 설명</th>
+		      <td><p>대구의 관문 동대구역 일원에 자리잡은 대구신세계 백화점은 국내최초 복합환승센터 사업에 의해 생겨난 곳으로 쇼핑과 더불어 광역/대중교통을 한곳에서 이용할 수 있는 건물이다. 영업면적 약 102,000㎡의 백화점에는 쇼핑시설 이외에도 대구최초 아쿠아리움, 팔공산이 한눈에들어오는 주라지 테마파크, 바운스트램폴린등 볼거리 즐길거리가 다양하게 구비되어 있는게 특징이다.</p></td>
+		    </tr>
+		    <tr>
+		      <th>장소 상세 설명</th>
+		      <td><p>주소 대구광역시 동구 동부로 149(신천동)
+
+전화번호 1588-1234
+
+홈페이지 https://www.shinsegae.com</p></td>
+		    </tr>
+		  </tbody>
+		</table>
+		<div class="buttons">
+		  <a href="/pro03/GetTourListCtrl.do" class="button is-info">전체 목록</a>
+		  <a href="/pro03/GetTourCateListCtrl.do?cate=G" class="button is-info">카테고리 목록</a>
+		  
+		</div>
+    </div>
+  </section>
+  <script>
+  //image Lazy Loading : 실제로 사용자 화면에 보여질 필요가 있을 때까지 이미지 로딩을 지연하는 것으로 네트워크 대역폭을 줄이는 방법
+  /* document.addEventListener("DOMContentLoaded", function() {
+	  var lazyloadImages = document.querySelectorAll("img.lazy");    
+	  var lazyloadThrottleTimeout;
+	  
+	  function lazyload () {
+	    if(lazyloadThrottleTimeout) {
+	      clearTimeout(lazyloadThrottleTimeout);
+	    }    
+	    
+	    lazyloadThrottleTimeout = setTimeout(function() {
+	        var scrollTop = window.pageYOffset;
+	        lazyloadImages.forEach(function(img) {
+	            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+	              img.src = img.dataset.src;
+	              img.classList.remove('lazy');
+	            }
+	        });
+	        if(lazyloadImages.length == 0) { 
+	          document.removeEventListener("scroll", lazyload);
+	          window.removeEventListener("resize", lazyload);
+	          window.removeEventListener("orientationChange", lazyload);
+	        }
+	    }, 20);
+	  }
+	  
+	  document.addEventListener("scroll", lazyload);
+	  window.addEventListener("resize", lazyload);
+	  window.addEventListener("orientationChange", lazyload);
+	}); */
+  </script>
+	
+  
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+    (41911) 대구광역시 중구 공평로 88 (동인동1가) | 전화 : 053.803.6514<br>
+	Copyright(c) DAEGU METROPOLITAN CITY. All rights reserved.<br>
+	본 홈페이지에 게시된 이메일주소의 자동 수집을 거부하며 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.<br>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

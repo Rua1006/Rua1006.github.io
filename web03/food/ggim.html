@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>장소 상세보기</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<style>
+body, html { font-family: 'Noto Sans KR', sans-serif; }
+.table { min-width:960px; }
+#logo { display:block; width:217px; height:63px; background-image:url("../data/logo.png");
+background-size:100% auto; background-repeat:no-repeat; background-position:center center; padding: 0;}
+.content .item_com {width:200px;}
+.con {width: 100%;}
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<style>
+	.table {line-height: 50px; word-break: keep-all; border-top : 1px solid #333; border-bottom: 1px solid #333; border-collapse: collapse;}
+	#con {margin-bottom: 10px;}
+	.table img{height: 330px;}
+	</style>
+  </head>
+  <body>
+	<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" id="logo" href="index.html"></a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start" id="gnb">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link"  href="../tour.html">
+                        명품관광코스
+                        </a>
+                        <div class="navbar-dropdown cate" id="cate01">
+                            <a class="navbar-item" href="tour/dong.html">동화사</a>
+                            <a class="navbar-item" href="tour/tree.html">대구수목원</a>
+                            <a class="navbar-item" href="tour/see.html">앞산전망대</a>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link"  href="../travel.html">
+                        관광명소
+                        </a>
+                        <div class="navbar-dropdown cate" id="cate02">
+                            <a class="navbar-item" href="travel/kangjung.html">강정고령보 - 디아크(The ARC)</a>
+                            <a class="navbar-item" href="travel/mout.html">팔공산자연공원</a>
+                            <a class="navbar-item" href="travel/load.html">동성로</a>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link"  href="../fst.html">
+                        축제
+                        </a>
+                        <div class="navbar-dropdown cate" id="cate03">
+                            <a class="navbar-item" href="fst/world.html">이월드별빛축제</a>
+                            <a class="navbar-item" href="fst/fire.html">대구 형형색색 달구벌 관등놀이</a>
+                            <a class="navbar-item" href="fst/blossom.html">팔공산 벚꽃축제</a>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link"  href="../sleep.html">
+                        숙박
+                        </a>
+                        <div class="navbar-dropdown cate" id="cate04">
+                            <a class="navbar-item" href="sleep/guest.html">한옥 게스트하우스 安(Ahn)</a>
+                            <a class="navbar-item" href="sleep/camp.html">달서별빛캠프 캠핑장</a>
+                            <a class="navbar-item" href="sleep/hotel.html">호텔 인터불고 엑스코</a>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link"  href="../foodpl.html">
+                        식당
+                        </a>
+                        <div class="navbar-dropdown cate" id="cate05">
+                            <a class="navbar-item" href="foodpl/dda.html">대구전통따로식당</a>
+                            <a class="navbar-item" href="foodpl/spi.html">왕거미</a>
+                            <a class="navbar-item" href="foodpl/rock.html">동인동찜갈비 돌담집</a>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link"  href="../food.html">
+                        음식
+                        </a>
+                        <div class="navbar-dropdown cate" id="cate06">
+                            <a class="navbar-item" href="food/six.html">대구따로국밥(대구육개장)</a>
+                            <a class="navbar-item" href="food/moong.html">뭉티기</a>
+                            <a class="navbar-item" href="food/ggim.html">동인동찜갈비</a>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link"  href="../shop.html">
+                        쇼핑
+                        </a>
+                        <div class="navbar-dropdown cate" id="cate07">
+                            <a class="navbar-item" href="shop/load.html">동성로</a>
+                            <a class="navbar-item" href="shop/mart.html">방촌시장</a>
+                            <a class="navbar-item" href="shop/dep.html">대구신세계 백화점</a>
+                        </div>
+                    </div> 
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" href="../more.html">
+                        더 알아보기
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="more/notice.html">
+                            NOTICE
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item" href="more/qna.html">
+                            QNA
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item" href="more/impress.html">
+                            이용후기
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="join.html" class="button is-dark">
+                        <strong>회원가입</strong>
+                        </a>
+                        <a href="login.html" class="button is-light">
+                        로그인
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </nav>
+<script>
+	$(document).ready(function(){
+		$.ajax({
+			url:"/pro03/MenuLoadCtrl.html",
+			type:"POST",
+			enctype:"UTF-8",
+			datatype:"json",
+			processData:false,
+			contentType:false, 
+			cache:false,
+			success:function(data){
+				$(".navbar-dropdown.cate").empty();
+				var trans = $.parseJSON(data);
+				$.each(trans, function(key, value){
+					if(key=="data"){
+						for(var i=0;i<value.length;i++){
+							if(value[i].cate=="A"){
+								$("#cate01").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="B"){
+								$("#cate02").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="C"){
+								$("#cate03").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="D"){
+								$("#cate04").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="E"){
+								$("#cate05").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="F"){
+								$("#cate06").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="G"){
+								$("#cate07").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
+							}
+						}
+					}
+				});
+				
+			}
+		});
+	});
+</script>
+	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
+	  <ul style="float:right;">
+	    <li><a href="../index.html">Home</a></li>
+	    <li><a href="GetTourListCtrl.html">전체 장소</a></li>
+	    <li><a href="../food.html">
+			<span>음식</span>
+	    </a></li>
+	    <li class="is-active"><a href="#" aria-current="page">동인동찜갈비</a></li>
+	  </ul>
+	</nav>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">장소 상세보기</h1>
+      	<div id="con">
+      		<table class="table">
+      			<tr>
+				<td>
+					<img src="../img/uploadtasteFood4.jpg" class="lazy" onerror="this.style.display='none'" alt="배너" />
+					<!-- onerror="this.style.display='none'"  -->
+	      		</td>
+		    	</tr>
+		  </tbody>
+		</table>
+      	</div>
+		<table class="table is-striped">
+		   <tbody>
+		    <tr>
+		      <th style="min-width:180px;">번호</th>
+		      <td>30</td>
+		    </tr>
+		    <tr>
+		      <th>분류</th>
+			      <td>
+					<span>음식</span>
+			      </td>
+		    </tr>
+		    <tr>
+		      <th>장소 번호</th>
+		      <td><p>F0030</p>
+		      	<input type="hidden" name="tourno" id="tourno" value="F0030" />
+		      </td>
+		    </tr>
+		    <tr> 
+		      <th>장소명</th>
+		      <td>
+				동인동찜갈비
+		      </td>	
+		    </tr>
+		    <tr>
+		      <th>장소 주요 설명</th>
+		      <td><p>70년대부터 중구 동인동 주택가에서 찌그러진 양은 냄비에 푹 익힌 소갈비를 담아 매운 고춧 가루와 다진 마늘을 주 양념으로 비벼먹는 동인동 찜갈비는 간장으로만 맛을 내는 갈비찜과는 판이하게 다른 대구에만 있는 스타일이다. 술안주로도 알맞으며 식사 후 남은 양념에 밥을 비벼 먹는 맛이 맵싸하고 화끈한 것이 특징이 다. 서울.경기권의 갈비찜과는 달리 혀가 얼얼할 정도로 매우면서도 달짝지근한 맛이 일품이다.</p></td>
+		    </tr>
+		    <tr>
+		      <th>장소 상세 설명</th>
+		      <td><p>입안이 얼얼한 갈비!맵고, 화끈한 맛</p></td>
+		    </tr>
+		  </tbody>
+		</table>
+		<div class="buttons">
+		  <a href="GetTourListCtrl.html" class="button is-info">전체 목록</a>
+		  <a href="../food.html" class="button is-info">카테고리 목록</a>
+		</div>
+    </div>
+  </section>
+  <script>
+  //image Lazy Loading : 실제로 사용자 화면에 보여질 필요가 있을 때까지 이미지 로딩을 지연하는 것으로 네트워크 대역폭을 줄이는 방법
+  /* document.addEventListener("DOMContentLoaded", function() {
+	  var lazyloadImages = document.querySelectorAll("img.lazy");    
+	  var lazyloadThrottleTimeout;
+	  
+	  function lazyload () {
+	    if(lazyloadThrottleTimeout) {
+	      clearTimeout(lazyloadThrottleTimeout);
+	    }    
+	    
+	    lazyloadThrottleTimeout = setTimeout(function() {
+	        var scrollTop = window.pageYOffset;
+	        lazyloadImages.forEach(function(img) {
+	            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+	              img.src = img.dataset.src;
+	              img.classList.remove('lazy');
+	            }
+	        });
+	        if(lazyloadImages.length == 0) { 
+	          document.removeEventListener("scroll", lazyload);
+	          window.removeEventListener("resize", lazyload);
+	          window.removeEventListener("orientationChange", lazyload);
+	        }
+	    }, 20);
+	  }
+	  
+	  document.addEventListener("scroll", lazyload);
+	  window.addEventListener("resize", lazyload);
+	  window.addEventListener("orientationChange", lazyload);
+	}); */
+  </script>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+    (41911) 대구광역시 중구 공평로 88 (동인동1가) | 전화 : 053.803.6514<br>
+	Copyright(c) DAEGU METROPOLITAN CITY. All rights reserved.<br>
+	본 홈페이지에 게시된 이메일주소의 자동 수집을 거부하며 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.<br>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

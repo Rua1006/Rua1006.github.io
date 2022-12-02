@@ -1,0 +1,317 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>이용후기 목록</title>
+    
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<style>
+body, html { font-family: 'Noto Sans KR', sans-serif; }
+.table { min-width:960px; }
+#logo { display:block; width:217px; height:63px; background-image:url("/pro03/data/logo.png");
+background-size:100% auto; background-repeat:no-repeat; background-position:center center; padding: 0;}
+.content .item_com {width:200px;}
+.con {width: 100%;}
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="/pro03/resource/datatables.min.css">
+	<script src="/pro03/resource/datatables.min.js"></script>
+	<script>
+	$(document).ready( function () {
+	    $('#tb1').DataTable();
+	} );
+	</script>
+  </head>
+  <body>
+  
+
+
+
+
+
+
+<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" id="logo" href="/pro03/">
+
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+	<div id="navbarBasicExample" class="navbar-menu">
+	  <div class="navbar-start" id="gnb">
+	    <div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=A">
+		 	명품관광코스
+			</a>
+			<div class="navbar-dropdown cate" id="cate01">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=B">
+		 	관광명소
+			</a>
+			<div class="navbar-dropdown cate" id="cate02">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=C">
+		 	축제
+			</a>
+			<div class="navbar-dropdown cate" id="cate03">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=D">
+		 	숙박
+			</a>
+			<div class="navbar-dropdown cate" id="cate04">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=E">
+		 	식당
+			</a>
+			<div class="navbar-dropdown cate" id="cate05">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=F">
+		 	음식
+			</a>
+			<div class="navbar-dropdown cate" id="cate06">
+				    
+			</div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link"  href="/pro03/GetTourCateListCtrl.do?cate=G">
+		 	쇼핑
+			</a>
+			<div class="navbar-dropdown cate" id="cate07">
+				    
+			</div>
+		</div> 
+		<div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link">
+		 	더 알아보기
+			</a>
+			<div class="navbar-dropdown">
+			<a class="navbar-item" href="/pro03/GetNoticeListCtrl.do">
+				NOTICE
+			</a>
+			<hr class="navbar-divider">
+	          <a class="navbar-item" href="/pro03/GetQnaListCtrl.do">
+	            QNA
+	          </a>
+	          <hr class="navbar-divider">
+	          <a class="navbar-item" href="/pro03/GetImpressListCtrl.do">
+	 			이용후기
+	          </a> 
+	       	</div>
+		</div>
+	</div>
+	</div>
+    <div class="navbar-end">
+	  <div class="navbar-item">
+	  	
+	 <div class="buttons">
+	   <a href="/pro03/user/membership.jsp" class="button is-dark">
+	     <strong>회원가입</strong>
+	   </a>
+	   <a href="/pro03/user/login.jsp" class="button is-light">
+	   	 로그인
+	   </a>
+	 </div>
+	
+	
+  </div>
+  </div>
+</nav>
+<script>
+	$(document).ready(function(){
+		$.ajax({
+			url:"/pro03/MenuLoadCtrl.do",
+			type:"POST",
+			enctype:"UTF-8",
+			datatype:"json",
+			processData:false,
+			contentType:false, 
+			cache:false,
+			success:function(data){
+				$(".navbar-dropdown.cate").empty();
+				var trans = $.parseJSON(data);
+				$.each(trans, function(key, value){
+					if(key=="data"){
+						for(var i=0;i<value.length;i++){
+							if(value[i].cate=="A"){
+								$("#cate01").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="B"){
+								$("#cate02").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="C"){
+								$("#cate03").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="D"){
+								$("#cate04").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="E"){
+								$("#cate05").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="F"){
+								$("#cate06").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							} else if(value[i].cate=="G"){
+								$("#cate07").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+							}
+						}
+					}
+				});
+				
+			}
+		});
+	});
+</script>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">이용후기</h1>
+		<table class="table" id="tb1">
+			<thead>
+				<tr>
+					<th>장소</th><th>내용</th><th>작성자</th><th>작성일</th><th></th>
+				</tr>
+			</thead>
+			<tbody>
+		   
+		    <tr>
+		      <td>
+		      	<input type="hidden" name="no" id="no" value="" />
+		      	<h3></h3>
+		      	<br>
+		      	<img src="/pro03/upload/dgjt_me5.jpg" alt="E0025" style="width:40px;" />
+		      </td>
+		      <td>
+		      	<div>식당 이용후기 테스트 너무 맛있어요</div>
+		      </td>
+		      <td>
+		      	<div>
+		      		
+		      		
+		      		
+		      		ad<span>*</span><span>*</span><span>*</span>
+		      	</div>
+		      </td>
+		      <td>
+		      	
+		      	2022-11-23
+		      </td>
+		      <td>
+		      	
+		      </td>	
+		    </tr>
+		    
+			
+		  </tbody>
+		</table>
+		<hr style="height:4px; background-color:#ccc;">
+		
+    </div>
+    <script>
+    $(document).ready(function(){
+    	$("#content").on("click", function(){
+    		if($("#tourno").val()==""){
+    			alert("방문 장소를 먼저 고르시기 바랍니다.");
+    		}
+    	});
+    }); 
+    function changeTourNo(){
+    	var ct = $("#cate").val(); 
+    	if(ct==""){
+    		alert("카테고리를 먼저 선택하시기 바랍니다.");
+    		return;
+    	}
+    	var params = {	cate : ct	}
+		$.ajax({
+			url:"/pro03/CateLoadCtrl.do",
+			type:"POST",
+			enctype:"application/json",
+			data:params,
+			datatype:"json",
+			success:function(result){
+				$("#tourno").empty();
+				$("#tourno").append("<option value=''>선택</option>");
+				var trans = result;
+				console.log(trans);
+				$.each(trans, function(key, value){
+					if(key=="result"){
+						for(var i=0;i<value.length;i++){
+							$("#tourno").append("<option value='"+value[i].tourno+"'>"+value[i].place+"</option>");
+						}
+					}
+				});				
+			}
+		});
+    }
+    function addImpress(){
+    	var ct = $("#cate").val();
+    	var tour = $("#tourno").val();
+    	var con = $("#content").val();
+    	var starpoint = $("#starpoint").val();
+    	if(ct==""){
+    		alert("카테고리를 먼저 선택하시기 바랍니다.");
+    		return;
+    	}
+    	if(tour==""){
+    		alert("방문 장소를 먼저 선택하시기 바랍니다.");
+    		return;
+    	}
+    	if(con==""){
+    		alert("내용을 입력하시기 바랍니다.");
+    		return;
+    	}
+    	var params = {	cate : ct, tourno : tour, content : con  }
+		$.ajax({
+			url:"/pro03/AddImpressCtrl.do",
+			type:"POST",
+			enctype:"application/json",
+			data:params,
+			datatype:"json",
+			success:function(result){
+				var trans = result;
+				location.href = "/pro03/GetImpressListCtrl.do";				
+			}
+		});
+    }
+    //href="/pro03/notice/AddImpressCtrl.do" 
+    </script>
+  </section>
+  
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+    (41911) 대구광역시 중구 공평로 88 (동인동1가) | 전화 : 053.803.6514<br>
+	Copyright(c) DAEGU METROPOLITAN CITY. All rights reserved.<br>
+	본 홈페이지에 게시된 이메일주소의 자동 수집을 거부하며 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.<br>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
