@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>관리자 메인 페이지</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>회원 정보 수정</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <style>
@@ -15,6 +15,10 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
 .con {width: 100%;}
 </style>
 <script src="https://code.jquery.com/jquery-latest.js"></script>
+<style>
+.title { padding-top:36px; padding-bottom:20px; }
+#id { width:780px; float:left; margin-right:30px; margin-left:6px; }
+</style>
 </head>
 <body>
     <nav class="navbar is-white" role="navigation" aria-label="main navigation">
@@ -183,7 +187,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
   <a class="panel-block" href="../GetTourListCtrl.html">
   	관광서비스 관리
   </a>
-  <a class="panel-block" href="../more/notice.html">
+  <a class="panel-block" href="../GetNoticeListCtrl.html">
 	게시판관리
   </a>
   <a class="panel-block">
@@ -191,10 +195,117 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
   </a>
 </article>
 			<div class="column is-10">
-				<h2>admin페이지에 오신걸 환영합니다.</h2>
-				<h3>관리자 메인 페이지</h3>
+				<h2 class="title">회원 정보 확인 및 수정</h2>
+				<form name="frm1" id="frm1" action="/pro03/UserUpdateCtrl.html" method="post" onsubmit="return joinCheck(this)">
+					<table class="table">
+						<tbody>
+							<tr>
+								<th>아이디</th>
+								<td>
+									<div class="form-row">
+										<input type="text" name="id" id="id" placeholder="아이디 입력" value="admin" class="input" readonly required />
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>비밀번호</th>
+								<td><input type="password" name="pw" id="pw" placeholder="비밀번호 입력" value="12345" class="input" required /></td>
+							</tr>
+							<tr>
+								<th>비밀번호 확인</th>
+								<td><input type="password" name="pw2" id="pw2" placeholder="비밀번호  확인 입력" value="12345" class="input" required /></td>
+							</tr>
+							<tr>
+								<th>회원이름</th>
+								<td><input type="text" name="name" id="name" placeholder="이름 입력" value="관리자" class="input" required /></td>
+							</tr>
+							<tr>
+								<th>이메일</th>
+								<td><input type="email" name="email" id="email" placeholder="이메일 입력" value="admin@naver.com" class="input" required></td>
+							</tr>
+							<tr>
+								<th>생년월일</th>
+								<td>
+									<input type="date" name="birth" id="birth" placeholder="생년월일 입력" value="2022-11-15" class="input" required>
+								</td>
+							</tr>
+							<tr>
+								<th>연락처</th>
+								<td><input type="tel" name="tel" id="tel" placeholder="전화번호 숫자만 입력 00000000000" class="input" value="" required></td>
+							</tr>
+							<tr>
+								<th>가입일</th>
+								<td>2022-11-15 10:08:17.0</td>
+							</tr>
+							<tr>
+								<th>회원등급</th>
+								<td>
+									<input type="hidden" name="grade" id="grade" value="" />	
+								</td>
+							</tr>
+							<tr>
+								<th>회원 포인트</th>
+								<td>0</td>
+							</tr>
+							<tr>
+								<th>방문 횟수</th>
+								<td>31</td>
+							</tr>
+							<tr>
+								<th>주소</th>
+								<td>
+								<h3>
+									현재 주소 : 서울 성동구 동호로 88<br>202/708
+								</h3>
+								<input type="hidden" name="address" id="address" value="서울 성동구 동호로 88<br>202/708" />
+								<h3>변경할 주소 <span style="color:red">변경시에만 입력하세요.</span></h3>
+								<input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="input" required /><br>
+								<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="input" required /><br>
+								<input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" class="input">
+								<button id="post_btn" onclick="findAddr()" class="button is-info">우편번호 검색</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="btn-group">
+						<input type="submit" name="submit-btn" class="button is-danger" value="회원정보변경">
+						<a href="../index.html" class="button is-info">취소</a>
+					</div>
+				</form>	
+				<script>
+				function joinCheck(f){
+					if(f.pw.value!=f.pw2.value){
+						alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+						f.pw.focus();
+						return false;
+					}
+					if(f.idck.value!="yes"){
+						alert("아이디 중복 체크를 하지 않으셨습니다.");
+						return false;
+					}
+				}
+				</script>
+				<script>
+				function findAddr() {
+					new daum.Postcode({
+						oncomplete: function(data) {
+							console.log(data);
+							var roadAddr = data.roadAddress;
+							var jibunAddr = data.jibunAddress;
+							document.getElementById("postcode").value = data.zonecode;
+							if(roadAddr !== '') {
+								document.getElementById("address1").value = roadAddr;				
+							} else if(jibunAddr !== ''){
+								document.getElementById("address1").value = jibunAddr;
+							}
+							document.getElementById("address2").focus();
+						}
+					}).open();
+				}
+				</script>
+				<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 			</div>
-		</div>
+		</div>	
 	</section>
 <footer class="footer">
   <div class="content has-text-centered">

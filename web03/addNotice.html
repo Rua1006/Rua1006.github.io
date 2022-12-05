@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>관리자 메인 페이지</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-<style>
-body, html { font-family: 'Noto Sans KR', sans-serif; }
-.table { min-width:960px; }
-#logo { display:block; width:217px; height:63px; background-image:url("../data/logo.png");
-background-size:100% auto; background-repeat:no-repeat; background-position:center center; padding: 0;}
-.content .item_com {width:200px;}
-.con {width: 100%;}
-</style>
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-</head>
-<body>
+    <title>공지사항 글 등록</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
     <nav class="navbar is-white" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" id="logo" href="index.html"></a>
@@ -170,32 +160,30 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
 		});
 	});
 </script>
-	<section class="section">
-	    <div class="columns is-full">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-	<article class="panel is-success">
-  <p class="panel-heading">
-    관리자 메뉴
-  </p>
-  <a class="panel-block is-active" href="memlist.html">
-	회원관리
-  </a> 
-  <a class="panel-block" href="../GetTourListCtrl.html">
-  	관광서비스 관리
-  </a>
-  <a class="panel-block" href="../more/notice.html">
-	게시판관리
-  </a>
-  <a class="panel-block">
-  	더 알아보기
-  </a>
-</article>
-			<div class="column is-10">
-				<h2>admin페이지에 오신걸 환영합니다.</h2>
-				<h3>관리자 메인 페이지</h3>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">글 등록하기</h1>
+      	<form action="/pro03/AddNoticeCtrl.html" method="post">
+			<table class="table">
+			   <tbody>
+			    <tr>
+			      <th><label for="title">제목</label></th>
+			      <td><input type="text" class="input" maxlength="120" name="title" id="title" placeholder="제목 입력" required /></td>
+			    </tr>
+			    <tr>
+			      <th><label for="content">내용</label></th>
+			      <td><textarea rows="8" cols="100" name="content" id="content" class="textarea" required></textarea></td>
+			    </tr>
+			  </tbody>
+			</table>
+			<div class="buttons">
+			  <button type="submit" class="button is-success">등록</button>
+			  <button type="reset" class="button is-warning">취소</button>
+			  <a href="more/notice.html" class="button is-info">목록</a>
 			</div>
-		</div>
-	</section>
+		</form>
+    </div>
+  </section>
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
@@ -205,5 +193,5 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
     </p>
   </div>
 </footer>
-</body>
+  </body>
 </html>
