@@ -127,10 +127,10 @@
     <div class="navbar-end">
 	  <div class="navbar-item">
         <div class="buttons">
-            <a href="join.html" class="button is-dark">
+            <a href="mem/join.html" class="button is-dark">
                 <strong>회원가입</strong>
             </a>
-            <a href="login.html" class="button is-light">
+            <a href="mem/login.html" class="button is-light">
                 로그인
             </a>
         </div>
@@ -140,7 +140,7 @@
 <script>
 	$(document).ready(function(){
 		$.ajax({
-			url:"MenuLoadCtrl.do",
+			url:"MenuLoadCtrl.html",
 			type:"POST",
 			enctype:"UTF-8",
 			datatype:"json",
@@ -154,19 +154,19 @@
 					if(key=="data"){
 						for(var i=0;i<value.length;i++){
 							if(value[i].cate=="A"){
-								$("#cate01").append("<a class='navbar-item' href='GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate01").append("<a class='navbar-item' href='GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="B"){
-								$("#cate02").append("<a class='navbar-item' href='GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate02").append("<a class='navbar-item' href='GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="C"){
-								$("#cate03").append("<a class='navbar-item' href='GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate03").append("<a class='navbar-item' href='GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="D"){
-								$("#cate04").append("<a class='navbar-item' href='GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate04").append("<a class='navbar-item' href='GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="E"){
-								$("#cate05").append("<a class='navbar-item' href='GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate05").append("<a class='navbar-item' href='GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="F"){
-								$("#cate06").append("<a class='navbar-item' href='GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate06").append("<a class='navbar-item' href='GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="G"){
-								$("#cate07").append("<a class='navbar-item' href='GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate07").append("<a class='navbar-item' href='GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							}
 						}
 					}

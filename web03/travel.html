@@ -128,10 +128,10 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
     <div class="navbar-end">
 	  <div class="navbar-item">	  	
 	 <div class="buttons">
-	   <a href="join.html" class="button is-dark">
+	   <a href="mem/join.html" class="button is-dark">
 	     <strong>회원가입</strong>
 	   </a>
-	   <a href="login.html" class="button is-light">
+	   <a href="mem/login.html" class="button is-light">
 	   	 로그인
 	   </a>
 	 </div>
@@ -141,7 +141,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
 <script>
 	$(document).ready(function(){
 		$.ajax({
-			url:"/pro03/MenuLoadCtrl.do",
+			url:"/pro03/MenuLoadCtrl.html",
 			type:"POST",
 			enctype:"UTF-8",
 			datatype:"json",
@@ -155,19 +155,19 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
 					if(key=="data"){
 						for(var i=0;i<value.length;i++){
 							if(value[i].cate=="A"){
-								$("#cate01").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate01").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="B"){
-								$("#cate02").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate02").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="C"){
-								$("#cate03").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate03").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="D"){
-								$("#cate04").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate04").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="E"){
-								$("#cate05").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate05").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="F"){
-								$("#cate06").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate06").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							} else if(value[i].cate=="G"){
-								$("#cate07").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+								$("#cate07").append("<a class='navbar-item' href='/pro03/GetTourDetailCtrl.html?no="+value[i].no+"'>"+value[i].place+"</a>");
 							}
 						}
 					}
@@ -205,7 +205,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
 			          <div class="content" style="margin:10px;">
 			          	<p class="item_com">주소 대구광역시 달성군 다사읍 강정본길 57
                         전화번호 053-585-0916~7
-                        홈페이지 http://www.riverguide.go.kr/kor/page.do?menuIdx=381</p>
+                        홈페이지 http://www.riverguide.go.kr/kor/page.html?menuIdx=381</p>
 			          </div>
 			          <a href="travle/kangjung.html" class="button is-primary">자세히 보기</a>
 			        </article>
@@ -222,7 +222,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
 			          <div class="content" style="margin:10px;">
 			          	<p class="item_com">주소 대구광역시 동구 팔공산로 199길 6-1
                         전화번호 053-982-0005
-                        홈페이지 https://www.daegu.go.kr/env/index.do?menu_id=00000914&servletPath=%2Fenv</p>
+                        홈페이지 https://www.daegu.go.kr/env/index.html?menu_id=00000914&servletPath=%2Fenv</p>
 			          </div>
 			          <a href="travel/mout.html" class="button is-primary">자세히 보기</a>
 			        </article>
@@ -245,7 +245,7 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
 			</div>
       	</div>
 		<div class="buttons">
-		  <a href="GetTourListCtrl.do.html" class="button is-info">전체 목록</a>
+		  <a href="GetTourListCtrl.html.html" class="button is-info">전체 목록</a>
 		</div>
     </div>
   </section>
