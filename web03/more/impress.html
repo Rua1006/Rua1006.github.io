@@ -12,11 +12,22 @@
 <!-- 스타일 -->
 <style>
 	body, html { font-family: 'Noto Sans KR', sans-serif; }
-	.table { min-width:960px; }
+	.table { min-width:960px; width: 100%;}
 	#logo { display:block; width:217px; height:63px; background-image:url("../data/logo.png");
 	background-size:100% auto; background-repeat:no-repeat; background-position:center center; padding: 0;}
 	.content .item_com {width:200px;}
 	.con {width: 100%;}
+	.dataTables_filter {float: right; text-align: right;}
+	.dataTables_paginate {float: right; text-align: right; padding-top: 0.25em;}
+	.dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+	cursor: default; color: #666 !important; border: 1px solid transparent; background: transparent; box-shadow: none;	}
+	.dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+	color: #333 !important; border: 1px solid rgba(0, 0, 0, 0.3); }
+	.dataTables_paginate .paginate_button { box-sizing: border-box; display: inline-block; min-width: 1.5em; padding: 0.5em 1em; 
+	margin-left: 2px; text-align: center; text-decoration: none !important; cursor: pointer; color: #333 !important;
+    border: 1px solid transparent; border-radius: 2px;}
+	.dataTables_paginate {position: inherit; float: right; text-align: right; padding-top: 0.25em;}
+	.section {height: 80vh;}
 </style>
 <!-- 데이터테이블 -->
 <script>
@@ -131,7 +142,7 @@ $(document).ready( function () {
 		<div class="navbar-end">
 			<div class="navbar-item">
 				<div class="buttons">
-					<a href="../mem/join.html" class="button is-dark">
+					<a href="../mem/membership.html" class="button is-dark">
 					<strong>회원가입</strong>
 					</a>
 					<a href="../mem/login.html" class="button is-light">
@@ -182,9 +193,21 @@ $(document).ready( function () {
 	});
 </script>
 <section class="section">
+	
 <!-- 메인 컨텐츠 -->
 <div class="container">
 	<h1 class="title">이용후기</h1>
+	<div class="dataTables_length" id="tb1_length">
+		<label>Show
+			<select name="tb1_length" aria-controls="tb1" class="">
+			<option value="10">10</option><option value="25">25</option>
+			<option value="50">50</option><option value="100">100</option>
+			</select> entries
+		</label>
+	</div>
+	<div id="tb1_filter" class="dataTables_filter">
+		<label>Search:<input type="search" class="" placeholder="" aria-controls="tb1"></label>
+	</div>
 	<table class="table" id="tb1">
 		<thead>
 			<tr>
@@ -211,11 +234,54 @@ $(document).ready( function () {
 			2022-11-23
 			</td>
 			<td>
+			<a href="/pro03/DelImpressCtrl.do?no=1" class="button is-success">글 삭제</a>
 			</td>	
 		</tr>
 		</tbody>
+		</table>
+		<div class="dataTables_info" id="tb1_info" role="status" aria-live="polite">Showing 1 to 1 of 1 entries
+		<div class="dataTables_paginate paging_simple_numbers" id="tb1_paginate">
+			<a class="paginate_button previous disabled" aria-controls="tb1" data-dt-idx="0" tabindex="-1" id="tb1_previous">Previous</a>
+			<span><a class="paginate_button current" aria-controls="tb1" data-dt-idx="1" tabindex="0">1</a></span>
+			<a class="paginate_button next disabled" aria-controls="tb1" data-dt-idx="2" tabindex="-1" id="tb1_next">Next</a>
+		</div>
+		</div>
+	<hr style="height:3px; background-color:#ccc;">
+	<table class="table">
+		<tbody>
+			<tr>
+				<td style="width:160px">
+					<div class="select" style="width:150">
+					  <select name="cate" id="cate" class="select" onchange="changeTourNo()" style="width:150" required="">
+						  <option value="">선택</option>
+						<option value="A">관광</option>
+						<option value="B">체험</option>
+						<option value="C">행사</option>
+						<option value="D">축제</option>
+						<option value="E">숙박</option>
+						<option value="F">음식</option>
+						<option value="G">쇼핑</option>
+						<option value="H">기타</option>
+					  </select>
+					</div>
+					<br>
+					<div class="select" style="width:150">
+						<select name="tourno" id="tourno" style="width:150" required="">
+							<option value="">선택</option>
+						</select>
+					</div>
+				</td>
+				<td style="min-width:400px">
+					<input type="text" name="content" id="content" class="input" placeholder="이용후기를 작성해주세요." required="">
+				</td>
+				<td>
+					<div class="buttons">
+					  <button type="button" class="button is-danger" onclick="addImpress()">글 등록</button>
+					</div>
+				</td>
+			</tr>
+		</tbody>
 	</table>
-	<hr style="height:4px; background-color:#ccc;">
 </div>
 <!-- 이용후기 스크립트 -->
 <script>

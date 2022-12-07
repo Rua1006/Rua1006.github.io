@@ -12,11 +12,21 @@
 <!-- 스타일 -->
 <style>
 	body, html { font-family: 'Noto Sans KR', sans-serif; }
-	.table { min-width:960px; }
+	.table { min-width:960px; width: 100%; }
 	#logo { display:block; width:217px; height:63px; background-image:url("../data/logo.png");
 	background-size:100% auto; background-repeat:no-repeat; background-position:center center; padding: 0;}
 	.content .item_com {width:200px;}
 	.con {width: 100%;}
+	.section {height: 80vh;}
+	.dataTables_wrapper .dataTables_filter {float: right; text-align: right;}
+	.dataTables_wrapper .dataTables_paginate {float: right; text-align: right; padding-top: 0.25em;}
+	.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+	cursor: default; color: #666 !important; border: 1px solid transparent; background: transparent; box-shadow: none;	}
+	.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+	color: #333 !important; border: 1px solid rgba(0, 0, 0, 0.3); }
+	.dataTables_wrapper .dataTables_paginate .paginate_button { box-sizing: border-box; display: inline-block; min-width: 1.5em; padding: 0.5em 1em; 
+	margin-left: 2px; text-align: center; text-decoration: none !important; cursor: pointer; color: #333 !important;
+    border: 1px solid transparent; border-radius: 2px;}
 </style>
 <!-- 데이터테이블 -->
 <script>
@@ -134,7 +144,7 @@ $(document).ready( function () {
 		<div class="navbar-end">
 			<div class="navbar-item">
 				<div class="buttons">
-					<a href="../mem/join.html" class="button is-dark">
+					<a href="../mem/membership.html" class="button is-dark">
 					<strong>회원가입</strong>
 					</a>
 					<a href="../mem/login.html" class="button is-light">
@@ -185,43 +195,67 @@ $(document).ready( function () {
 	});
 </script>
 <section class="section">
+<!-- 관리자 메뉴 -->
+<div class="columns is-full">
+	<article class="panel is-success">
+    <p class="panel-heading">관리자 메뉴</p>
+    <a class="panel-block is-active" href="../mem/memlist.html">회원관리</a> 
+    <a class="panel-block" href="../GetTourListCtrl.html">관광서비스 관리</a>
+    <a class="panel-block" href="notice.html">게시판관리</a>
+    <a class="panel-block">더 알아보기</a>
+  </article>	
 <!-- 메인 컨텐츠 -->
-<div class="container">
-	<h2 class="title">묻고 답하기</h2>
-		<table class="table" id="tb1">
+<div class="column is-10">
+	<div class="container">
+		<h2 class="title">묻고 답하기</h2>
+		<div id="tb1_wrapper" class="dataTables_wrapper no-footer">
+			<div class="dataTables_length" id="tb1_length">
+				<label>Show 
+					<select name="tb1_length" aria-controls="tb1" class="">
+					<option value="10">10</option><option value="25">25</option>
+					<option value="50">50</option><option value="100">100</option>
+					</select> entries</label></div><div id="tb1_filter" class="dataTables_filter">
+				<label>Search:<input type="search" class="" placeholder="" aria-controls="tb1"></label>
+			</div>
+			<table class="table dataTable no-footer" id="tb1" aria-describedby="tb1_info">
 			<thead>
 				<tr>
-					<th style="max-width:5px"></th><th>번호</th><th>제목</th><th>작성자</th><th>작성일</th>
+					<th style="max-width: 5px; width: 79px;" class="sorting" tabindex="0" aria-controls="tb1" rowspan="1" colspan="1" aria-label=": activate to sort column ascending"></th>
+					<th class="sorting" tabindex="0" aria-controls="tb1" rowspan="1" colspan="1" aria-label="연번: activate to sort column ascending" style="width: 174px;">연번</th>
+					<th class="sorting" tabindex="0" aria-controls="tb1" rowspan="1" colspan="1" aria-label="제목: activate to sort column ascending" style="width: 470px;">제목</th>
+					<th class="sorting" tabindex="0" aria-controls="tb1" rowspan="1" colspan="1" aria-label="작성자: activate to sort column ascending" style="width: 221px;">작성자</th>
+					<th class="sorting" tabindex="0" aria-controls="tb1" rowspan="1" colspan="1" aria-label="작성일: activate to sort column ascending" style="width: 221px;">작성일</th>
 				</tr>
 			</thead>
 			<tbody>
-			<tr>
+			<tr class="odd">
 				<td><span style="color:transparent">1</span></td>
 				<td>
-				<span>1</span>
+					<span>1</span>
 				</td>
 				<td>
-				<span>질문글 테스트</span>
+					<a href="/pro03/GetQnaDetailCtrl.do?no=1">테스트</a>
 				</td>
 				<td>admin</td>
 				<td>
 		      	</td>
-			</tr>
-			<tr>
+			</tr><tr class="even">
 				<td><span style="color:transparent">1</span></td>
 				<td>
-				<span style="color:white">2</span>
+					<span style="color:white">2</span>
 				</td>
 				<td>
-				<span style="padding-left:60px;">답변글 테스트</span>
+					<a href="/pro03/GetQnaDetailCtrl.do?no=2" style="padding-left:60px;">테스트 답변</a>
 				</td>
 				<td>admin</td>
 				<td>
 		      	</td>
-			</tr>
-			</tbody>
-		</table>
-	</div>	
+			</tr></tbody>
+		</table><div class="dataTables_info" id="tb1_info" role="status" aria-live="polite">Showing 1 to 2 of 2 entries</div><div class="dataTables_paginate paging_simple_numbers" id="tb1_paginate"><a class="paginate_button previous disabled" aria-controls="tb1" data-dt-idx="0" tabindex="-1" id="tb1_previous">Previous</a><span><a class="paginate_button current" aria-controls="tb1" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="tb1" data-dt-idx="2" tabindex="-1" id="tb1_next">Next</a></div></div>
+		<div class="btn-group">
+			<a href="/pro03/qna/qnaWrite.jsp" class="button is-danger">글 등록</a>
+		</div>
+		</div>
 </section>
 <!-- 하단 푸터 -->
 <footer class="footer">

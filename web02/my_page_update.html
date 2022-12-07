@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://www.tamburins.com/img/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://www.tamburins.com/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="https://www.tamburins.com/img/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://www.tamburins.com/img/favicon/favicon-16x16.png">
+    <meta name="copyright" content="Copyrights © tamburins  All Rights Reserved" />
+		<meta name="description" content="감각적 아트와 아름다움을 지향하는 코스메틱 브랜드 탬버린즈">
+		<meta name="keywords" content="탬버린즈, tamburins, 코스메틱, 아트, 핸드크림">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="tamburins">
+		<meta property="og:description" content="감각적 아트와 아름다움을 지향하는 코스메틱 브랜드 탬버린즈">
+		<meta property="og:url" content="https://www.tamburins.com/">
+		<meta property="og:locale" content="ko_KR">
+    <meta property="og:image" content="https://www.tamburins.com/img/opengraph/20220919.jpg">	
     <!--반응형-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- bootstrap link -->
@@ -42,7 +55,7 @@
     .col-lg-6 {font-size: 15px; line-height: 30px; word-break: keep-all;}
     .my-5 {margin-top: 0rem!important; margin-bottom: 0rem!important; }
     .product1 {margin-top: 30px;}
-    .subtitle {border-bottom: 1px solid #adb5bd; padding-bottom: 1em; font-size: 17px; font-weight: 700; width: 400px; text-align: center; margin-left: 0;}
+    .subtitle {border-bottom: 1px solid #adb5bd; padding-bottom: 1em; font-size: 17px; font-weight: 700; width: 400px; text-align: center; margin:0 auto;}
     .card {margin-bottom: 30px;}
     .card-text1{word-break: keep-all; font-size: 12px; margin-bottom: 1em;}
     .card-title {font-size: 17px; font-weight: 600; margin-bottom: 1em;}
@@ -58,7 +71,8 @@
     .insert {width: 800px; margin-left: 20%;}
     .input-group {align-items: flex-end;}
     #sidebarMenu {height: 98vh; margin: 0; float: left; padding-top: 100px;  text-align: center;} 
-    .maincontent {float:left; width: auto; min-width: 1300px; height: auto; min-height: 100%; padding-top: 100px; padding-bottom: 600px; margin-left: 20px; text-align: center;}
+    .maincontent {float:left; width: 700px; min-width: 700px; height: auto; min-height: 100%; padding-top: 100px; padding-bottom: 600px; margin: 0 auto; text-align: center;
+    margin-left: 20%;}
     body {margin: 0; padding: 0; height: 100%;}  
     #body-wrapper {min-height: 100%; position: relative;}
     .maincontent {margin-top: 100px; padding-bottom: 600px;}
@@ -203,76 +217,76 @@
     </div>
    </nav>
   <section class="maincontent">
-    <div class="container subtitle">
-      <div class="list-title font--kr litletitle">회원정보변경</strong></div>
+    <div class="container-fluid">
+      <div class="container subtitle">
+        <div class="list-title font--kr">내 정보 변경</strong></div>
+      </div>
+      <form action="#" method="post" name="frm1" id="frm1" onsubmit="return joinCheck(this)" class="insertjoin">
+        <table class="table">
+          <tbody>
+            <tr>
+            <td>
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">아이디</span>
+                <input type="text" id="cusId" name="cusId" class="form-control" placeholder="아이디입력" autofocus required/>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1">비밀번호</span>
+                  <input type="password" id="cusPw" name="cusPw" class="form-control" placeholder="비밀번호입력" required/>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1">비밀번호확인</span>
+                  <input type="password" id="cusPw2" name="cusPw2" class="form-control" placeholder="비밀번호확인" required/>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1">이름입력</span>
+                  <input type="text" id="cusName" name="cusName" class="form-control" placeholder="이름입력" required/>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1">주소입력</span>
+                  <input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="form-control" required />
+                </div>
+                <div class="input-group">
+                  <input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="form-control mt-2 mb-2" required />
+                </div>  
+                <div class="input-group">
+                  <input type="text" name="postcode" id="postcode" placeholder="우편번호" class="form-control">
+                  <button id="post_btn" onclick="findAddr()" class="btn btn-dark">우편번호 검색</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1">전화번호</span>
+                  <input type="text" id="tel" name="tel" class="form-control" placeholder="000-0000-0000" required>
+                </div>
+              </td>
+            </tr>
+          </tbody>		
+        </table>
+        <div class="btn-group col-lg-10 gap-2">
+          <input type="submit" name="submit-btn" value="변경" class="btn btn-dark">
+          <input type="reset" name="reset-btn" value="취소" class="btn btn-dark" >
+        </div>	
+      </form>
     </div>
-    <form action="" class="insert">
-      <table class="table">
-        <tbody>
-          <tr>
-          <td>
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon1">아이디</span>
-              <input type="text" id="cusId" name="cusId" class="form-control" placeholder="아이디입력" autofocus required/>
-              <input type="button" class="btn btn-dark" id="button-addon2" value="아이디 중복 확인" onclick="idCheck()">
-              <input type="hidden" name="idck" value="no">
-            </div>
-          </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="input-group">
-                <span class="input-group-text" id="basic-addon1">비밀번호</span>
-                <input type="password" id="cusPw" name="cusPw" class="form-control" placeholder="비밀번호입력" required/>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="input-group">
-                <span class="input-group-text" id="basic-addon1">비밀번호확인</span>
-                <input type="password" id="cusPw2" name="cusPw2" class="form-control" placeholder="비밀번호확인" required/>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="input-group">
-                <span class="input-group-text" id="basic-addon1">이름입력</span>
-                <input type="text" id="cusName" name="cusName" class="form-control" placeholder="이름입력" required/>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="input-group">
-                <span class="input-group-text" id="basic-addon1">주소입력</span>
-                <input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="form-control" required />
-              </div>
-              <div class="input-group">
-                <input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="form-control mt-2 mb-2" required />
-              </div>  
-              <div class="input-group">
-                <input type="text" name="postcode" id="postcode" placeholder="우편번호" class="form-control">
-                <button id="post_btn" onclick="findAddr()" class="btn btn-dark">우편번호 검색</button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="input-group">
-                <span class="input-group-text" id="basic-addon1">전화번호</span>
-                <input type="text" id="tel" name="tel" class="form-control" placeholder="000-0000-0000" required>
-              </div>
-            </td>
-          </tr>
-        </tbody>		
-      </table>
-      <div class="btn-group col-lg-10 gap-2">
-        <input type="submit" name="submit-btn" value="가입" class="btn btn-dark">
-        <input type="reset" name="reset-btn" value="취소" class="btn btn-dark" >
-      </div>	
-    </form>
   </section>
 </div>
 </body>
