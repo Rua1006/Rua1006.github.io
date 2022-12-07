@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>장소 목록</title>
+<title>공지사항 목록</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <!-- 스타일 -->
 <style>
-body, html { font-family: 'Noto Sans KR', sans-serif; }
-.table { min-width:960px; }
-#logo { display:block; width:217px; height:63px; background-image:url("/data/logo.png");
-background-size:100% auto; background-repeat:no-repeat; background-position:center center; padding: 0;}
-.content .item_com {width:200px;}
-.con {width: 100%;}
+  body, html { font-family: 'Noto Sans KR', sans-serif; }
+  .table { min-width:960px; }
+  #logo { display:block; width:217px; height:63px; background-image:url("/data/logo.png");
+  background-size:100% auto; background-repeat:no-repeat; background-position:center center; padding: 0;}
+  .content .item_com {width:200px;}
+  .con {width: 100%;}
 </style>
 
 </head>
@@ -148,232 +148,54 @@ background-size:100% auto; background-repeat:no-repeat; background-position:cent
 		});
 	});
 </script>
-<!-- 브래드크럼 -->
-	<nav class="breadcrumb" aria-label="breadcrumbs" style="border-bottom:2px solid #ddd; padding-bottom:8px; min-height:48px; line-height:48px;">
-	  <ul style="float:right;">
-	    <li><a href="index.html">Home</a></li>
-	    <li class="is-active"><a href="GetTourListCtrl.html" aria-current="page">전체 장소 목록</a></li>
-	  </ul>
-	</nav>
+<!-- 관리자 메뉴 -->
 <section class="section">
-<!-- 메인 컨텐츠 -->
-<div class="container">
-	<h1 class="title">장소 목록</h1>
-	<form name="frm1" id="frm1" class="search_form" action=".GetPlaceSearchCtrl.html" method="get">
-		<div class="select inline">
-			<select name="sel" id="sel" required>
-				<option value="">옵션 선택</option>
-				<option value="place">장소명</option>
-				<option value="comment2">장소설명</option>
-				<option value="place+comment2">장소명+장소설명</option>
-			</select>
+<div class="columns is-full">
+	<article class="panel is-success">
+		<p class="panel-heading">
+		관리자 메뉴
+		</p>
+		<a class="panel-block is-active" href="memlist.html">
+		회원관리
+		</a> 
+		<a class="panel-block" href="../GetTourListCtrl.html">
+		관광서비스 관리
+		</a>
+		<a class="panel-block" href="../more/notice.html">
+		게시판관리
+		</a>
+		<a class="panel-block">
+		더 알아보기
+		</a>
+	</article>
+	<div class="column is-10">
+		<h1 class="title">공지사항 목록</h1>
+		<table class="table">
+			<thead>
+			<tr>
+				<th><abbr title="No">No</abbr></th>
+				<th><abbr title="Title">Title</abbr></th>
+				<th><abbr title="Result">RegDate</abbr></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>1</td>
+				<td><a href="GetNoticeCtrl.html?no=2">공지사항 글쓰기 테스트</a></td>
+				<td>
+				2022-11-11
+			</tr>
+			<tr>
+				<td>2</td>
+				<td><a href="GetNoticeCtrl.html?no=1">공지사항 글쓰기 테스트2</a></td>
+				<td>
+				2022-11-11
+			</tr>
+			</tbody>
+		</table>
+		<div class="buttons">
+			<a href="notice/addNotice.html" class="button is-success">글 등록</a>
 		</div>
-		<input type="text" name="keyword" id="keyword" class="input inline" placeholder="검색어 입력" required>
-		<input type="submit" class="button is-primary inline" value="검색">
-	</form>
-	<table class="table">
-		<thead>
-		<tr>
-			<th><abbr title="Num">Num</abbr></th>
-			<th><abbr title="Cate">Category</abbr></th>
-			<th><abbr title="Place">Place</abbr></th>
-			<th><abbr title="Comment">Comment</abbr></th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-			<td>1</td>
-			<td>
-			<span>명품관광코스</span>
-			</td>
-			<td>
-			<a href="tour/dong.html">동화사</a>
-			</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>
-			<span>명품관광코스</span>
-			</td>
-			<td>
-			<a href="tour/tree.html">대구수목원</a>
-			</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>
-			<span>명품관광코스</span>
-			</td>
-			<td>
-			<a href="tour/see.html">앞산전망대</a>
-			</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>
-			<span>관광명소</span>
-			</td>
-			<td>
-			<a href="travel/kangjung.html">강정고령보 - 디아크(The ARC)</a>
-			</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>
-			<span>관광명소</span>
-			</td>
-			<td>
-			<a href="travel/mout.html">팔공산자연공원</a>
-			</td>
-		</tr>
-		<tr>
-			<td>6</td>
-			<td>
-			<span>관광명소</span>
-			</td>
-			<td>
-			<a href="travel/load.html">동성로</a>
-			</td>
-		</tr>
-		<tr>
-			<td>7</td>
-			<td>
-			<span>축제</span>
-			</td>
-			<td>
-			<a href="fst/world.html">이월드별빛축제</a>
-			</td>
-		</tr>
-		<tr>
-			<td>8</td>
-			<td>
-			<span>축제</span>
-			</td>
-			<td>
-			<a href="fst/fire.html">대구 형형색색 달구벌 관등놀이</a>
-			</td>
-		</tr>
-		<tr>
-			<td>9</td>
-			<td>
-			<span>축제</span>
-			</td>
-			<td>
-			<a href="fst/blossom.html">팔공산 벚꽃축제</a>
-			</td>
-		</tr>
-		<tr>
-			<td>10</td>
-			<td>
-			<span>숙박</span>
-			</td>
-			<td>
-			<a href="sleep/guest.html">한옥 게스트하우스 安(Ahn)</a>
-			</td>
-		</tr>
-		<tr>
-			<td>11</td>
-			<td>
-			<span>숙박</span>
-			</td>
-			<td>
-			<a href="sleep/camp.html">달서별빛캠프 캠핑장</a>
-			</td>
-		</tr>
-		<tr>
-			<td>12</td>
-			<td>
-			<span>숙박</span>
-			</td>
-			<td>
-			<a href="sleep/hotel.html">호텔 인터불고 엑스코</a>
-			</td>
-		</tr>
-		<tr>
-			<td>13</td>
-			<td>
-			<span>식당</span>
-			</td>
-			<td>
-			<a href="foodpl/dda.html">대구전통따로식당</a>
-			</td>
-		</tr>
-		<tr>
-			<td>14</td>
-			<td>
-			<span>식당</span>
-			</td>
-			<td>
-			<a href="foodpl/spi.html">왕거미</a>
-			</td>
-		</tr>
-		<tr>
-			<td>15</td>
-			<td>
-			<span>식당</span>
-			</td>
-			<td>
-			<a href="foodpl/rock.html">동인동찜갈비 돌담집</a>
-			</td>
-		</tr>
-		<tr>
-			<td>16</td>
-			<td>
-			<span>음식</span>
-			</td>
-			<td>
-			<a href="food/six.html">대구따로국밥(대구육개장)</a>
-			</td>
-		</tr>
-		<tr>
-			<td>17</td>
-			<td>
-			<span>음식</span>
-			</td>
-			<td>
-			<a href="food/moong.html">뭉티기</a>
-			</td>
-		</tr>
-		<tr>
-			<td>18</td>
-			<td>
-			<span>음식</span>
-			</td>
-			<td>
-			<a href="food/ggim.html">동인동찜갈비</a>
-			</td>
-		</tr>
-		<tr>
-			<td>19</td>
-			<td>
-			<span>쇼핑</span>
-			</td>
-			<td>
-			<a href="shop/load.html">동성로</a>
-			</td>
-		</tr>
-		<tr>
-			<td>20</td>
-			<td>
-			<span>쇼핑</span>				
-			</td>
-			<td>
-			<a href="shop/mart.html">방촌시장</a>
-			</td>
-		</tr>
-		<tr>
-			<td>21</td>
-			<td>
-			<span>쇼핑</span>
-			</td>
-			<td>
-			<a href="shop/dep.html">대구신세계 백화점</a>
-			</td>
-		</tr>
-		</tbody>
-	</table>
-	<div class="buttons">
-		<a href="addTour.html" class="button is-success">장소 등록</a>
 	</div>
 </div>
 </section>
