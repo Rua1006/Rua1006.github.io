@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html">
 <head>
@@ -89,14 +87,93 @@
     .copyright_title3 {font-weight: 700; margin-top: 30px;}
     .ft_tel {font-size: 50px; font-weight: 700;}
     .weekend {font-size: 12px;}
-    .humu {margin-bottom: 70px;}  
+    .humu {margin-bottom: 70px;} 
+
+
     </style>
 </head>
 <body>
 <div class="wrap">
 <header class="hd">
     <div class="hd_wrap">
-         <%@ include file="../header.jsp" %>
+        <nav class="navbar navbar-expand-lg bg-white fixed-top">
+            <div class="container-fluid">
+                <!-- 로고 클릭시 메인페이지 이동 -->
+                <a class="navbar-brand" href="index.html"><img src="img/logo/header_logo_mini.png" alt="로고" width="100" height="auto"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="brandStroy.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          브랜드</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="brandStroy.html">브랜드스토리</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="brandGiveLove.html">Give & Love</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="GetProductItemListCtrl?cateNo=1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          제품</a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="GetProductItemListCtrl?cateNo=1">사료</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="GetProductItemListCtrl?cateNo=2">화식</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="GetProductItemListCtrl?cateNo=3">간식</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="event.jsp" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          커뮤니티</a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="event.jsp">이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="GetBoardListCtrl" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  고객지원</a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="GetBoardListCtrl">공지사항</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="GetQnaListCtrl.do">고객문의</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">자주 묻는 질문</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                    <!-- navi 끝부분 -->
+                    <ul class="nav justify-content-end">
+                  <li class="nav-item">
+                    <span class="nav-link text-secondary"><%=sname %>님</span>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-secondary" href="LogOutCtrl">로그아웃</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-secondary" href="GetCustomInfoCtrl">회원정보</a>
+                  </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="admin/index.jsp">관리자 페이지로</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="GetMemberSalesInfoCtrl">구매내역</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-secondary" href="GetMemberCartListCtrl">장바구니</a>
+                    </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-secondary" href="custom/login.jsp">로그인</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-secondary" href="custom/membership.jsp">회원가입</a>
+                  </li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
     </div>
 </header>
 <div class="content container-fluid bg-light">
@@ -111,6 +188,69 @@
 </div>   
 </body>
 <footer class="ft container-sticky">
-    <%@ include file="../footer.jsp" %>
-</footer>
+    <div class="ft_wrap">
+        <div class="ft-top">
+            <a href="#">이용안내</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">공지사항</a>
+        </div>
+        <div class="left">
+            <p class="copyright">주식회사 일현코퍼레이션<br></p>
+            <p class="addr">
+                04799 서울특별시 성동구 아차산로15길 52 (성수동2가) 삼환디지털벤처타워 902-1호<br>
+                이메일 : doctordog@ilhyun.co.kr<br>
+                사업자번호 : 206-86-61496 | 통신판매신고번호 : 제 2012-서울성동-0364<br> 
+                KG 이니시스 매매보호(에스크로)서비스 가입<br>
+                대표이사 : 김형우 | 개인정보관리자 : 관리부<br>
+            </p>
+            <div>
+                <p class="copyright">© Ilhyun Corporation. all rights reserved.</p>
+                <a href="https://ko-kr.facebook.com/okdoctordog/" target="_blank">
+                    <img src="img/icon/ico_facebook.png"  width="25" height: auto alt="facebook" class="pic_fb">
+                </a>
+                <a href="https://www.instagram.com/doctordog_korea/?hl=ko" target="_blank">
+                    <img src="img/icon/ico_instagram.png"  width="25" height: auto alt="instagram" class="pic_is">
+                </a>
+                <a href="https://www.youtube.com/channel/UCFOuQToD-Ces7c1CxMu5SRA" target="_blank">
+                    <img src="img/icon/ico_youtube.png"  width="31" height: auto alt="youtube" class="pic_yt">
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right1">
+                <p class="copyright_title">고객센터</p>
+                <p class="addr">
+                <p class="ft_tel">1544-0322</p><br>
+                <p>
+                    평일 | 오전 10:30~오후 05:00<br>
+                    점심시간 | 오전 11:30 ~ 오후 12:30<br>
+                </p>
+                <p class="weekend">     
+                    (주말 및 공휴일 휴무)<br> 
+                </p>
+                <p class="copyright">
+                    FAQ | 1:1문의 | 마케팅제휴문의
+                </p>
+            </div>    
+            <div class="right2">
+                <p class="copyright_title2">
+                    택배 배송 마감 안내
+                </p>
+                <p class="addr">
+                    평일 | 오후 2시 마감<br>
+                    토요일 | 오후 1시 마감<br>
+                </p>
+                <p class="humu">    
+                    고객센터는 토요일 휴무입니다.<br> 
+                </p>
+                <p class="copyright_title3">
+                    상온 제품 배송조회>
+                </p>
+                <p class="copyright_title3">
+                    냉동 제품 배송조회>
+                </p>
+            </div>
+        </div>
+    </div>    
 </html>
