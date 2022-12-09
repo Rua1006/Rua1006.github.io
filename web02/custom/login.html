@@ -49,25 +49,23 @@
     img {border: none; vertical-align: top; margin: 0; padding: 0;}
     .wrap {height: auto; min-height: 100%;} 
     .wrap:after {content: ""; display: block; clear: both;}
-
+    
     /*head*/
     .dropdown-menu {border-radius:0%}
     .text-secondary {margin-left: 20px;}
     .navbar {--bs-navbar-padding-y: 0; height: 100px; padding: 20px;}
 
     /*main*/
-    .card {overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display: block; margin: 0 auto; padding: 0; margin-bottom: 40px;}
-    .page_wrap {width:55%; margin: 0 auto;}
     .container-fluid {padding-left: 0; padding-right: 0;}
-    .content {padding-top: 140px; padding-bottom: 30px;}
-    .card-text {font-weight: 600;}
-    .card-body p {margin: 0;}
-    
+    .content {padding-top: 110px; height: 100vh;}
+    .sub-title {font-weight: 600; font-size: 30px; margin-top: 150px;}
+    a {text-decoration: none;}
+    .form {margin-top: 30px; width: 600px; margin: 0 auto;}
+    .row {width: 100%; margin:0 auto;}
+
     /*btn*/
-    .btn-group {width: 100%;}
-    #button-addon2 {border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;}
-    .pagination {text-align: center;}
-    
+    .btn {margin-left: 10px;}
+
     /*foot*/
     .ft {position: relative; height: 470px; width: 100%;}
     .ft_wrap:after { content:""; display:block; clear:both; }
@@ -89,14 +87,15 @@
     .copyright_title3 {font-weight: 700; margin-top: 30px;}
     .ft_tel {font-size: 50px; font-weight: 700;}
     .weekend {font-size: 12px;}
-    .humu {margin-bottom: 70px;}  
+    .humu {margin-bottom: 70px;} 
+
     </style>
 </head>
 <body>
 <div class="wrap">
 <header class="hd">
-    <div class="hd_wrap">
-      <nav class="navbar navbar-expand-lg bg-white fixed-top">
+<div class="hd_wrap">
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
         <div class="container-fluid">
             <!-- 로고 클릭시 메인페이지 이동 -->
             <a class="navbar-brand" href="../index.html"><img src="../img/logo/header_logo_mini.png" alt="로고" width="100" height="auto"></a>
@@ -147,117 +146,96 @@
                 <!-- navi 끝부분 -->
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <span class="nav-link text-secondary" ><%=sname %>님</span>
+                        <span class="nav-link text-secondary" hidden >관리자님</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="LogOutCtrl">로그아웃</a>
+                        <a class="nav-link text-secondary" href="LogOutCtrl" hidden>로그아웃</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="custom/customInfo.html">회원정보</a>
+                        <a class="nav-link text-secondary" href="custom/customInfo.html" hidden>회원정보</a>
                     </li>
                         <li class="nav-item">
-                        <a class="nav-link text-secondary" href="admin/index.html">관리자 페이지로</a>
+                        <a class="nav-link text-secondary" href="admin/index.html" hidden>관리자 페이지로</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link text-secondary" href="GetMemberSalesInfoCtrl">구매내역</a>
+                        <a class="nav-link text-secondary" href="GetMemberSalesInfoCtrl" hidden>구매내역</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link text-secondary" href="cart/cartList.html">장바구니</a>
+                        <a class="nav-link text-secondary" href="cart/cartList.html" hidden>장바구니</a>
                         </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="custom/login.html">로그인</a>
+                        <a class="nav-link text-secondary" href="login.html">로그인</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="custom/membership.html">회원가입</a>
+                        <a class="nav-link text-secondary" href="membership.html">회원가입</a>
                     </li>
                 </ul>
             </div>
         </div>
       </nav>
-</div>
+    </div>
 </header>
 <div class="content container-fluid bg-light">
-    <div class="page_wrap row">
-        <div class="card" style="width: 20rem;">
-            <img src="../img/community/event/event1.png"  class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text mb-3">닥터독 11월 출석체크 이벤트</p>
-              <p>2022-10-31</p>
+    <div class="login-page bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <h3 class="mb-3 sub-title">로그인</h3>
+                <div class="bg-white ">
+                    <div class="row">
+                        <div class="form h-100 py-5 px-5">
+                            <form name="frm1" id="frm1" action="/web02/LoginCtrl" class="row g-4" method="post">
+                                <div class="col-12">
+                                <label>아이디<span class="text-danger">*</span></label>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  										<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+									</svg>
+									</div>
+                                    <input type="text" id="cusId" name="cusId" class="form-control" placeholder="아이디입력" autofocus required>
+                                </div>
+                                </div>
+                                <div class="col-12">
+                                <label>비밀번호<span class="text-danger">*</span></label>
+                                <div class="input-group mt-2">
+                                    <div class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+       									<path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+									</svg>
+									</div>
+                                    <input type="password" id="cusPw" name="cusPw" class="form-control" placeholder="비밀번호입력" required>
+                                </div>
+                                </div>
+                                <div class="col-sm-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                    <label class="form-check-label" for="inlineFormCheck">아이디 저장</label>
+                                </div>
+                                </div>
+                                <div class="col-sm-6">
+                                <a href="#" class="float-end text-primary">비밀번호 찾기</a>
+                                </div>
+                                <div class="col">
+                                <a href="#" class="float-end text-primary">비회원 주문조회</a>
+                                </div>
+                                <div class="col-12">
+                                <input type="reset" class="btn btn-dark px-4 mt-4 float-end" value="취소">
+                                <input type="submit" class="btn btn-dark px-4 mt-4 mr-3 float-md-end" value="로그인">
+                                <a href="membership.html" class="btn btn-dark px-4 mt-4 float-end">회원가입</a>  
+                                </div> 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
-        <div class="card" style="width: 20rem;">
-            <img src="../img/community/event/event2.png"  class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text mb-3">닥터독x소노펫 펫캉스 EVENT</p>
-              <p>2022-09-22</p>
-            </div>
-        </div>
-        <div class="card" style="width: 20rem;">
-            <img src="../img/community/event/event3.png"  class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text mb-3">닥터독x상하농원 글램핑 초대 이벤트</p>
-              <p>2022-06-07</p>
-            </div>
-        </div>
-        <div class="card" style="width: 20rem;">
-            <img src="../img/community/event/event4.png"  class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text mb-3">상하농원x닥터독 웰컴키트 증정이벤트</p>
-              <p>2022-04-29</p>
-            </div>
-        </div>
-        <div class="card" style="width: 20rem;">
-            <img src="../img/community/event/event5.png"  class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text mb-3">닥터독 신규회원만 특별 혜택!</p>
-              <p>2021-09-01</p>
-            </div>
-        </div>
-        <div class="card" style="width: 20rem;">
-            <img src="../img/community/event/event6.png"  class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text mb-3">닥터독 정기배송 OPEN</p>
-              <p>2021-08-11</p>
-            </div>
-        </div>
-        <div class="card" style="width: 20rem;">
-            <img src="../img/community/event/event7.png"  class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text mb-3">앱 설치하면 할인혜택!</p>
-              <p>2021-08-02</p>
-            </div>
-        </div>
-        <div class="card" style="width: 20rem;">
-            <img src="../img/community/event/event8.png"  class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text mb-3">아직도 닥터독을 모르는 견주가 있다면 널리 추천해주고 적립금 받개</p>
-              <p>2018-10-01</p>
-            </div>
-        </div>
-        <div class="card" style="width: 20rem;">
-            <img src="../img/community/event/event9.png"  class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text mb-3">반려견 정보 등록하고 BIG혜택 받자!</p>
-              <p>2018-06-08</p>
-            </div>
-        </div>
-    </div>
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">Previous</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-    </nav>
-</div>
+    </div> 
 </div> 
 </body>
 <footer class="ft container-sticky">
-  <div class="ft_wrap">
+<div class="ft_wrap">
     <div class="ft-top">
         <a href="#">이용안내</a>
         <a href="#">이용약관</a>
@@ -276,13 +254,13 @@
         <div>
             <p class="copyright">© Ilhyun Corporation. all rights reserved.</p>
             <a href="https://ko-kr.facebook.com/okdoctordog/" target="_blank">
-                <img src="img/icon/ico_facebook.png"  width="25" height: auto alt="facebook" class="pic_fb">
+                <img src="/web02/img/icon/ico_facebook.png"  width="25" height: auto alt="facebook" class="pic_fb">
             </a>
             <a href="https://www.instagram.com/doctordog_korea/?hl=ko" target="_blank">
-                <img src="img/icon/ico_instagram.png"  width="25" height: auto alt="instagram" class="pic_is">
+                <img src="/web02/img/icon/ico_instagram.png"  width="25" height: auto alt="instagram" class="pic_is">
             </a>
             <a href="https://www.youtube.com/channel/UCFOuQToD-Ces7c1CxMu5SRA" target="_blank">
-                <img src="img/icon/ico_youtube.png"  width="31" height: auto alt="youtube" class="pic_yt">
+                <img src="/web02/img/icon/ico_youtube.png"  width="31" height: auto alt="youtube" class="pic_yt">
             </a>
         </div>
     </div>
@@ -321,6 +299,6 @@
             </p>
         </div>
     </div>
-</div>    
+</div>
 </footer>
 </html>

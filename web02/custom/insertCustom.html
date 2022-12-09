@@ -31,6 +31,7 @@
     <!-- jquery 플러그인 연결 -->
     <script src="./js/jquery-1.11.1.js"></script>
     <link rel="stylesheet" href="./css/reset2.css">
+    <link rel="stylesheet" href="./css/header.css">
     <!-- bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
@@ -56,29 +57,18 @@
     .navbar {--bs-navbar-padding-y: 0; height: 100px; padding: 20px;}
 
     /*main*/
+    .page_wrap {width: 30%; margin: 0 auto;}
     .container-fluid {padding-left: 0; padding-right: 0;}
-    .content {padding-top: 110px; height: auto; width: 100%; position: relative;}
+    .content {padding-top: 110px; height: 100vh;}
     .subtitle {font-weight: 600; font-size: 30px; margin-top: 150px; text-align: center; padding-bottom: 20px;}
-    .title {font-weight: 600; padding-left: 2rem; margin-bottom: 20px; margin-left: 5%;}
     a {text-decoration: none;}
-    .form {margin-top: 30px; width: 600px;}
-    .row {width: 100%; padding: 0;}
-   	.row1 {width: 100%; margin: 0; }
-    .card-body .btn {float: right;}
-    li {list-style: none;}
-
-    .my-5 {margin-top: 0rem!important; margin-bottom: 0rem!important; }
-    .product1 {margin-top: 30px;}
-    .col-xl-3 {margin-bottom: 30px; float:left; width: 20%; margin-left: 5%;}
-    .col-lg-6 {font-size: 15px; line-height: 30px; word-break: keep-all; flex: 0 0 auto; width: 71%; margin-top: 2em;}
-    .card-text {word-break: keep-all; font-size: 17px; margin-bottom: 0.5em; font-weight: 600; }
-    .card-title {font-size: 17px; font-weight: 600; margin-bottom: 1em;}
-    .item-spec {display: block; float: right;}
-    #sidebarMenu {height: 100vh; margin-right: 0;}
+    .form {margin-top: 30px; width: 600px; margin: 0 auto;}
+    .row {width: 100%; margin:0 auto;}
+    
     /*btn*/
-    .btn {margin-top: 0.5em; float: right;}
-    .btn-group {width: 25%; float: right; padding-left: calc(var(--bs-gutter-x) * .5); padding-right: 1.5rem!important; margin-right: 1%}
+    .btn-group {width: 100%;}
     #button-addon2 {border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;}
+    
 
 	/*foot*/
     .ft {position: relative; height: 470px; width: 100%;}
@@ -102,6 +92,7 @@
     .ft_tel {font-size: 50px; font-weight: 700;}
     .weekend {font-size: 12px;}
     .humu {margin-bottom: 70px;} 
+
     </style>
 </head>
 <body>
@@ -118,110 +109,190 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="../brandStroy.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="../brand/brandStroy.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   브랜드</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="../brandStroy.html">브랜드스토리</a></li>
+                    <li><a class="dropdown-item" href="../brand/brandStroy.html">브랜드스토리</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="../brandGiveLove.html">Give & Love</a></li>
+                    <li><a class="dropdown-item" href="../brand/brandGiveLove.html">Give & Love</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="productList_cateA.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  제품</a>
-                <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="productList_cateA.html">사료</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="productList_cateB.html">화식</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="productList_cateC.html">간식</a></li>
-                </ul>
+              <a class="nav-link dropdown-toggle" href="../product/productList_cateA.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                제품</a>
+              <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../product/productList_cateA.html">사료</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="../product/productList_cateB.html">화식</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="../product/productList_cateC.html">간식</a></li>
+              </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="../event/event.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="event.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   커뮤니티</a>
                 <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../event/event.html">이벤트</a></li>
+                <li><a class="dropdown-item" href="event.html">이벤트</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="../notice/boardList.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              고객지원</a>
-              <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../notice/boardList.html">공지사항</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="../custom/qna.html">고객문의</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">자주 묻는 질문</a></li>
-              </ul>
+                <a class="nav-link dropdown-toggle" href="../notice/boardList.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                고객지원</a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../notice/boardList.html">공지사항</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../custom/qna.html">고객문의</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">자주 묻는 질문</a></li>
+                </ul>
             </li>
             </ul>
             <!-- navi 끝부분 -->
             <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <span class="nav-link text-secondary" ><%=sname %>님</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-secondary" href="LogOutCtrl">로그아웃</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-secondary" href="GetCustomInfoCtrl">회원정보</a>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="admin/index.jsp">관리자 페이지로</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="GetMemberSalesInfoCtrl">구매내역</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="GetMemberCartListCtrl">장바구니</a>
-            </li>
-          <li class="nav-item">
-              <a class="nav-link text-secondary" href="custom/login.jsp">로그인</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link text-secondary" href="custom/membership.jsp">회원가입</a>
-          </li>
+                <li class="nav-item">
+                    <span class="nav-link text-secondary" hidden >관리자님</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="LogOutCtrl" hidden>로그아웃</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="custom/customInfo.html" hidden>회원정보</a>
+                </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-secondary" href="admin/index.html" hidden>관리자 페이지로</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-secondary" href="GetMemberSalesInfoCtrl" hidden>구매내역</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-secondary" href="cart/cartList.html" hidden>장바구니</a>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="custom/login.html">로그인</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="custom/membership.html">회원가입</a>
+                </li>
             </ul>
         </div>
     </div>
   </nav>
 </div>
 </header>
-<div class="content container-fluid" id="page1">
-    <div class="product" id="content">
-        <div class="row" id="content_row">
-		<main class="content container">
-			<h2 class="title">사료</h2>
-			<ul class="row1" id="best">
-				<li class="col-xl-3">
-					<div class="card" style="width: 18rem;">
-					  <img src="../img/product/pro1_1/pro01_1.png" class="card-img-top" alt="생연어">
-					  <div class="card-body">
-					    <h5 class="card-title">생연어</h5>
-					    <p class="card-text"><strong style="color:red;">45000원</strong> (<del>50000)</del></p>
-					    <a href="productDetail.html" class="btn btn-outline-warning">제품 상세보기</a>
-					  </div>
-					</div>
-				</li>
-				<li class="col-xl-3">
-					<div class="card" style="width: 18rem;">
-					  <img src="../img/product/pro1_1/pro01_2.png" class="card-img-top" alt="테스트">
-					  <div class="card-body">
-					    <h5 class="card-title">테스트</h5>
-					    <p class="card-text"><strong style="color:red;">45000원</strong> (<del>50000)</del></p>
-					    <a href="/web02/GetProductDetailCtrl?proNo=10" class="btn btn-outline-warning">제품 상세보기</a>
-					  </div>
-					</div>
-				</li>
-			</ul>
-		</main>
-		</div>
+<div class="content container-fluid bg-light">
+    <div class="page_wrap">    
+        <div class="container subtitle">
+        <div class="list-title font--kr">일반 회원 가입</div>
+        </div>
+        <form action="../InsertCustomCtrl" method="post" name="frm1" id="frm1" onsubmit="return joinCheck(this)" class="insertjoin">
+            <table class="table">
+            <tbody>
+                <tr>
+                <td>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">아이디</span>
+                    <input type="text" id="cusId" name="cusId" class="form-control" placeholder="아이디입력" autofocus required/>
+                    <input type="button" class="btn btn-dark" id="button-addon2" value="아이디 중복 확인" onclick="idCheck()">
+                    <input type="hidden" name="idck" value="no">
+                </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">비밀번호</span>
+                    <input type="password" id="cusPw" name="cusPw" class="form-control" placeholder="비밀번호입력" required/>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">비밀번호확인</span>
+                    <input type="password" id="cusPw2" name="cusPw2" class="form-control" placeholder="비밀번호확인" required/>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">이름입력</span>
+                    <input type="text" id="cusName" name="cusName" class="form-control" placeholder="이름입력" required/>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">주소입력</span>
+                    <input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="form-control" required />
+                    </div>
+                    <div class="input-group">
+                    <input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="form-control mt-2 mb-2" required />
+                    </div>  
+                    <div class="input-group">
+                    <input type="text" name="postcode" id="postcode" placeholder="우편번호" class="form-control">
+                    <button id="post_btn" onclick="findAddr()" class="btn btn-dark">우편번호 검색</button>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">전화번호</span>
+                    <input type="text" id="tel" name="tel" class="form-control" placeholder="000-0000-0000" required>
+                    </div>
+                </td>
+                </tr>
+            </tbody>		
+            </table>
+            <div class="btn-group col-lg-10 gap-2">
+            <input type="submit" name="submit-btn" value="가입" class="btn btn-dark">
+            <input type="reset" name="reset-btn" value="취소" class="btn btn-dark" >
+            </div>	
+        </form>
     </div>
 </div>
-</div>
+<script>
+function idCheck(){
+		var cusId = document.frm1.cusId.value;
+		var win = window.open("idCheck.html?cusId="+cusId,"id 중복 체크", "width=400, height=300");
+	}
+	function joinCheck(f){
+		if(f.cusPw.value!=f.cusPw2.value){
+			alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+			f.cusPw.focus();
+			return false;
+		}
+		if(f.idck.value!="yes"){
+			alert("아이디 중복 체크를 하지 않으셨습니다.");
+			return false;
+		}
+	}
+</script>
+<!-- 주소 스크립트 -->
+<script>
+function findAddr() {
+	new daum.Postcode({
+		oncomplete: function(data) {
+			console.log(data);
+			var roadAddr = data.roadAddress;
+			var jibunAddr = data.jibunAddress;
+			document.getElementById("postcode").value = data.zonecode;
+			if(roadAddr !== '') {
+				document.getElementById("address1").value = roadAddr;				
+			} else if(jibunAddr !== ''){
+				document.getElementById("address1").value = jibunAddr;
+			}
+			document.getElementById("address2").focus();
+		}
+	}).open();
+}
+</script>
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script> 
 </body>
 <footer class="ft container-sticky">
+<div class="ft_wrap">
 <div class="ft_wrap">
     <div class="ft-top">
         <a href="#">이용안내</a>
@@ -287,5 +358,6 @@
         </div>
     </div>
 </div>
+    </div>
 </footer>
 </html>

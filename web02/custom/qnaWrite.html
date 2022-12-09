@@ -56,31 +56,37 @@
     .navbar {--bs-navbar-padding-y: 0; height: 100px; padding: 20px;}
 
     /*main*/
+    #page1 {height: 100vh;}
     .container-fluid {padding-left: 0; padding-right: 0;}
-    .content {padding-top: 110px; height: auto; width: 100%; position: relative;}
+    .content {padding-top: 110px; height: auto; position: relative;}
     .subtitle {font-weight: 600; font-size: 30px; margin-top: 150px; text-align: center; padding-bottom: 20px;}
-    .title {font-weight: 600; padding-left: 2rem; margin-bottom: 20px; margin-left: 5%;}
+    .title {font-weight: 600; padding-left: 2rem; margin-bottom: 20px;  width: 58%; margin-left: 24%; }
+    .title .row {margin-left: 2%}
     a {text-decoration: none;}
     .form {margin-top: 30px; width: 600px;}
-    .row {width: 100%; padding: 0;}
+    .row  {width: 100%; padding: 0;}
    	.row1 {width: 100%; margin: 0; }
     .card-body .btn {float: right;}
-    li {list-style: none;}
+	.table {width: 60%; margin-left: 24%;}
+
 
     .my-5 {margin-top: 0rem!important; margin-bottom: 0rem!important; }
-    .product1 {margin-top: 30px;}
+    .product {height: 90vh;}
     .col-xl-3 {margin-bottom: 30px; float:left; width: 20%; margin-left: 5%;}
     .col-lg-6 {font-size: 15px; line-height: 30px; word-break: keep-all; flex: 0 0 auto; width: 71%; margin-top: 2em;}
     .card-text {word-break: keep-all; font-size: 17px; margin-bottom: 0.5em; font-weight: 600; }
     .card-title {font-size: 17px; font-weight: 600; margin-bottom: 1em;}
     .item-spec {display: block; float: right;}
     #sidebarMenu {height: 100vh; margin-right: 0;}
+    .align-items-start {width: 100%}
+    .mem {margin-top: 30px;}
+    
     /*btn*/
     .btn {margin-top: 0.5em; float: right;}
-    .btn-group {width: 25%; float: right; padding-left: calc(var(--bs-gutter-x) * .5); padding-right: 1.5rem!important; margin-right: 1%}
+    .btn-group {width: 25%; float: right; padding-left: calc(var(--bs-gutter-x) * .5); padding-right: 1.5rem!important; margin-right: 11%}
     #button-addon2 {border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;}
 
-	/*foot*/
+    /*foot*/
     .ft {position: relative; height: 470px; width: 100%;}
     .ft_wrap:after { content:""; display:block; clear:both; }
     .ft_wrap .ft-top a {display: inline-block; font-family: 'AppleGothic-B'; font-size: 16px; color: #aaaba6; letter-spacing: -0.025em;}
@@ -102,124 +108,139 @@
     .ft_tel {font-size: 50px; font-weight: 700;}
     .weekend {font-size: 12px;}
     .humu {margin-bottom: 70px;} 
+
     </style>
 </head>
 <body>
 <div class="wrap">
 <header class="hd">
 <div class="hd_wrap">
-<nav class="navbar navbar-expand-lg bg-white fixed-top">
-    <div class="container-fluid">
-        <!-- 로고 클릭시 메인페이지 이동 -->
-        <a class="navbar-brand" href="../index.html"><img src="../img/logo/header_logo_mini.png" alt="로고" width="100" height="auto"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="../brandStroy.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  브랜드</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="../brandStroy.html">브랜드스토리</a></li>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container-fluid">
+            <!-- 로고 클릭시 메인페이지 이동 -->
+            <a class="navbar-brand" href="../index.html"><img src="../img/logo/header_logo_mini.png" alt="로고" width="100" height="auto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../brand/brandStroy.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      브랜드</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../brand/brandStroy.html">브랜드스토리</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="../brand/brandGiveLove.html">Give & Love</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="../product/productList_cateA.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    제품</a>
+                  <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../product/productList_cateA.html">사료</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../product/productList_cateB.html">화식</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../product/productList_cateC.html">간식</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="event.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      커뮤니티</a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="event.html">이벤트</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../notice/boardList.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    고객지원</a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../notice/boardList.html">공지사항</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="../brandGiveLove.html">Give & Love</a></li>
+                    <li><a class="dropdown-item" href="../custom/qna.html">고객문의</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">자주 묻는 질문</a></li>
+                    </ul>
+                </li>
                 </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="productList_cateA.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  제품</a>
-                <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="productList_cateA.html">사료</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="productList_cateB.html">화식</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="productList_cateC.html">간식</a></li>
+                <!-- navi 끝부분 -->
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <span class="nav-link text-secondary" >관리자님</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="LogOutCtrl">로그아웃</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="custom/customInfo.html">회원정보</a>
+                    </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-secondary" href="admin/index.html">관리자 페이지로</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-secondary" href="GetMemberSalesInfoCtrl">구매내역</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-secondary" href="cart/cartList.html">장바구니</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="custom/login.html" hidden>로그인</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="custom/membership.html" hidden>회원가입</a>
+                    </li>
                 </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="../event/event.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  커뮤니티</a>
-                <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../event/event.html">이벤트</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="../notice/boardList.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              고객지원</a>
-              <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../notice/boardList.html">공지사항</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="../custom/qna.html">고객문의</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">자주 묻는 질문</a></li>
-              </ul>
-            </li>
-            </ul>
-            <!-- navi 끝부분 -->
-            <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <span class="nav-link text-secondary" ><%=sname %>님</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-secondary" href="LogOutCtrl">로그아웃</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-secondary" href="GetCustomInfoCtrl">회원정보</a>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="admin/index.jsp">관리자 페이지로</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="GetMemberSalesInfoCtrl">구매내역</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="GetMemberCartListCtrl">장바구니</a>
-            </li>
-          <li class="nav-item">
-              <a class="nav-link text-secondary" href="custom/login.jsp">로그인</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link text-secondary" href="custom/membership.jsp">회원가입</a>
-          </li>
-            </ul>
+            </div>
         </div>
+      </nav>
     </div>
-  </nav>
-</div>
 </header>
 <div class="content container-fluid" id="page1">
     <div class="product" id="content">
         <div class="row" id="content_row">
-		<main class="content container">
-			<h2 class="title">사료</h2>
-			<ul class="row1" id="best">
-				<li class="col-xl-3">
-					<div class="card" style="width: 18rem;">
-					  <img src="../img/product/pro1_1/pro01_1.png" class="card-img-top" alt="생연어">
-					  <div class="card-body">
-					    <h5 class="card-title">생연어</h5>
-					    <p class="card-text"><strong style="color:red;">45000원</strong> (<del>50000)</del></p>
-					    <a href="productDetail.html" class="btn btn-outline-warning">제품 상세보기</a>
-					  </div>
-					</div>
-				</li>
-				<li class="col-xl-3">
-					<div class="card" style="width: 18rem;">
-					  <img src="../img/product/pro1_1/pro01_2.png" class="card-img-top" alt="테스트">
-					  <div class="card-body">
-					    <h5 class="card-title">테스트</h5>
-					    <p class="card-text"><strong style="color:red;">45000원</strong> (<del>50000)</del></p>
-					    <a href="/web02/GetProductDetailCtrl?proNo=10" class="btn btn-outline-warning">제품 상세보기</a>
-					  </div>
-					</div>
-				</li>
-			</ul>
-		</main>
+		<main class="content container qna">    
+		<h2 class="pb-2 border-bottom title">고객문의</h2>
+		<div class="row">
+			<form name="frm1" id="frm1" action="/web02/InsertQnaProCtrl.do" method="post">
+				<table class="table">
+					<tbody>
+						<tr>
+							<th><label for="title">질문 제목</label></th>
+							<td><input type="text" name="title" id="title" placeholder="제목 입력" maxlength="100" class="form-control" required></td>
+						</tr>
+						<tr>
+							<th><label for="content">질문 내용</label></th>
+							<td>
+								<textarea cols="100" rows="6" name="content" id="content" maxlength="600" class="form-control"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="author">작성자</label></th>
+							<td>
+								<input type="text" name="author" id="author" class="form-control" value='ruart1006' readonly required>
+								<input type="hidden" name="lev" id="lev" value="0">
+							</td>
+						</tr>
+						<tr>
+							<th><label for="sec1">비밀글 여부</label></th>
+							<td>
+								<input type="radio" name="sec" id="sec1" value="N" checked>
+								<label for="">공개</label>
+								<input type="radio" name="sec" id="sec2" value="Y">
+								<label for="">비밀글</label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="btn-group">
+					<button type="submit" class="btn btn-secondary">글 쓰기</button>
+					<a href="qna.html" class="btn btn-dark">목록으로</a>
+				</div>
+			</form>
 		</div>
-    </div>
-</div>
-</div>
+		</div>
+	</div>
+</div>	
 </body>
 <footer class="ft container-sticky">
 <div class="ft_wrap">
