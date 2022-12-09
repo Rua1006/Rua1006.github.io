@@ -118,7 +118,7 @@
 					Sales vo = saleList.get(i);
 				%>
 				<tr>
-					<td><%=saleList.size()-i %></td>
+					<td><%=saleList.asize()-i %></td>
 					<td><a href="<%=request.getContextPath() %>/GetSalesDetailCtrl?saleNo=<%=vo.getSaleNo() %>"><%=vo.getProNo() %></a></td>
 					<td><%=vo.getSaleDate() %></td>
 				</tr>
