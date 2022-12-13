@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>공지사항 목록</title>
+	<title>소개</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 <!-- <script src="include/jquery.js"></script>
 <script src="include/foundation.js"></script>
@@ -70,9 +70,11 @@ ul { list-style:none; }
 #footer > article > div.footer-nav-right > ul > li.footer-nav-item {
 	width:25%; height:25%;
 }
-	.content {height: 100vh;}
+	.content {min-height: 100vh;}
 	.table_form {width: 80%; margin: 0 auto;}
 	.h2 {margin-top: 40px;}
+    .card {width: 500px; height: 360px;}
+    .card-section {padding: 10px;}
 	</style>
 </head>
 <body>
@@ -89,8 +91,8 @@ ul { list-style:none; }
 		<li>
 		   <a href="#">기업</a>
 		   <ul class="menu">
-		   <li><a href="../company/ceo.html">인사말</a></li>
-		   <li><a href="../company/intro.html">소개</a></li>
+		   <li><a href="ceo.html">인사말</a></li>
+		   <li><a href="intro.html">소개</a></li>
 		   <li><a href="#">뉴스</a></li>
 		  </ul>
 	   </li>
@@ -129,102 +131,88 @@ ul { list-style:none; }
 	  </div>
    </nav>
 </header>
-    <div class="content row column text-center">
-      <h2 class="h2">공지사항 목록</h2>
+    <div class="content row column">
+      <h2 class="h2">한미 소개</h2>
       <hr>
 	<div class="bd_wrap">      
-      <table>
-      	<thead>
-      		<tr>
-      			<th width="80">No</th>
-      			<th width="720">Title</th>
-      			<th width="200">ResDate</th>
-      			<th width="200">Visited</th>
-      		</tr>
-      	</thead>
-      	<tbody>
-      		<tr>
-      			<td>1</td>
-      			<td><a href="detail.html">샘플 글 제목1입니다.</a></td>
-      			<td>2022-12-13 10:01:30.0</td>
-      			<td>0</td>
-      		</tr>
-      	
-      		<tr>
-      			<td>2</td>
-      			<td><a href="detail.html?no=2">샘플2 제목입니다.</a></td>
-      			<td>2022-12-13 10:01:30.0</td>
-      			<td>0</td>
-      		</tr>
-      	
-      		<tr>
-      			<td>3</td>
-      			<td><a href="detail.html?no=3">샘플3 제목입니다.</a></td>
-      			<td>2022-12-13 10:01:30.0</td>
-      			<td>0</td>
-      		</tr>
-      	
-      		<tr>
-      			<td>4</td>
-      			<td><a href="detail.html?no=4">샘플4 제목입니다.</a></td>
-      			<td>2022-12-13 10:01:30.0</td>
-      			<td>0</td>
-      		</tr>
-      	
-      		<tr>
-      			<td>5</td>
-      			<td><a href="detail.html?no=5">샘플5 제목입니다.</a></td>
-      			<td>2022-12-13 10:01:30.0</td>
-      			<td>0</td>
-      		</tr>
-      	
-      		<tr>
-      			<td>6</td>
-      			<td><a href="detail.html?no=11">샘플11 제목입니다.</a></td>
-      			<td>2022-12-13 10:01:30.0</td>
-      			<td>0</td>
-      		</tr>
-      	
-      		<tr>
-      			<td>7</td>
-      			<td><a href="detail.html?no=7">샘플7 제목입니다.</a></td>
-      			<td>2022-12-13 10:01:30.0</td>
-      			<td>0</td>
-      		</tr>
-      	
-      		<tr>
-      			<td>8</td>
-      			<td><a href="detail.html?no=8">샘플8 제목입니다.</a></td>
-      			<td>2022-12-13 10:01:30.0</td>
-      			<td>0</td>
-      		</tr>
-      	
-      		<tr>
-      			<td>9</td>
-      			<td><a href="detail.html?no=9">샘플9 제목입니다.</a></td>
-      			<td>2022-12-13 10:01:30.0</td>
-      			<td>0</td>
-      		</tr>
-      	
-      		<tr>
-      			<td>10</td>
-      			<td><a href="detail.html?no=10">샘플10 제목입니다.</a></td>
-      			<td>2022-12-13 10:01:30.0</td>
-      			<td>0</td>
-      		</tr>
-      	
-      		<tr>
-      			<td>11</td>
-      			<td><a href="detail.html?no=6">샘플6 제목입니다.</a></td>
-      			<td>2022-12-13 10:01:30.0</td>
-      			<td>0</td>
-      		</tr>
-      	</tbody>
-      </table>
-      	<div class="button-group">
-		  <a class="button" href="insert.html">글 작성하기</a>
-		</div>
+        <div class="media-object">
+            <div class="media-object-section">
+              <div class="thumbnail">
+                <img src= "../resources/img/bg_company.jpg">
+              </div>
+            </div>
+            <div class="media-object-section main-section">
+            <h4>회사개요</h4>
+            <div class="company_info">
+                <strong>한미약품은</strong> 제약산업의 생명인 R&D 투자에 대한 강력한 의지를 바탕으로 효율적이고 전략적인 연구개발 모델을 도출해내는 일에 한미약품의 미래를 걸 계획입니다. 회사의 모든 역량을 R&D에 집중함으로써 신약 파이프라인을 최대한 확보해 세계 무대에서 통하는 글로벌 신약의 탄생 가능성을 높여 나가겠습니다.
+                <table>
+                <tr style="margin-top: 20px; border-top:1px solid #e7e7e7;">
+                   <th>설립일</th>
+                   <td>1973년 6월 15일(분할일 2010년 7월5일) </td>
+                </tr>
+                <tr>
+                   <th>대표이사</th>
+                   <td>우종수, 권세창 (각자 대표이사)</td>
+                </tr>
+                <tr>
+                    <th>매출액</th>
+                    <td>1조 2,032억원 (K-IFRS 연결기준)</td>
+                </tr>
+                <tr>
+                    <th>R&D 투자</th>
+                    <td>1,615억원(매출대비 13.4%)</td>
+                </tr>
+                <tr>
+                    <th>임직원 수</th>
+                    <td>2,142명 (2021.12.31. 기준)</td>
+                </tr>
+                </table>
+             </div>
+            </div>
+        </div>
     </div>
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x small-up-2 medium-up-2">
+          <div class="cell">
+            <div class="card">
+              <img src="../resources/img/company_vision1.jpg">
+              <div class="card-section">
+              <h4><strong>창조와 도전</strong>으로 글로벌 기업 도약</h4>
+                <p>의약품 합성기술 자체 개발을 시작으로 개량 및 복합신약, 혁신신약 프로젝트를 통해 한미약품은 대한민국 1호 글로벌 제약회사로 도약하고 있습니다. RFID 기술을 통한 의약품 유통혁명과 국내 개량신약 최초의 FDA 허가, 글로벌 기업들과의 공동 R&D 등 한미약품은 기업의 핵심정신인 '창조와 도전'을 통해 국내 제약산업의 새 길을 개척하고 있습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card">
+              <img src="../resources/img/company_vision2.jpg">
+              <div class="card-section">
+                <h4>세계가 인정하는 <strong>복합신약 명가</strong></h4>
+                <p>서로 다른 두 가지 이상의 의약품을 하나로 만드는 한미약품의복합신약 제제기술은 세계적으로 그 역량을 입증받고 있습니다. 고혈압치료 복합신약 아모잘탄은 미국MSD 등을 통해 60개국에 수출이 진행 중이며, 사노피아벤티스와는 고혈압·고지혈증 치료제 '로벨리토'를 공동 개발하였습니다</p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="grid-x grid-margin-x small-up-2 medium-up-2">
+          <div class="cell">
+            <div class="card">
+              <img src="../resources/img/company_vision3.jpg">
+              <div class="card-section">
+                <h4><strong>No.1 R&D</strong>로 글로벌 신약에 도전</h4>
+                <p>한미약품은 지난 2013년 코스피 상장 제약기업 중 최초로 연간 R&D 투자 1,000억원을 돌파했습니다. 한미약품은 이를 기반으로 지속형 바이오신약과 혁신적 표적항암제 등 개발 초기 단계부터 글로벌 시장을 타깃으로 설계된 20여개의 신약 프로젝트를 미국, 유럽, 국내 등에서 개발하고 있습니다. 또 외부의 우수 R&D 역량에 문호를 개방하는 “Open Innovation” 전략을 통해 연구개발의 시너지를 높이고 있습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card">
+              <img src="../resources/img/company_vision4.jpg">
+              <div class="card-section">
+                <h4>제1의 사명은 <strong>인류건강 기여</strong></h4>
+                <p>“인간존중, 가치창조” 모든 사람들의 생명과 건강을 지키고 삶의 질을 향상시키기 위해 새로운 가치를 창조해내는 것이 한미약품 제1의 사명입니다. 한미약품은 이 같은 경영이념을 바탕으로 인류 건강증진에 기여할 수 있는 비즈니스 모델을 개발함으로써 지속 가능하고 건강한 사회적 기업으로 성장하기 위해 최선을 다하고 있습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
