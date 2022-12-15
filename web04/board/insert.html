@@ -148,6 +148,15 @@ ul { list-style:none; }
 </header>
     <div class="content row column text-center">
       <h2 class="h2">공지사항 작성하기</h2>
+	  <nav aria-label="You are here:" role="navigation">
+		<ul class="breadcrumbs">
+		  <li><a href="../index.html">Home</a></li>
+		  <li><a href="#">고객</a></li>
+		  <li>
+			<span class="show-for-sr">Current: </span> 공지사항 작성
+		  </li>
+		</ul>
+	  </nav>
       <hr>
       <form action="/board/insert.html" method="post" name="insert" id="insert">
       <table>

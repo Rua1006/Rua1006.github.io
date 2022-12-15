@@ -144,6 +144,15 @@ ul { list-style:none; }
 	    <div class="row column text-center">
 	      <div class="container">
 			<h2 class="page_tit">마이 페이지</h2>
+			<nav aria-label="You are here:" role="navigation">
+				<ul class="breadcrumbs">
+				  <li><a href="../index.html">Home</a></li>
+				  <li><a href="#">회원</a></li>
+				  <li>
+					<span class="show-for-sr">Current: </span> 회원정보상세
+				  </li>
+				</ul>
+			  </nav>
 	      	<hr>
 				<form action="/member/update.html" method="post" onsubmit="return updateCheck(this)">
 				<div class="table_form_wrap">

@@ -143,6 +143,15 @@ ul { list-style:none; }
 	<div class="content" id="con">
 	    <div class="row column text-center">
 	      <h2 class="h1">회원가입</h2>
+		  <nav aria-label="You are here:" role="navigation">
+			<ul class="breadcrumbs">
+			  <li><a href="../index.html">Home</a></li>
+			  <li><a href="#">회원</a></li>
+			  <li>
+				<span class="show-for-sr">Current: </span> 회원가입
+			  </li>
+			</ul>
+		  </nav>
 	      <hr>
 	      <div class="container">
 	      	<form name="frm1" id="frm1" action="/member/insert.html" method="post" onsubmit="return joinCheck(this)">
