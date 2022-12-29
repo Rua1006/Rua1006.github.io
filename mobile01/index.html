@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalalbe=no">
     <title>수리랑</title>
     <!-- 문서 정보 -->
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="Content-Style-Type" content="text/css">
     <meta name="application-name" content="수리랑">
     <meta name="subject" content="수리랑">
     <meta name="keywords" content="안주, 술, 야식, 회식, 뒷풀이, 혼술">
@@ -49,22 +46,47 @@
         .video-player:after {content: ""; display: block; clear: both;}
         .vdo1-dimensions { width:600px; margin: 0; padding: 0; min-width:600px;  min-height:452px; }
         .vdo1-dimensions::after { content:""; clear:both; display:block; }
+        .vdo2-dimensions { width:600px; margin: 0; padding: 0; min-width:600px;  min-height:452px; }
+        .vdo2-dimensions::after { content:""; clear:both; display:block; }
+        .vdo3-dimensions { width:600px; margin: 0; padding: 0; min-width:600px;  min-height:452px; }
+        .vdo3-dimensions::after { content:""; clear:both; display:block; }
+        .vdo4-dimensions { width:600px; margin: 0; padding: 0; min-width:600px;  min-height:452px; }
+        .vdo4-dimensions::after { content:""; clear:both; display:block; }
+        .vdo5-dimensions { width:600px; margin: 0; padding: 0; min-width:600px;  min-height:452px; }
+        .vdo5-dimensions::after { content:""; clear:both; display:block; }
+        .vdo6-dimensions { width:600px; margin: 0; padding: 0; min-width:600px;  min-height:452px; }
+        .vdo6-dimensions::after { content:""; clear:both; display:block; }
         .video-js .vjs-tech { display:block; width:auto; min-width:600px; min-height:452px;}
         .ui-content .ui-listview-inset, .ui-panel-inner>.ui-listview-inset {margin: 0.5em 0;}
         
         /* 모바일 */
         @media screen and (max-width:767px) {
             .vdo1-dimensions {width:360px; height:250px; min-width:320px; min-height:auto;}
+            .vdo2-dimensions {width:360px; height:250px; min-width:320px; min-height:auto;}
+            .vdo3-dimensions {width:360px; height:250px; min-width:320px; min-height:auto;}
+            .vdo4-dimensions {width:360px; height:250px; min-width:320px; min-height:auto;}
+            .vdo5-dimensions {width:360px; height:250px; min-width:320px; min-height:auto;}
+            .vdo6-dimensions {width:360px; height:250px; min-width:320px; min-height:auto;}
             .video-js .vjs-tech{display:block; width:360px; height:250px; min-width:320px; min-height:auto;}
         }
         /* 태블릿 */
         @media screen and (min-width:768px) and (max-width:959px){
             .vdo1-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
+            .vdo2-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
+            .vdo3-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
+            .vdo4-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
+            .vdo5-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
+            .vdo6-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
             .video-js .vjs-tech{display:block; width:760px; height:350px; min-width:760px; min-height:auto;}
         }
         /* 데스크탑 */
         @media screen and (min-width:960px) {
             .vdo1-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
+            .vdo2-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
+            .vdo3-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
+            .vdo4-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
+            .vdo5-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
+            .vdo6-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
             .video-js .vjs-tech{display:block; width:960px; height:450px; min-width:960px; min-height:auto;}
         }
     </style>
@@ -111,13 +133,13 @@
     </nav>
 </header>
 <div data-role="content" class="ui-content">
-<div dat-role="content" role="sub" class="ui-content">
+<div dat-role="content"  class="ui-content">
     <h2>수리랑 이벤트</h2>
     <div class="box">
         <img src="sample/main.jpg" alt="main" style="width: 83vw;">
     </div>
 </div>   
-<div data-role="content" role="sub" class="ui-content">
+<div data-role="content" class="ui-content">
     <h3>공지사항</h3>
     <ul class="ui-listview ui-listview-inset ui-corner-all ui-body-a ui-shadow" data-inset="true" data-role="listview" data-filter="true" data-filter-placeholder="Search...">
         <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-li-has-count ui-first-child">월요일, 12 26, 2022
@@ -207,10 +229,10 @@
                 <form>
                     <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow"> 
                         <li class="ui-filed-contain ui-li-static ui-body-inherit ui-first-child">
-                            <input type="text" name="id" id="id" value="" data-theme="a" data-clear-btn="true" placeholder="아이디 입력">
+                            <input type="text" name="userid" id="userid" value="" data-theme="a" data-clear-btn="true" placeholder="아이디 입력">
                         </li>
                         <li class="ui-filed-contain ui-li-static ui-body-inherit">
-                            <input type="password" name="pw" id="pw" value="" data-theme="a" data-clear-btn="true" placeholder="패스워드 입력">
+                            <input type="password" name="userpw" id="userpw" value="" data-theme="a" data-clear-btn="true" placeholder="패스워드 입력">
                         </li>
                     </ul>
                     <div class="ui-btn-group">
@@ -287,7 +309,7 @@
                             <input type="text" name="name" id="name" value="" data-theme="a" placeholder="이름 입력">
                         </li>
                         <li class="ui-filed-contain ui-li-static ui-body-inherit">
-                            <input type="date" name="born" id="born" value="" data-theme="a" placeholder="생년월일 입력">
+                            <input type="date" name="born" id="born" value="" data-theme="a">
                         </li>
                     </ul>
                     <div class="ui-btn-group">
@@ -353,26 +375,26 @@
               </ul>
             </div>
             <div id="page13">
-                <div dat-role="content" role="sub" class="ui-content">
+                <div dat-role="content"  class="ui-content">
                     <div class="box">
                         <img src="sample/beer.jpg" alt="bear" style="width: 83vw;">
                     </div>
                 </div>
-                <div data-role="content" role="sub" class="ui-content">
+                <div data-role="content"  class="ui-content">
                     <h3>브랜드 찾기</h3>
                     <ul class="ui-listview ui-listview-inset ui-corner-all ui-body-a ui-shadow" data-inset="true" data-role="listview" data-filter="true" data-filter-placeholder="Search...">
                         <li class="ui-first-child">
-                            <a href="#page4" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                            <a href="#page4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                                 <h3>하이트 진로</h3>
                             </a>
                         </li>
                         <li class="ui-body-inherit">
-                            <a href="#page31" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                            <a href="#page31" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                                 <h3>OB</h3>
                             </a>
                         </li>
                         <li class="ui-body-inherit">
-                            <a href="#page32" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                            <a href="#page32" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                                 <h3>롯데칠성음료</h3>
                             </a>
                         </li>
@@ -547,9 +569,9 @@
     </div>
     <div class="ui-grid-a">
         <div class="ui-block-a">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
             <ul class="ui-listview ui-listview-inset ui-corner-all ui-body-a ui-shadow" data-inset="true" data-role="listview">
-                <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">제품 목록
+                <li data-role="list-divider" class="ui-li-divider ui-bar-inherit ui-first-child">제품 목록
                 </li>
                 <li>
                     <a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
@@ -572,7 +594,7 @@
             </div>
         </div>
         <div class="ui-block-b">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
                 <div data-role="collapsible-set">
                     <div role="heading" class="ui-page-theme-a ui-bar-inherit ui-body-a heading">
                         브랜드 소개
@@ -647,7 +669,7 @@
         <a href="#page3" class="ui-btn ui-icon-back ui-btn-icon-left backpage" data-role="button" role="button">이전페이지</a>
             <div class="player">
                 <div class="video-player">
-                    <video id="vdo1" class="video-js" controls preload="auto" data-setup="{}">
+                    <video id="vdo2" class="video-js" controls preload="auto" data-setup="{}">
                         <source src="video/OB.mp4" type="video/mp4">
                     </video>
                 </div>    
@@ -655,7 +677,7 @@
     </div>
     <div class="ui-grid-a">
         <div class="ui-block-a">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
             <ul class="ui-listview ui-listview-inset ui-corner-all ui-body-a ui-shadow" data-inset="true" data-role="listview">
                 <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">제품 목록
                 </li>
@@ -680,7 +702,7 @@
             </div>
         </div>
         <div class="ui-block-b">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
                 <div data-role="collapsible-set">
                     <div role="heading" class="ui-page-theme-a ui-bar-inherit ui-body-a heading">
                         브랜드 소개
@@ -755,7 +777,7 @@
         <a href="#page3" class="ui-btn ui-icon-back ui-btn-icon-left backpage" data-role="button" role="button">이전페이지</a>
             <div class="player">
                 <div class="video-player">
-                    <video id="vdo1" class="video-js" controls preload="auto" data-setup="{}">
+                    <video id="vdo3" class="video-js" controls preload="auto" data-setup="{}">
                         <source src="video/Kloud.mp4" type="video/mp4">
                     </video>
                 </div>    
@@ -763,7 +785,7 @@
     </div>
     <div class="ui-grid-a">
         <div class="ui-block-a">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
             <ul class="ui-listview ui-listview-inset ui-corner-all ui-body-a ui-shadow" data-inset="true" data-role="listview">
                 <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">제품 목록
                 </li>
@@ -779,7 +801,7 @@
             </div>
         </div>
         <div class="ui-block-b">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
                 <div data-role="collapsible-set">
                     <div role="heading" class="ui-page-theme-a ui-bar-inherit ui-body-a heading">
                         브랜드 소개
@@ -859,22 +881,22 @@
               </ul>
             </div>
             <div id="page16">
-                <div dat-role="content" role="sub" class="ui-content">
+                <div dat-role="content"  class="ui-content">
                     <h2 class="ui-title">브랜드</h2>
                     <div class="box">
                         <img src="sample/soju.jpg" alt="example" style="width: 83vw;">
                     </div>
                 </div>
-                <div data-role="content" role="sub" class="ui-content">
+                <div data-role="content"  class="ui-content">
                     <h3>브랜드 찾기</h3>
                     <ul class="ui-listview ui-listview-inset ui-corner-all ui-body-a ui-shadow" data-inset="true" data-role="listview" data-filter="true" data-filter-placeholder="Search...">
                         <li class="ui-first-child">
-                            <a href="#page6" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                            <a href="#page6"  class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                                 <h3>하이트 진로</h3>
                             </a>
                         </li>
                         <li class="ui-body-inherit">
-                            <a href="#page35" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                            <a href="#page35"  class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                                 <h3>한라산</h3>
                             </a>
                         </li>
@@ -1038,7 +1060,7 @@
         <a href="#page5" class="ui-btn ui-icon-back ui-btn-icon-left backpage" data-role="button" role="button">이전페이지</a>
             <div class="player">
                 <div class="video-player">
-                    <video id="vdo1" class="video-js" controls preload="auto" data-setup="{}">
+                    <video id="vdo4" class="video-js" controls preload="auto" data-setup="{}">
                         <source src="video/jin.mp4" type="video/mp4">
                     </video>
                 </div>    
@@ -1046,7 +1068,7 @@
     </div>
     <div class="ui-grid-a">
         <div class="ui-block-a">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
             <ul class="ui-listview ui-listview-inset ui-corner-all ui-body-a ui-shadow" data-inset="true" data-role="listview">
                 <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">제품 목록
                 </li>
@@ -1065,7 +1087,7 @@
             </div>
         </div>
         <div class="ui-block-b">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
                 <div data-role="collapsible-set">
                     <div role="heading" class="ui-page-theme-a ui-bar-inherit ui-body-a heading">
                         브랜드 소개
@@ -1140,7 +1162,7 @@
         <a href="#page5" class="ui-btn ui-icon-back ui-btn-icon-left backpage" data-role="button" role="button">이전페이지</a>
             <div class="player">
                 <div class="video-player">
-                    <video id="vdo1" class="video-js" controls preload="auto" data-setup="{}">
+                    <video id="vdo5" class="video-js" controls preload="auto" data-setup="{}">
                         <source src="video/han.mp4" type="video/mp4">
                     </video>
                 </div>    
@@ -1148,7 +1170,7 @@
     </div>
     <div class="ui-grid-a">
         <div class="ui-block-a">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
             <ul class="ui-listview ui-listview-inset ui-corner-all ui-body-a ui-shadow" data-inset="true" data-role="listview">
                 <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">제품 목록
                 </li>
@@ -1167,7 +1189,7 @@
             </div>
         </div>
         <div class="ui-block-b">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
                 <div data-role="collapsible-set">
                     <div role="heading" class="ui-page-theme-a ui-bar-inherit ui-body-a heading">
                         브랜드 소개
@@ -1247,27 +1269,27 @@
               </ul>
             </div>
             <div id="page19">
-                <div dat-role="content" role="sub" class="ui-content">
+                <div dat-role="content"  class="ui-content">
                     <h2 class="ui-title">브랜드</h2>
                     <div class="box">
                         <img src="sample/mak.jpg" alt="example" style="width: 83vw;">
                     </div>
                 </div>
-                <div data-role="content" role="sub" class="ui-content">
+                <div data-role="content"  class="ui-content">
                     <h3>브랜드 찾기</h3>
                     <ul class="ui-listview ui-listview-inset ui-corner-all ui-body-a ui-shadow" data-inset="true" data-role="listview" data-filter="true" data-filter-placeholder="Search...">
                         <li class="ui-first-child">
-                            <a href="#page8" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                            <a href="#page8"  class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                                 <h3>배혜정도가</h3>
                             </a>
                         </li>
                         <li class="ui-body-inherit">
-                            <a href="#page38" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                            <a href="#page38"  class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                                 <h3>국순당</h3>
                             </a>
                         </li>
                         <li class="ui-body-inherit">
-                            <a href="#page39" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                            <a href="#page39"  class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                                 <h3>지평생</h3>
                             </a>
                         </li>
@@ -1374,7 +1396,7 @@
     </header>
     <div data-role="content" class="ui-content">
         <h2 class="ui-title">배혜정도가</h2>
-        <div dat-role="content" role="sub" class="ui-content">
+        <div dat-role="content"  class="ui-content">
             <div class="box">
                 <img src="sample/bea.jpg" alt="example" style="width: 83vw;">
             </div>
@@ -1382,7 +1404,7 @@
     </div>
     <div class="ui-grid-a">
         <div class="ui-block-a">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
             <ul class="ui-listview ui-listview-inset ui-corner-all ui-body-a ui-shadow" data-inset="true" data-role="listview">
                 <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">제품 목록
                 </li>
@@ -1407,7 +1429,7 @@
             </div>
         </div>
         <div class="ui-block-b">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
                 <div data-role="collapsible-set">
                     <div role="heading" class="ui-page-theme-a ui-bar-inherit ui-body-a heading">
                         브랜드 소개
@@ -1482,7 +1504,7 @@
         <a href="#page7" class="ui-btn ui-icon-back ui-btn-icon-left backpage" data-role="button" role="button">이전페이지</a>
             <div class="player">
                 <div class="video-player">
-                    <video id="vdo1" class="video-js" controls preload="auto" data-setup="{}">
+                    <video id="vdo6" class="video-js" controls preload="auto" data-setup="{}">
                         <source src="video/guk.mp4" type="video/mp4">
                     </video>
                 </div>    
@@ -1490,7 +1512,7 @@
     </div>
     <div class="ui-grid-a">
         <div class="ui-block-a">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
             <ul class="ui-listview ui-listview-inset ui-corner-all ui-body-a ui-shadow" data-inset="true" data-role="listview">
                 <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">제품 목록
                 </li>
@@ -1509,7 +1531,7 @@
             </div>
         </div>
         <div class="ui-block-b">
-            <div data-role="content" role="sub" class="ui-content">
+            <div data-role="content"  class="ui-content">
                 <div data-role="collapsible-set">
                     <div role="heading" class="ui-page-theme-a ui-bar-inherit ui-body-a heading">
                         브랜드 소개
@@ -1583,35 +1605,35 @@
         <h3 class="ui-title">추천 게시판</h3>
                 <ol class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview" data-filter="true" data-filter-placeholder="Search...">
                     <li class="ul-li-has-thumb ui-first-child">
-                        <a href="#page29" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                        <a href="#page29"  class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                             <img src="sample/hoo.jpg" alt="sample">
                             <h2>역시 맥주는 고기랑!</h2>
                             <p>맥주는 고기랑 먹어야..</p>
                         </a>
                     </li>
                     <li class="ul-li-has-thumb ui-first-child">
-                        <a href="#" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                        <a href="#"  class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                             <img src="sample/hoo2.jpg" alt="sample">
                             <h2>뿌링클 강력 추천!</h2>
                             <p>뿌링클에 어울리는건 테라가...</p>
                         </a>
                     </li>
                     <li class="ul-li-has-thumb ui-first-child">
-                        <a href="#" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                        <a href="#"  class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                             <img src="sample/hoo3.jpg" alt="sample">
                             <h2>낙곱새 추천합니다</h2>
                             <p>술이 저절로 들어가는 맛!</p>
                         </a>
                     </li>
                     <li class="ul-li-has-thumb ui-first-child">
-                        <a href="#" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                        <a href="#"  class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                             <img src="sample/hoo4.jpg" alt="sample">
                             <h2>떡순은 진리</h2>
                             <p>떡순에 카스 한모금이면 피로가 싹!</p>
                         </a>
                     </li>
                     <li class="ul-li-has-thumb ui-first-child">
-                        <a href="#" id="heart" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                        <a href="#"  class="ui-btn ui-btn-icon-right ui-icon-carat-r">
                             <img src="sample/hoo5.jpg" alt="sample">
                             <h2>닭꼬치+치킨+맥주=꿀조합</h2>
                             <p>기분내고 싶을 때 추천드려요</p>
@@ -1733,7 +1755,7 @@
     <div data-role="content" class="ui-content">
         <h2 class="ui-title">추천 게시판 글쓰기</h2>
     </div>
-    <div data-role="content" role="sub" class="ui-content">
+    <div data-role="content"  class="ui-content">
         <label for="select-choice-min" class="select"><strong>추천 주류:</strong></label>
         <select name="select-choice-min" id="select-choice-min" data-mini="true">
             <option value="맥주">맥주</option>
@@ -1798,8 +1820,8 @@
         </nav>
     </header>
     <!-- 추천 -->
-    <div data-role="content" role="sub" class="ui-content">
-        <div dat-role="content" role="sub" class="ui-content">
+    <div data-role="content"  class="ui-content">
+        <div dat-role="content"  class="ui-content">
             <h2 class="ui-title">추천 게시판</h2>
             <div class="box">
                 <label for="text-write" class="text-title"><strong>이미지 :</strong></label>
@@ -1876,8 +1898,8 @@
         </nav>
     </header>
     <!-- 추천 -->
-    <div data-role="content" role="sub" class="ui-content">
-        <div dat-role="content" role="sub" class="ui-content">
+    <div data-role="content"  class="ui-content">
+        <div dat-role="content"  class="ui-content">
             <h2 class="ui-title">이벤트 게시판</h2>
             <div class="box">
                 <label for="text-write" class="text-title"><strong>이미지 :</strong></label>
