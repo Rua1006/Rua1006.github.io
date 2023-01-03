@@ -25,8 +25,8 @@
     <meta property="og:image:height" content="400">
     <meta property="og:locale" content="ko_KR">
 
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="favicon/apple-icon-152x152.png">
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -71,23 +71,23 @@
         }
         /* 태블릿 */
         @media screen and (min-width:768px) and (max-width:959px){
-            .vdo1-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
+            .vdo1-dimensions {width:730px; height:350px; min-width:730px; min-height:auto;}
             .vdo2-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
             .vdo3-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
             .vdo4-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
             .vdo5-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
             .vdo6-dimensions {width:760px; height:350px; min-width:760px; min-height:auto;}
-            .video-js .vjs-tech{display:block; width:760px; height:350px; min-width:760px; min-height:auto;}
+            .video-js .vjs-tech{display:block; width:730px; height:350px; min-width:730px; min-height:auto;}
         }
         /* 데스크탑 */
         @media screen and (min-width:960px) {
-            .vdo1-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
-            .vdo2-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
-            .vdo3-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
-            .vdo4-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
-            .vdo5-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
-            .vdo6-dimensions {width:960px; height:450px; min-width:960px; min-height:auto;}
-            .video-js .vjs-tech{display:block; width:960px; height:450px; min-width:960px; min-height:auto;}
+            .vdo1-dimensions {width:950px; height:450px; min-width:940px; min-height:auto;}
+            .vdo2-dimensions {width:950px; height:450px; min-width:940px; min-height:auto;}
+            .vdo3-dimensions {width:950px; height:450px; min-width:940px; min-height:auto;}
+            .vdo4-dimensions {width:950px; height:450px; min-width:940px; min-height:auto;}
+            .vdo5-dimensions {width:950px; height:450px; min-width:940px; min-height:auto;}
+            .vdo6-dimensions {width:950px; height:450px; min-width:940px; min-height:auto;}
+            .video-js .vjs-tech{display:block; width:950px; height:450px; min-width:930px; min-height:auto;}
         }
     </style>
 </head>
@@ -136,7 +136,7 @@
 <div data-role="content"  class="ui-content">
     <h2>수리랑 이벤트</h2>
     <div class="box">
-        <img src="sample/main.jpg" alt="main" style="width: 83vw;">
+      <a href="#page43"><img src="sample/main.jpg" alt="main" style="width: 83vw;"></a>
     </div>
 </div>   
 <div data-role="content" class="ui-content">
@@ -377,7 +377,7 @@
             <div id="page13">
                 <div data-role="content"  class="ui-content">
                     <div class="box">
-                        <img src="sample/beer.jpg" alt="bear" style="width: 83vw; height: 35vh; height: 35vh;">
+                        <img src="sample/beer.jpg" alt="bear" style="width: 83vw; height: 30vh;">
                     </div>
                 </div>
                 <div data-role="content"  class="ui-content">
@@ -1694,13 +1694,13 @@
                 <a href="#page41" class="event"><img src="sample/event.jpg" alt="이벤트" class="event"></a>
             </div>
             <div class="ui-block-b">    
-                <a href="#page42" class="event"><img src="sample/event2.jpg" alt="이벤트" class="event"></a>
+                <a href="#" class="event"><img src="sample/event2.jpg" alt="이벤트" class="event"></a>
             </div>
             <div class="ui-block-a">  
-                <a href="#page43" class="event"><img src="sample/event3.jpg" alt="이벤트" class="event"></a>
+                <a href="#" class="event"><img src="sample/event3.jpg" alt="이벤트" class="event"></a>
             </div>
             <div class="ui-block-b">  
-                <a href="#page43" class="event"><img src="sample/event4.jpg" alt="이벤트" class="event"></a>
+                <a href="#" class="event"><img src="sample/event4.jpg" alt="이벤트" class="event"></a>
             </div>
           </div>
         <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
@@ -1923,6 +1923,82 @@
                   </tbody>
               </table>
               <a href="#page11" class="ui-btn ui-icon-back ui-btn-icon-left backpage" data-role="button" role="button">이전페이지</a>
+        </div>
+    </div>
+<footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+    <h3>©copyright</h3>
+</footer>
+</div>
+
+<div id="page43" data-role="page43" class="ui-page ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <h1 role="heading" class="ui-title">수리랑</h1>
+        <a href="#page1" data-role="main" class="ui-btn ui-btn-right ui-icon-user ui-btn-icon-right" role="button">로그인</a>
+        <a href="#page" data-role="main" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">메인</a>
+        <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
+            <ul class="ui-grid-d">
+                <li class="ui-block-a" data-icon="custom">
+                    <a href="#page3" data-theme="b" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-icon-custom1">
+                        <span class="ui-btn-text">맥주</span>
+                        <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                    </a>
+                </li>
+                <li class="ui-block-b" data-icon="custom">
+                    <a href="#page5" data-theme="b" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-icon-custom2">
+                        <span class="ui-btn-text">소주</span>
+                        <span class="ui-icon ui-icon-home ui-icon-shadow"></span>
+                    </a>
+                </li>
+                <li class="ui-block-c" data-icon="custom">
+                    <a href="#page7" data-theme="b" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-icon-custom3">
+                        <span class="ui-btn-text">막걸리</span>
+                        <span class="ui-icon ui-icon-grid ui-icon-shadow"></span>
+                    </a>
+                </li>
+                <li class="ui-block-d" data-icom="custom">
+                    <a href="#page9" data-theme="b" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-icon-custom4">
+                        <span class="ui-btn-text">추천게시판</span>
+                        <span class="ui-icon ui-icon-heart ui-icon-shadow"></span>
+                    </a>
+                </li>
+                <li class="ui-block-e" data-icon="custom">
+                    <a href="#page11" data-theme="b" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-icon-custom5">
+                        <span class="ui-btn-text">이벤트</span>
+                        <span class="ui-icon ui-icon-user ui-icon-shadow"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 추천 -->
+    <div data-role="content"  class="ui-content">
+        <div data-role="content"  class="ui-content">
+            <h2 class="ui-title">이벤트 게시판</h2>
+            <div class="box">
+                <strong>이미지 :</strong>
+                <img src="sample/main.jpg" alt="event" style="width: 83vw;">
+            </div>
+            <table data-role="table" id="my-table1" data-mode="reflow">
+                <thead>
+                  <tr>
+                    <th>제목</th>
+                    <th>내용</th>
+                    <th>글쓴이</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>수리랑 이벤트!</th>  
+                    <td>리뷰를 남겨주시는 분들 중 추첨을 통해 드립백을 선물로 드립니다!</td>
+                    <td>관리자</td>
+                    <td>2022-12-27</td>
+                    <td>77</td> 
+                  </tr>
+                  </tbody>
+              </table>
+              <a href="#page" class="ui-btn ui-icon-back ui-btn-icon-left backpage" data-role="button" role="button">이전페이지</a>
         </div>
     </div>
 <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
