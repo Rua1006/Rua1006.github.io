@@ -30,17 +30,45 @@
     <link rel="mask-icon" href="dist/images/favicons/safari-pinned-tab.svg" color="#000000">
     <link rel="stylesheet" href="dist/styles/main.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144274538-1"></script>
-
+    <style>
+        *{margin: 0; padding: 0;}
+        body, html {width: 100%; overflow-x: hidden;}
+        /* 스크롤바 보이지 않게 - Chrome, Safari, Opera */
+        ::-webkit-scrollbar {display: none;}
+        body, html {-ms-overflow-style: none; /* IE and Edge */
+                    scrollbar-width: none; /*Firefox*/ }
+        #hd {position: fixed; background-color: rgba(33, 33, 33, 0.6); width: 100vw; height: 90px; top: 0; left: 0; z-index: 999;}
+        .page_wrap {clear: both; width: 1200px; margin: 0 auto;}
+        .page_tit {text-align: center; line-height: 2.4; padding-top: 2rem;}
+        
+    </style>
+    <script src="dist/locomotive-scroll.min.js"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-144274538-1');
+   (function () {
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true
+        });
+    })();
     </script>
 </head>
 <body>
     <div data-scroll>Element To Animate</div>
+    
+    <div data-scroll-container>
+    <div class="page">
+        <div data-scroll-section>
+            <h1 data-scroll>Hey</h1>
+            <p data-scroll>👋</p>
+        </div>
+    </div>
+    <div class="page">
+        <div data-scroll-section>
+            <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+            <p data-scroll data-scroll-speed="2">😬</p>
+        </div>
+    </div>
+    </div>
     <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous"></script>
     <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
     <script src="dist/scripts/main.js"></script>
