@@ -30,19 +30,672 @@
     <link rel="mask-icon" href="dist/images/favicons/safari-pinned-tab.svg" color="#000000">
     <link rel="stylesheet" href="dist/styles/main.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144274538-1"></script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-144274538-1');
-    </script>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- icon -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- js -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- scrollmagic.io : scrollMagic이 먼저 선언 -->
+    <script src="./js/plugin/ScrollMagic.min.js"></script>
+    <script src="./js/plugin/debug.addIndicators.min.js"></script>
+    <!-- gsap.js -->
+    <script src="./js/plugin/gsap.min.js"></script>
+    <script src="./js/plugin/animation.gsap.min.js"></script>
+    <!-- slick js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+<title>강병수 포트폴리오 사이트</title>
 </head>
 <body>
-    <div data-scroll>Element To Animate</div>
-    <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous"></script>
-    <script nomodule src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll" crossorigin="anonymous"></script>
-    <script src="dist/scripts/main.js"></script>
+    <a id="skip" href="#introduce__section" tabindex="1">본문 바로가기</a>
+    <header id="header">
+        <div class="header__small" id="header__small">
+            <div class="inner header__small__inner">
+                <a href="#none" class="logo">
+                    SUYA_KANG
+                </a>
+                <ul class="small__gnb">
+                    <li class="small__gnb__item">
+                        <a href="#" class="small__gnb__menu home__menu" data-target="#home">
+                            home
+                        </a>
+                    </li>
+                    <li class="small__gnb__item">
+                        <a href="#" class="small__gnb__menu about__menu" data-target="#introduce__section">
+                            about
+                        </a>
+                    </li>
+                    <li class="small__gnb__item">
+                        <a href="#" class="small__gnb__menu history__menu" data-target="#history">
+                            history
+                        </a>
+                    </li>
+                    <li class="small__gnb__item">
+                        <a href="#" class="small__gnb__menu website__menu" data-target="#website">
+                            website
+                        </a>
+                    </li>
+                    <li class="small__gnb__item">
+                        <a href="#" class="small__gnb__menu artwork__menu" data-target="#artwork">
+                            artwork
+                        </a>
+                    </li>
+                    <li class="small__gnb__item">
+                        <a href="#" class="small__gnb__menu point__menu" data-target="#point">
+                            point
+                        </a>
+                    </li>
+                    <li class="small__gnb__item">
+                        <a href="#" class="small__gnb__menu blog__menu" data-target="#blog">
+                            blog
+                        </a>
+                    </li>
+                    <li class="small__gnb__item">
+                        <a href="#" class="small__gnb__menu contact__menu" data-target="#contact">
+                            contact
+                        </a>
+                    </li>
+                    <li class="small__gnb__item">
+                        <a href="#" class="darkmode__icon">
+                            <i class="uil uil-moon"></i>
+                        </a>
+                        <a href="#" class="lightmode__icon">
+                            <i class="uil uil-sun"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header__big" id="header__big">
+            <div class="inner header__big__inner">
+                <h1 class="header__text">
+                    all i dream about
+                </h1>
+                <ul class="gnb">
+                    <li class="gnb__item">
+                        <a href="#" class="gnb__menu" data-target="#introduce__section">
+                            about
+                        </a>
+                    </li>
+                    <li class="gnb__item">
+                        <a href="#" class="gnb__menu" data-target="#history">
+                            history
+                        </a>
+                    </li>
+                    <li class="gnb__item">
+                        <a href="#" class="gnb__menu" data-target="#website">
+                            website
+                        </a>
+                    </li>
+                    <li class="gnb__item">
+                        <a href="#" class="gnb__menu" data-target="#artwork">
+                            artwork
+                        </a>
+                    </li>
+                    <li class="gnb__item">
+                        <a href="#" class="gnb__menu" data-target="#point">
+                            point
+                        </a>
+                    </li>
+                    <li class="gnb__item">
+                        <a href="#" class="gnb__menu" data-target="#blog">
+                            blog
+                        </a>
+                    </li>
+                    <li class="gnb__item">
+                        <a href="#" class="gnb__menu" data-target="#contact">
+                            contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <section id="home" class="home">
+        <div class="inner home__inner">
+            <div class='home__box'>
+                <div class='wave -one'></div>
+                <div class='wave -two'></div>
+                <div class='wave -three'></div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="introduce__section" id="introduce__section">
+        <div class="inner">
+            <h1 class="section__title about__title">
+                about me
+            </h1>
+            <div class="floating__wrap">
+                <div class="floating__left">
+                    <!-- floating img -->
+                    <div class="about__img__item">
+                        <div class="about__img__box">
+                            <img src="." alt="." >
+                        </div>
+                        <a download="#" href="./pdf/심수현_웹퍼블리셔_입사지원서.pdf" class="about__img__resume" target="blank">
+                            이력서 다운로드
+                        </a>
+                    </div>
+                </div>
+                <div class="floating__right">
+                    <!-- ================== about section ================== -->
+                    <section id="about__profile__section" class="about__profile__section">
+                        <div class="inner about__profile__inner">
+                            
+                            <div class="about__profile__container">
+                                <div class="about__info">
+                                    <div class="about__info__profile">
+                                        <h1 class="profile__title about__sub-title">
+                                            profile
+                                        </h1>
+                                        <span>강병수</span>
+                                        <span>1993.08.06</span>
+                                        <span>대구광역시 동구</span>
+                                    </div>
+                                    <div class="about__info__education">
+                                        <h1 class="profile__title about__sub-title">
+                                            education
+                                        </h1>
+                                        <span>영신고등학교 졸업</span>
+                                        <span>계명대학교 생명과학전공</span>
+                                        <span>
+                                            학원<br>
+                                            양성과정 수료
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- ================== skills section ================== -->
+                    <section id="about__skills__section" class="about__skills__section">
+                        <div class="inner">
+                            <div class="about__skills__container">
+                                <div class="about__skills">
+                                    <h1 class="skills__title about__sub-title">
+                                        skills
+                                    </h1>
+                                    <div class="skills__content">
+                                        <ul class="skills__develop">
+                                            <li class="skills__cup skills__cup__html">
+                                                <div class="skills__water skills__html">
+                                    
+                                                </div>
+                                            </li>
+                                            <li class="skills__cup skills__cup__css">
+                                                <div class="skills__water skills__css">
+                                    
+                                                </div>
+                                            </li>
+                                            <li class="skills__cup skills__cup__js">
+                                                <div class="skills__water skills__js">
+                                    
+                                                </div>
+                                            </li>
+                                            <li class="skills__cup skills__cup__jquery">
+                                                <div class="skills__water skills__jquery">
+                                    
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="skills__design">
+                                            <li class="skills__cup skills__cup__ps">
+                                                <div class="skills__water skills__ps">
+                                    
+                                                </div>
+                                            </li>
+                                            <li class="skills__cup skills__cup__ai">
+                                                <div class="skills__water skills__ai">
+                                    
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <section id="history" class="history">
+        <div class="inner">
+            <h1 class="section__title history__title">
+                history
+            </h1>
+            <div class="history__circle history__circle__left"></div>
+            <div class="history__circle history__circle__right"></div>
+            <div class="history__container">
+                <div class="history__item">
+                    <div class="history__blank">
+    
+                    </div>
+                    <div class="history__bar">
+                        <div class="history__dot"></div>
+                        <div class="history__line"></div>
+                    </div>
+                    <div class="history__data htmlcss__data">
+                        <div class="history__img htmlcss__img">
+                            <img src="./img/history/html.png" alt="html icon">
+                            <img src="./img/history/css.png" alt="css icon">
+                        </div>
+                        <div class="history__desc htmlcss__desc">
+                            <h5 class="history__text">
+                                웹접근성, 웹표준성을 준수한 웹페이지 구현
+                            </h5>
+                            <h5 class="history__text">
+                                크로스브라우징에 대한 이해
+                            </h5>
+                            <h5 class="history__text">
+                                시멘틱 마크의 활용
+                            </h5>
+                            <h5 class="history__text">
+                                미디어쿼리를 이용한 반응형 웹페이지 구현
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="history__item">
+                    <div class="history__data js__data">
+                        <div class="history__img js__img">
+                            <img src="./img/history/javascript.png" alt="javascript icon">
+                            <img src="./img/history/jquery.png" alt="jquery icon">
+                        </div>
+                        <div class="history__desc js__desc">
+                            <h5 class="history__text">
+                                제어문, 함수, 객체, 배열, 이벤트 숙지
+                            </h5>
+                            <h5 class="history__text">
+                                동적인 화면 구현 가능
+                            </h5>
+                            <h5 class="history__text">
+                                라이브러리 적용(slick js, wow js, fullpage, scroll magic)
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="history__bar">
+                        <div class="history__dot"></div>
+                        <div class="history__line"></div>
+                    </div>
+                    <div class="history__blank">
+    
+                    </div>
+                </div>
+                <div class="history__item">
+                    <div class="history__blank">
+    
+                    </div>
+                    <div class="history__bar">
+                        <div class="history__dot"></div>
+                        <div class="history__line"></div>
+                        <div class="history__dot"></div>
+                    </div>
+                    <div class="history__data design__data">
+                        <div class="history__img design__img">
+                            <img src="./img/history/photoshopicon.png" alt="photoshop icon">
+                            <img src="./img/history/ai-icon.png" alt="illustrator icon">
+                        </div>
+                        <div class="history__desc design__desc">
+                            <h5 class="history__text">
+                                포토샵을 이용한 아트웍 작업 및 사진 조정
+                            </h5>
+                            <h5 class="history__text">
+                                GTQ 1급 취득
+                            </h5>
+                            <h5 class="history__text">    
+                                일러스트 프로그램을 이용한 오브젝트 제작 가능
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="website" class="website">
+        <div class="inner">
+            <h1 class="section__title website__title">
+                website
+            </h1>
+            <div class="website__container">
+                <div>
+                    <div class="website__site">
+                        <img src="./img/website/tada_clone.JPG" alt="tada_clone_coding">
+                        <div class="site__content flex-center">
+                            <div class="site__desc">
+                                <h1 class="site__title">tada 클론 코딩</h1>
+                                <h4 class="site__subtitle">반응형 사이트<br>
+                                    기여도 : 100%
+                                </h4>
+                                <div class="site__desc-btn">
+                                    <a href="https://github.com/simsoohyun/tada-clone" class="website__viewcode" target="blank">view code</a>
+                                    <a href="https://simsoohyun.github.io/tada-clone/" class="website__gotosite" target="blank">go to site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="website__site">
+                        <img src="./img/website/daelim_clone.JPG" alt="daelim_clone_coding">
+                        <div class="site__content flex-center">
+                            <div class="site__desc">
+                                <h1 class="site__title">daelim 클론 코딩</h1>
+                                <h4 class="site__subtitle">웹전용 사이트<br>
+                                    기여도 : 100%
+                                </h4>
+                                <div class="site__desc-btn">
+                                    <a href="https://github.com/simsoohyun/dealim-clone" class="website__viewcode" target="blank">view code</a>
+                                    <a href="https://simsoohyun.github.io/dealim-clone/" class="website__gotosite" target="blank">go to site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="website__site">
+                        <img src="./img/website/o'kitchen_clone.JPG" alt="o'kitchen_clone_coding">
+                        <div class="site__content flex-center">
+                            <div class="site__desc">
+                                <h1 class="site__title">o'kitchen 클론 코딩</h1>
+                                <h4 class="site__subtitle">웹전용 사이트<br>
+                                    기여도 : 100%
+                                </h4>
+                                <div class="site__desc-btn">
+                                    <a href="https://github.com/simsoohyun/okitchen-clone" class="website__viewcode" target="blank">view code</a>
+                                    <a href="https://simsoohyun.github.io/okitchen-clone/" class="website__gotosite" target="blank">go to site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="website__site">
+                        <img src="./img/website/muji_redesign.JPG" alt="muji_redesign">
+                        <div class="site__content flex-center">
+                            <div class="site__desc">
+                                <h1 class="site__title">무인양품 리디자인</h1>
+                                <h4 class="site__subtitle">웹전용 사이트<br>
+                                    기여도 : 100%
+                                </h4>
+                                <div class="site__desc-btn">
+                                    <a href="https://github.com/simsoohyun/muji-redesign" class="website__viewcode" target="blank">view code</a>
+                                    <a href="https://simsoohyun.github.io/muji-redesign/" class="website__gotosite" target="blank">go to site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="artwork" class="artwork">
+        <div class="inner">
+            <h1 class="section__title artwork__title">
+                artwork
+            </h1>
+            <div class="l-grid artwork__grid clearfix">
+                <div class="l-grid-item l-grid-item-large">
+                    <div class="cover">
+                        <img src="./img/artwork/잡지레이아웃_썸네일_목업.jpg" alt="newyork_magazine" class="artwork__img newyork_magazine" data-link="./img/artwork/잡지레이아웃_가이드.jpg">
+                    </div>
+                </div>
+                <div class="l-grid-item l-grid-4-12">
+                    <div class="cover">
+                        <img src="./img/artwork/stumpfilm_목업1.jpg" alt="stump_film_logo" class="artwork__img stump_film_logo" data-link="./img/artwork/stumpfilm_가이드.jpg">
+                    </div>
+                </div>
+                <div class="l-grid-item l-grid-4-12">
+                    <div class="cover">
+                        <img src="./img/artwork/나이키포스터_목업1.jpg" alt="nike_poster" class="artwork__img nike_poster" data-link="./img/artwork/nike_poster_guide-01.jpg">
+                    </div>
+                </div>
+                <div class="l-grid-item l-grid-item-large">
+                    <div class="cover">
+                        <img src="./img/artwork/앱디자인_회원가입페이지_목업.jpg" alt="ridethewave" class="artwork__img ridethewave" data-link="./img/artwork/ridethewave_가이드-01-01.jpg">
+                    </div>
+                </div>
+                <div class="l-grid-item l-grid-item-full">
+                    <div class="cover">
+                        <img src="./img/artwork/aesop_1080x400.jpg" alt="aesop_banner" class="artwork__img aesop_banner" data-link="./img/artwork/aesop_banner_guide-01-01.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+            <div class="modal">
+                <div class="modal__content">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="point" class="point">
+        <div class="inner">
+            <h1 class="section__title point__title">
+                point
+            </h1>
+            <ul class="point__container">
+                <li class="point__item">
+                    <div class="point__item__title visible">
+                        <h5>responsive</h5>
+                    </div>
+                    <div class="point__item__content">
+                        <div class="point__img point__responsive__img">
+                            <img src="./img/point/responsive_layout_icon.png" alt="responsive icon">
+                            <img src="./img/point/responsive_layout_icon2.png" alt="responsive icon">
+                        </div>
+                        <div class="point__desc point__responsive__desc">
+                            <div class="point__desc-tag point__responsive__desc-tag">
+                                <span>&#35;미디어쿼리</span>
+                                <span>&#35;다양한디바이스</span>
+                            </div>
+                            <p class="point__desc-text point__responsive__desc-text">
+                                미디어쿼리를 이용해 다양한 디바이스에 적절한 레이아웃이 배치되도록 반응형 웹사이트를 구현하였습니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="point__item">
+                    <div class="point__item__title">
+                        <h5>css naming</h5>
+                    </div>
+                    <div class="point__item__content">
+                        <div class="point__img point__naming__img">
+                            <img src="./img/point/bem.JPG" alt="naming icon">
+                        </div>
+                        <div class="point__desc point__naming__desc">
+                            <div class="point__desc-tag point__naming__desc-tag">
+                                <span>&#35;BEM</span>
+                                <span>&#35;명확성</span>
+                                <span>&#35;일관성</span>
+                                <span>&#35;협업에유리</span>
+                            </div>
+                            <p class="point__desc-text point__naming__desc-text">
+                                BEM방식을 사용하여 효율적으로 일할 수 있도록 하고 명확성과 일관성을 유지해 협업에도 유리하도록 하였습니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="point__item">
+                    <div class="point__item__title">
+                        <h5>root variation</h5>
+                    </div>
+                    <div class="point__item__content">
+                        <div class="point__img point__root__img">
+                            <img src="./img/point/root.JPG" alt="root icon">
+                        </div>
+                        <div class="point__desc point__root__desc">
+                            <div class="point__desc-tag point__root__desc-tag">
+                                <span>&#35;변수선언</span>
+                                <span>&#35;일관성</span>
+                                <span>&#35;유지보수</span>
+                            </div>
+                            <p class="point__desc-text point__root__desc-text">
+                                구현의 일관성을 유지하여 유지 보수에 효율성을 높이기 위해 css에서 변수를 사용하였습니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="point__item">
+                    <div class="point__item__title">
+                        <h5>common class</h5>
+                    </div>
+                    <div class="point__item__content">
+                        <div class="point__img point__common__img">
+                            <img src="./img/point/common.JPG" alt="common icon">
+                        </div>
+                        <div class="point__desc point__common__desc">
+                            <div class="point__desc-tag point__common__desc-tag">
+                                <span>&#35;reusable</span>
+                                <span>&#35;일관성</span>
+                                <span>&#35;유지보수</span>
+                            </div>
+                            <p class="point__desc-text point__common__desc-text">
+                                'title', 'section', 'inner'등 공통되는 css를 하나의 class로 묶어 재사용할 수 있게 구현하였습니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="point__item">
+                    <div class="point__item__title">
+                        <h5>git</h5>
+                    </div>
+                    <div class="point__item__content">
+                        <div class="point__img point__git__img">
+                            <img src="./img/point/github2.jpg" alt="git icon">
+                            <img src="./img/point/git2.jpg" alt="github icon">
+                        </div>
+                        <div class="point__desc point__git__desc">
+                            <div class="point__desc-tag point__git__desc-tag">
+                                <span>&#35;1일1commit</span>
+                                <span>&#35;협업에용이</span>
+                                <span>&#35;효율적인코드관리</span>
+                            </div>
+                            <p class="point__desc-text point__git__desc-text">
+                                git과 github을 사용해 코드를 보다 효율적으로 관리하고 협업에 
+                                용이하도록 하였습니다.<br>
+                                특히 github을 사용하면서 꾸준히 1일 1commit을 하기 위해 노력
+                                하였고 그 결과 성취감을 얻고 개발에 자신감도 얻을 수 있었습니다. 
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="blog" class="blog">
+        <div class="inner">
+            <h1 class="section__title blog__title">
+                blog
+            </h1>
+            <ul class="blog__container clearfix">
+                <li class="blog__item l-grid-4-12">
+                    <a href="https://blog.naver.com/tngus2958/222255416345" target="blank">
+                        <div class="blog__img img-form"></div>
+                        <div class="blog__desc">
+                            <h5>FORM 태그</h5>
+                            <span>2021. 02. 24</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="blog__item l-grid-4-12">
+                    <a href="https://blog.naver.com/tngus2958/222264782106" target="blank">
+                        <div class="blog__img img-selector"></div>
+                        <div class="blog__desc">
+                            <h5>selector</h5>
+                            <span>2021. 03. 04</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="blog__item l-grid-4-12">
+                    <a href="https://blog.naver.com/tngus2958/222345721953" target="blank">
+                        <div class="blog__img img-netflix"></div>
+                        <div class="blog__desc">
+                            <h5>NETFLIX 클론코딩</h5>
+                            <span>2021. 05. 10</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="blog__item l-grid-4-12">
+                    <a href="https://blog.naver.com/tngus2958/222373854186" target="blank">
+                        <div class="blog__img img-function"></div>
+                        <div class="blog__desc">
+                            <h5>함수 &#38; 매개변수</h5>
+                            <span>2021. 05. 29</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="blog__item l-grid-4-12">
+                    <a href="https://blog.naver.com/tngus2958/222393338531" target="blank">
+                        <div class="blog__img img-jquery"></div>
+                        <div class="blog__desc">
+                            <h5>jQuery</h5>
+                            <span>2021. 06. 11</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="blog__item l-grid-4-12">
+                    <a href="https://blog.naver.com/tngus2958/222396431620" target="blank">
+                        <div class="blog__img img-slick"></div>
+                        <div class="blog__desc">
+                            <h5>Slick. js</h5>
+                            <span>2021. 06. 13</span>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    <footer id="contact" class="contact">
+        <div class="inner clearfix">
+            <h1 class="section__title footer__title">
+                contact
+            </h1>
+            <div class="footer__content">
+                <div class="footer__info">
+                    <div class="footer__item footer__phone">
+                        <a href="tel:010-2958-3585" target="blank">
+                            +82 -10 - 2958 - 3585
+                        </a>
+                    </div>
+                    <div class="footer__item footer__email">
+                        <a href="mailto:tngus3585@gmail.com" target="blank">
+                            tngus3585@gmail.com
+                        </a>
+                    </div>
+                    <div class="footer__item footer__git">
+                        <a href="https://github.com/simsoohyun " target="blank"> 
+                            https://github.com/simsoohyun
+                        </a>
+                    </div>
+                    <div class="footer__item footer__blog">
+                        <a href="https://blog.naver.com/tngus2958" target="blank">
+                            https://blog.naver.com/tngus2958
+                        </a>
+                    </div>
+                    <p class="footer__text">thank you</p>
+                </div>
+            </div>
+            <p class="footer__copyright">
+                copyright 2021. Simsoohyun all rights reserved.
+            </p>
+        </div>
+    </footer>
+    <div id="arrowup" class="arrowup">
+        <i class="uil uil-arrow-up flex-center"></i>
+    </div>
 </body>
 </html>
