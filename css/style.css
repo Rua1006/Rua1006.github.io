@@ -110,7 +110,6 @@ a {
 }
 img {
     max-width: 100%;
-    height: 100vh;
     overflow: hidden;
     vertical-align: top;
 }
@@ -436,10 +435,6 @@ from { transform: rotate(360deg); }
     overflow: hidden;
     background: var(--main-yellow-color);
 }
-.about__img__box img {
-    margin-top: 30px;
-    width: 280px;
-}
 .about__img__resume {
     background: var(--main-yellow-color);
     display: block;
@@ -571,8 +566,9 @@ from { transform: rotate(360deg); }
     animation: water 2s alternate;
 }
 .skills__js,
-.skills__jquery {
-    height: 70%;
+.skills__slc,
+.skills__sbt {
+    height: 80%;
 }
 .skills__ai {
     height: 80%;
@@ -600,22 +596,22 @@ from { transform: rotate(360deg); }
     font-size: var(--h4-font-size);
     z-index: 1;
 }
-.skills__cup__html:before {
+.skills__cup__java:before {
     content: '100%';
 }
-.skills__cup__css:before {
+.skills__cup__jsp:before {
+    content: '100%';
+}
+.skills__cup__slc:before {
+    content: '80%';
+}
+.skills__cup__sbt:before {
+    content: '80%';
+}
+.skills__cup__db:before {
     content: '100%';
 }
 .skills__cup__js:before {
-    content: '70%';
-}
-.skills__cup__jquery:before {
-    content: '70%';
-}
-.skills__cup__ps:before {
-    content: '100%';
-}
-.skills__cup__ai:before {
     content: '80%';
 }
 .skills__cup:after {
@@ -628,22 +624,22 @@ from { transform: rotate(360deg); }
     transform: translateX(-50%); */
     font-size: var(--h4-font-size);
 }
-.skills__cup__html:after {
+.skills__cup__java:after {
     content: 'JAVA';
 }
-.skills__cup__css:after {
+.skills__cup__jsp:after {
     content: 'JSP/Sevelt';
 }
-.skills__cup__js:after {
+.skills__cup__slc:after {
     content: 'SpringLegacy';
 }
-.skills__cup__jquery:after {
+.skills__cup__sbt:after {
     content: 'SpringBoot';
 }
-.skills__cup__ps:after {
+.skills__cup__db:after {
     content: 'Database';
 }
-.skills__cup__ai:after {
+.skills__cup__js:after {
     content: 'Javascript';
 }
 @keyframes water {
