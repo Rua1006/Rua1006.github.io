@@ -557,7 +557,7 @@ from { transform: rotate(360deg); }
 }
 .skills__water {
     width: 100%;
-    height: 95%;
+    height: 85%;
     background: var(--blue-color);
     position: absolute;
     bottom: 0;
@@ -568,7 +568,7 @@ from { transform: rotate(360deg); }
 .skills__js,
 .skills__slc,
 .skills__sbt {
-    height: 80%;
+    height: 75%;
 }
 .skills__ai {
     height: 80%;
@@ -597,22 +597,22 @@ from { transform: rotate(360deg); }
     z-index: 1;
 }
 .skills__cup__java:before {
-    content: '100%';
+    
 }
 .skills__cup__jsp:before {
-    content: '100%';
+
 }
 .skills__cup__slc:before {
-    content: '80%';
+
 }
 .skills__cup__sbt:before {
-    content: '80%';
+
 }
 .skills__cup__db:before {
-    content: '100%';
+
 }
 .skills__cup__js:before {
-    content: '80%';
+
 }
 .skills__cup:after {
     position: absolute;
@@ -628,10 +628,10 @@ from { transform: rotate(360deg); }
     content: 'JAVA';
 }
 .skills__cup__jsp:after {
-    content: 'JSP/Sevelt';
+    content: 'JSP/Servlet';
 }
 .skills__cup__slc:after {
-    content: 'SpringLegacy';
+    content: 'Spring';
 }
 .skills__cup__sbt:after {
     content: 'SpringBoot';
